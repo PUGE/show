@@ -1,0 +1,28 @@
+<template>
+  <div class="home">
+    <div class="box">
+      <temple class="button-item" name="waterRipple" text="页面切换效果" src="./src/module/waterRipple.owo"></temple>
+    </div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: function () {
+
+    }
+  }
+</script>
+
+
+<style lang="less">
+.box {
+  margin: 0 auto;
+  width: 80%;
+}
+.button-item {
+  margin: 10px 0;
+}
+</style>

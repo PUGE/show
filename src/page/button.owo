@@ -1,0 +1,28 @@
+<template>
+  <div class="button">
+    <div class="box">
+      <temple class="button-item" @click="owo.go('button')" name="waterRipple" text="水波纹按钮" src="./src/module/waterRipple.owo"></temple>
+    </div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: function () {
+
+    }
+  }
+</script>
+
+
+<style lang="less">
+.box {
+  margin: 0 auto;
+  width: 80%;
+}
+.button-item {
+  margin: 10px 0;
+}
+</style>
