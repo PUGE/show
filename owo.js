@@ -100,7 +100,7 @@ module.exports = {
     {
       name: 'button',
       isPage: true,
-      src: './src/page/button.page'
+      src: './src/page/button.owo'
     }
   ],
   // 调试模式配置

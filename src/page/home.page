@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="box">
-      <temple class="button-item" name="waterRipple" text="页面切换效果" src="./src/module/waterRipple.owo"></temple>
+      <temple class="button-item" :click="owo.go('button', 'moveToLeft', 'moveFromRight', 'moveToRight', 'moveFromLeft')" name="waterRipple" text="页面切换效果" src="./src/module/waterRipple.owo"></temple>
     </div>
   </div>
 </template>
