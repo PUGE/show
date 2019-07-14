@@ -15,10 +15,35 @@
       <temple text="向后淡出/向前淡入" class="button-item" :click="owo.go('exhibition', 'scaleDown', 'scaleUpDown', 'scaleDown', 'scaleUp')" name="line" src="./src/module/button/line.owo"></temple>
       <temple text="向左移出/向前淡入" class="button-item" :click="owo.go('exhibition', 'moveToLeft', 'scaleUp', 'moveToRight', 'scaleUp')" name="line" src="./src/module/button/line.owo"></temple>
       <temple text="向上移出/向前淡入" class="button-item" :click="owo.go('exhibition', 'moveToTop', 'scaleUp', 'moveToBottom', 'scaleUp')" name="line" src="./src/module/button/line.owo"></temple>
-      <temple text="向后移出/向前移入" class="button-item" :click="owo.go('exhibition', 'scaleDownCenter', 'scaleUpCenter,delay400', 'scaleDownCenter', 'scaleUpCenter,delay400')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向后移出/向前移入" class="button-item" :click="owo.go('exhibition', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')" name="line" src="./src/module/button/line.owo"></temple>
+      <p class="title">吸附效果</p>
+      <temple text="左侧吸附/向左移入" class="button-item" :click="owo.go('exhibition', 'rotateRightSideFirst', 'moveFromRight&&delay200', 'rotateLeftSideFirst', 'moveFromLeft&&delay200')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="下侧吸附/向下移入" class="button-item" :click="owo.go('exhibition', 'rotateTopSideFirst', 'moveFromTop&&delay200', 'rotateBottomSideFirst', 'moveFromBottom&&delay200')" name="line" src="./src/module/button/line.owo"></temple>
+      <p class="title">翻转效果</p>
+      <temple text="向右翻转/向左翻转" class="button-item" :click="owo.go('exhibition', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向下翻转/向向翻转" class="button-item" :click="owo.go('exhibition', 'flipOutTop', 'flipInBottom&&delay500', 'flipOutBottom', 'flipInTop&&delay500')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向后螺旋/向前螺旋" class="button-item" :click="owo.go('exhibition', 'rotateOutNewspaper', 'rotateInNewspaper&&delay500', 'rotateOutNewspaper', 'rotateInNewspaper&&delay500')" name="line" src="./src/module/button/line.owo"></temple>
+      <p class="title">掉落效果</p>
+      <temple text="向下掉落/向前移入" class="button-item" :click="owo.go('exhibition', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" name="line" src="./src/module/button/line.owo"></temple>
+      <p class="title">推拉效果</p>
+      <!-- 待修复这里应该能控制什么在前 -->
+      <temple text="向左推出/向左移入" class="button-item" :click="owo.go('exhibition', 'rotatePushLeft', 'moveFromRight&&ontop', 'rotatePushRight', 'moveFromLeft&&ontop')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向上推出/向上移入" class="button-item" :click="owo.go('exhibition', 'rotatePushTop', 'moveFromBottom&&ontop', 'rotatePushBottom', 'moveFromTop&&ontop')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向左推出/向左推入" class="button-item" :click="owo.go('exhibition', 'rotatePushLeft', 'rotatePullRight&&ontop', 'rotatePushRight', 'rotatePullLeft&&ontop')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向上推出/向上推入" class="button-item" :click="owo.go('exhibition', 'rotatePushTop', 'rotatePullBottom&&ontop', 'rotatePushBottom', 'rotatePullTop&&ontop')" name="line" src="./src/module/button/line.owo"></temple>
+      <p class="title">盒子效果</p>
+      <temple text="向左转动/向左转动" class="button-item" :click="owo.go('exhibition', 'rotateRoomLeftOut&&ontop', 'rotateRoomLeftIn', 'rotateRoomRightOut&&ontop', 'rotateRoomRightIn')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向上转动/向上转动" class="button-item" :click="owo.go('exhibition', 'rotateRoomTopOut&&ontop', 'rotateRoomTopIn', 'rotateRoomBottomOut&&ontop', 'rotateRoomBottomIn')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向右扭转/向右扭转" class="button-item" :click="owo.go('exhibition', 'rotateCubeLeftOut', 'rotateCubeLeftIn', 'rotateCubeRightOut', 'rotateCubeRightIn')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向上扭转/向上扭转" class="button-item" :click="owo.go('exhibition', 'rotateCubeTopOut', 'rotateCubeTopIn', 'rotateCubeBottomOut', 'rotateCubeBottomIn')" name="line" src="./src/module/button/line.owo"></temple>
+      <p class="title">旋转木马</p>
+      <temple text="向左飞出/向左飞入" class="button-item" :click="owo.go('exhibition', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向上飞出/向左飞入" class="button-item" :click="owo.go('exhibition', 'rotateCarouselTopOut&&ontop', 'rotateCarouselTopIn', 'rotateCarouselBottomOut&&ontop', 'rotateCarouselBottomIn')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向左翻转/向左翻转" class="button-item" :click="owo.go('exhibition', 'rotateSidesOut&&ontop', 'rotateSidesIn&&delay200', 'rotateSidesOut&&ontop', 'rotateSidesIn&&delay200')" name="line" src="./src/module/button/line.owo"></temple>
     </div>
   </div>
 </template>
+
 
 
 <style lang="less">
