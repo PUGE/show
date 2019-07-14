@@ -99,8 +99,19 @@ module.exports = {
     },
     {
       name: 'button',
-      isPage: true,
       src: './src/page/button.owo'
+    },
+    {
+      name: 'font',
+      src: './src/page/font.owo'
+    },
+    {
+      name: 'switch',
+      src: './src/page/switch.owo'
+    },
+    {
+      name: 'exhibition',
+      src: './src/page/exhibition.owo'
     }
   ],
   // 调试模式配置

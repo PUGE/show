@@ -1,0 +1,33 @@
+<template>
+  <div class="color-button">
+    <span>{{prop.text}}</span>
+  </div>
+</template>
+
+<style>
+.color-button {
+  appearance: none !important;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  transition: all 150ms;
+  box-shadow: 0 8px 20px -10px #7367f0;
+  display: block;
+  background: #5a02ff;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff5000 0%, #e98600 100%);
+}
+.color-button:hover {
+  opacity: 0.75;
+}
+.color-button:active {
+  opacity: 0.5;
+  box-shadow: 0 0 8px 0 #7367f0;
+  transform: translate3d(0, 2px, 0);
+}
+
+
+</style>

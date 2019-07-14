@@ -1,0 +1,17 @@
+<template>
+  <div class="line-button">
+    <span>{{prop.text}}</span>
+  </div>
+</template>
+
+<style>
+.line-button {
+  cursor: pointer;
+  border-radius: 3px;
+  color: #3bb1d5;
+  line-height: 46px;
+  text-align: center;
+  border: 2px solid #3bb1d5;
+}
+
+</style>

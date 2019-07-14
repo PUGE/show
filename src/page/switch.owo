@@ -1,0 +1,26 @@
+<template>
+  <div class="switch">
+    <div class="box">
+      <p class="title">移入/移出</p>
+      <temple text="向右移出" class="button-item" :click="owo.go('exhibition', 'moveToLeft', 'moveFromRight', 'moveToRight', 'moveFromLeft')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向下移出" class="button-item" :click="owo.go('exhibition', 'moveToTop', 'moveFromBottom', 'moveToBottom', 'moveFromTop')" name="line" src="./src/module/button/line.owo"></temple>
+      <p class="title">淡入/淡出</p>
+      <temple text="向右淡入" class="button-item" :click="owo.go('exhibition', 'fade', 'moveFromRight', 'fade', 'moveFromLeft')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向下淡入" class="button-item" :click="owo.go('exhibition', 'fade', 'moveFromBottom', 'fade', 'moveFromTop')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向右淡入2" class="button-item" :click="owo.go('exhibition', 'moveToLeftFade', 'moveFromRightFade', 'moveToRightFade', 'moveFromLeftFade')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向下淡入2" class="button-item" :click="owo.go('exhibition', 'moveToTopFade', 'moveFromBottomFade', 'moveToBottomFade', 'moveFromTopFade')" name="line" src="./src/module/button/line.owo"></temple>
+      <p class="title">后退效果</p>
+      <temple text="向后淡出/向左移入" class="button-item" :click="owo.go('exhibition', 'scaleDown', 'moveFromRight', 'scaleDown', 'moveFromLeft')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向后淡出/向上移入" class="button-item" :click="owo.go('exhibition', 'scaleDown', 'moveFromBottom', 'scaleDown', 'moveFromTop')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向后淡出/向前淡入" class="button-item" :click="owo.go('exhibition', 'scaleDown', 'scaleUpDown', 'scaleDown', 'scaleUp')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向左移出/向前淡入" class="button-item" :click="owo.go('exhibition', 'moveToLeft', 'scaleUp', 'moveToRight', 'scaleUp')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向上移出/向前淡入" class="button-item" :click="owo.go('exhibition', 'moveToTop', 'scaleUp', 'moveToBottom', 'scaleUp')" name="line" src="./src/module/button/line.owo"></temple>
+      <temple text="向后移出/向前移入" class="button-item" :click="owo.go('exhibition', 'scaleDownCenter', 'scaleUpCenter,delay400', 'scaleDownCenter', 'scaleUpCenter,delay400')" name="line" src="./src/module/button/line.owo"></temple>
+    </div>
+  </div>
+</template>
+
+
+<style lang="less">
+
+</style>

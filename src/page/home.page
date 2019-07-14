@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <div class="box">
-      <temple class="button-item" :click="owo.go('button', 'moveToLeft', 'moveFromRight', 'moveToRight', 'moveFromLeft')" name="waterRipple" text="页面切换效果" src="./src/module/waterRipple.owo"></temple>
+      <!-- 文字字体 -->
+      <temple class="button-item" :click="owo.go('font', 'moveToTop', 'moveFromBottom', 'moveToBottom', 'moveFromTop')" name="line" text="文字字体" src="./src/module/button/line.owo"></temple>
+      <temple class="button-item" :click="owo.go('switch', 'moveToLeft', 'moveFromRight', 'moveToRight', 'moveFromLeft')" name="line" text="页面切换效果" src="./src/module/button/line.owo"></temple>
+      <!-- 按钮 -->
+      <temple class="button-item" :click="owo.go('button', 'moveToLeft', 'moveFromRight', 'moveToRight', 'moveFromLeft')" name="line" text="按钮" src="./src/module/button/line.owo"></temple>
     </div>
   </div>
 </template>
@@ -18,11 +22,4 @@
 
 
 <style lang="less">
-.box {
-  margin: 0 auto;
-  width: 80%;
-}
-.button-item {
-  margin: 10px 0;
-}
 </style>

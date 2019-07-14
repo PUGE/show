@@ -1,0 +1,15 @@
+<template>
+  <div class="button">
+    <div class="box">
+      <!-- 水波纹按钮 -->
+      <temple class="button-item" name="waterRipple" text="水波纹按钮111" src="./src/module/waterRipple.owo"></temple>
+      <!-- 炫彩按钮 -->
+      <temple class="button-item" name="color" text="炫彩按钮111" src="./src/module/color.owo"></temple>
+    </div>
+  </div>
+</template>
+
+
+<style lang="less">
+
+</style>

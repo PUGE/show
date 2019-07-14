@@ -1,28 +1,21 @@
 <template>
   <div class="button">
     <div class="box">
-      <temple class="button-item" name="waterRipple" text="水波纹按钮" src="./src/module/waterRipple.owo"></temple>
+      <!-- 单线按钮 -->
+      <temple class="button-item" name="line" text="单线按钮" src="./src/module/button/line.owo"></temple>
+      <!-- 单线按钮 -->
+      <temple class="button-item" name="colorLine" text="边框按钮" src="./src/module/button/colorLine.owo"></temple>
+      <!-- 炫彩按钮 -->
+      <temple class="button-item" name="color" text="炫彩按钮" src="./src/module/color.owo"></temple>
+      <!-- 立体按钮 -->
+      <temple class="button-item" name="3d" text="立体按钮" src="./src/module/button/3d.owo"></temple>
+      <!-- 水波纹按钮 -->
+      <temple class="button-item" name="waterRipple" text="水波纹特效" src="./src/module/waterRipple.owo"></temple>
     </div>
   </div>
 </template>
 
-<script>
-  module.exports = {
-    data: {
-    },
-    created: function () {
-
-    }
-  }
-</script>
-
 
 <style lang="less">
-.box {
-  margin: 0 auto;
-  width: 80%;
-}
-.button-item {
-  margin: 10px 0;
-}
+
 </style>

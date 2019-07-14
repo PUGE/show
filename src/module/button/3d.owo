@@ -1,0 +1,27 @@
+<template>
+  <div class="flat-button">
+    <span>{{prop.text}}</span>
+  </div>
+</template>
+
+<style>
+.flat-button {
+  background: #1abc9c;
+  border-bottom: #16a085 3px solid;
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+  line-height: 47px;
+}
+
+.flat-button:hover {
+ opacity:0.8; 
+}
+
+.flat-button:active {
+  background: #18B495;
+  border-bottom-color: transparent;
+  transform: translate(0, 3px);
+}
+
+</style>
