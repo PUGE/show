@@ -33,7 +33,7 @@ a {
   margin: 0 auto;
   padding: 10px 10%;
   overflow: auto;
-  height: calc(100% - 40px);
+  height: calc(100% - 20px);
 }
 .button-item {
   margin-bottom: 10px;
@@ -81,4 +81,5 @@ a {
   text-align: center;
   margin: 0;
   padding: 0;
+  margin-bottom: 40px;
 }

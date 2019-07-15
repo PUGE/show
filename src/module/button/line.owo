@@ -13,5 +13,8 @@
   text-align: center;
   border: 2px solid #3bb1d5;
 }
-
+.line-button:active {
+  background: #3bb1d5;
+  color: white;
+}
 </style>
