@@ -6,6 +6,8 @@
       <temple class="button-item" :click="owo.go('switch', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" name="line" text="页面切换效果" src="./src/module/button/line.owo"></temple>
       <!-- 按钮 -->
       <temple class="button-item" :click="owo.go('button', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')" name="line" text="按钮" src="./src/module/button/line.owo"></temple>
+      <!-- 轮播图 -->
+      <temple class="button-item" :click="owo.go('swiper', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')" name="line" text="按钮" src="./src/module/button/line.owo"></temple>
       <!-- 趣动logo -->
       <img class="logo" src="@|logo.png|"/>
     </div>

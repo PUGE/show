@@ -1,0 +1,20 @@
+<template>
+  <div class="container">
+    <temple name="flip" src="./src/module/swiper/flip.owo"></temple>
+  </div>
+</template>
+
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: function () {
+
+    }
+  }
+</script>
+
+<style lang="less">
+
+</style>

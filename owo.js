@@ -125,6 +125,10 @@ module.exports = {
     {
       name: 'exhibition',
       src: './src/page/exhibition.owo'
+    },
+    {
+      name: 'swiper',
+      src: './src/page/swiper.owo'
     }
   ],
   // 调试模式配置
