@@ -5,3 +5,6 @@ yarn.lock
 ozzx.log
 owo.log
 owo_modules
+*.otf
+*.ttc
+*.ttf

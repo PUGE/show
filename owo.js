@@ -79,9 +79,22 @@ module.exports = {
     }
   ],
   // 使用到的外部脚本清单
-  scriptList: [],
+  scriptList: [
+    {
+      name: "main",
+      src: "./src/main.js"
+    },
+    {
+      name: "swiper-3.4.2",
+      src: "./src/resource/swiper.min.js"
+    }
+  ],
   // 使用到的样式列表
   styleList: [
+    {
+      name: "swiper-3.4.2",
+      src: "./src/resource/swiper.min.css"
+    },
     {
       resource: true,
       name: "main",
@@ -153,16 +166,15 @@ module.exports = {
     // 基础目录
     basePath: './',
     // 外链警告
-    alertLink: true,
+    alertLink: false,
     // 输出配置
     outPut: {
       // 是否将主要css, js合并到html中
       merge: false,
-      alertLink: true,
       // 是否压缩css
-      minifyCss: false,
+      minifyCss: true,
       // 是否压缩js
-      minifyJs: false,
+      minifyJs: true,
       // 输出文件自动追加版本号，可以用来消除缓存
       addVersion: true,
       // 小于多大的资源会嵌入到代码中,单位kb,默认10,设置为0则不启用

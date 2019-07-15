@@ -41,11 +41,15 @@
       <temple text="向上飞出/向左飞入" class="button-item" :click="owo.go('exhibition', 'rotateCarouselTopOut&&ontop', 'rotateCarouselTopIn', 'rotateCarouselBottomOut&&ontop', 'rotateCarouselBottomIn')" name="line" src="./src/module/button/line.owo"></temple>
       <temple text="向左翻转/向左翻转" class="button-item" :click="owo.go('exhibition', 'rotateSidesOut&&ontop', 'rotateSidesIn&&delay200', 'rotateSidesOut&&ontop', 'rotateSidesIn&&delay200')" name="line" src="./src/module/button/line.owo"></temple>
     </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
 
 
 
 <style lang="less">
-
+.switch {
+  background-image: linear-gradient(to top, #fddb92 0%, #8ffaff 100%);
+}
 </style>

@@ -1,0 +1,55 @@
+<template>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="http://www.people.com.cn/NMediaFile/2019/0715/MAIN201907150934246380428030916.jpg"/></div>
+      <div class="swiper-slide"><img src="http://culture.people.com.cn/NMediaFile/2019/0706/MAIN201907061606184511014633123.jpg"/></div>
+      <div class="swiper-slide"><img src="http://ent.people.com.cn/NMediaFile/2019/0709/MAIN201907090850000450350387315.jpg"/></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      new Swiper(this.$el, {
+        autoplay: true,
+        pagination: {
+          el: '.swiper-pagination',
+        }
+      })
+    }
+  }
+</script>
+
+<style lang="less">
+.swiper-container {
+  width: 100%;
+  height: 60vw;
+  .swiper-pagination {
+    bottom: 5px;
+    left: unset;
+    right: 5px;
+  }
+}
+.swiper-slide {
+  position: relative;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiper-pagination {
+  text-align: right;
+}
+.swiper-pagination-bullet {
+  background-color: white;
+  opacity: 0.8;
+}
+.swiper-pagination-bullet-active {
+  background-color: #009fe9;
+}
+
+</style>

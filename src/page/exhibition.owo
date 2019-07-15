@@ -1,6 +1,14 @@
 <template>
   <div class="exhibition">
-    <div class="box"></div>
+    <temple class="swiper-item" name="swiper" src="./src/module/swiper.owo"></temple>
+    <div class="box">
+      <div class="card" font="FZKATJW.TTF">
+        <p>三星首尔医院一项历时十年的研究显示，高收入群体的生存率高于低收入群体，而收入水平上升能够降低心脑血管疾病死亡率。</p>
+        <p>该院心内科研究团队根据2002—2013年间韩国国民健康保险公团数据对近18万韩国人的收入、体检记录和死因进行了分析。研究筛选了定期体检且没有缺血性心脏病、脑中风、心力衰竭、癌症等病史的数据。研究初始以2002年年收入为准，将研究对象分为高、中、低收入三个群体。</p>
+      </div>
+    </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
 
@@ -9,5 +17,15 @@
 <style lang="less">
 .exhibition {
   background-color: #009fe9;
+}
+.box {
+  height: calc(100% - 326px);
+  overflow: hidden;
+  margin: 10px auto;
+  color: white;
+  font-size: 20px;
+}
+p {
+  text-indent: 2em;
 }
 </style>

@@ -11,11 +11,17 @@
       <temple class="button-item" name="3d" text="立体按钮" src="./src/module/button/3d.owo"></temple>
       <!-- 水波纹按钮 -->
       <temple class="button-item" name="waterRipple" text="水波纹特效" src="./src/module/waterRipple.owo"></temple>
+      <!-- 更多内容不断补充中 -->
+      <div class="supplement">更多内容正在持续补充中!</div>
     </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
 
 
 <style lang="less">
-
+.button {
+  background-image: linear-gradient(to top, #fddb92 0%, #8ffaff 100%);
+}
 </style>

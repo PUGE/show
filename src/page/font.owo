@@ -1,15 +1,88 @@
 <template>
-  <div class="button">
+  <div class="font">
     <div class="box">
-      <!-- 水波纹按钮 -->
-      <temple class="button-item" name="waterRipple" text="水波纹按钮111" src="./src/module/waterRipple.owo"></temple>
-      <!-- 炫彩按钮 -->
-      <temple class="button-item" name="color" text="炫彩按钮111" src="./src/module/color.owo"></temple>
+      <p font="FZHZGBJW.TTF"><i>方正汉真广标简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZKATJW.TTF"><i>方正卡通简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZLTCHJW.TTF"><i>方正兰亭粗黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZLTHJW.TTF"><i>方正兰亭黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZXSHJW.TTF"><i>方正细珊瑚简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZYBKSJW.TTF"><i>方正硬笔楷书简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZZBHJW.TTF"><i>方正毡笔黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZZCHJW.TTF"><i>方正正粗黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZZXHJW.TTF"><i>方正纤黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZZZHONGJW.TTF"><i>方正正中黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <!-- 华康字体 -->
+      <!-- <p font="DFBuDingGB-W12.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFCaiDaiGB-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFChuSC24-W4.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFFangYuanGB-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFGangBiGB-W2.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFGBHNT5.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBHNT7.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBHZP3.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBHZP5.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBL7.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBMO9.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBYK7.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFHaiBaoGB-W12.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHannotateGB-W5.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHannotateGB-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHanziPenGB-W3.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHanziPenGB-W5.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W3.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W5.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W9.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W12.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFJinWenGB-W3.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFKaiGB-W5.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFKanTingLiuGB-W9.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLangManFengSC24-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLangManHuiSC24-W9.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLianLianSC24-W4.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLiJinHeiGB-W8.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLiuYeSC24-W3.otf"><i>11111111111111111</i>文字</p> -->
+      <!-- 华康新增字体 -->
+      <!-- <p font="DFLianLianSC24-W2.otf"><i>华康连连体-w2</i>文字</p>
+      <p font="DFLiuLi-SC24-W7.otf"><i>华康流隶体-w7</i>文字</p>
+      <p font="DFLiuLiuSC24-W7.otf"><i>华康溜溜体-w7</i>文字</p>
+      <p font="DFPingJuSC24-W7.otf"><i>华康平剧体-w7</i>文字</p>
+      <p font="DFPiPiSC24-W5.otf"><i>华康皮皮体-w5</i>文字</p>
+      <p font="DFQianLongXingSC24-W7.otf"><i>华康乾隆行楷-w7</i>文字</p>
+      <p font="DFXiangLeZhuSC24-W12.otf"><i>华康享乐猪体-w12</i>文字</p>
+      <p font="DFXinDongSC24-W4.otf"><i>华康心动体-w4</i>文字</p>
+      <p font="DFXingKaiSC24-W5.otf"><i>华康行楷体-w5</i>文字</p>
+      <p font="DFYuanYuan-SC24-W2.otf"><i>华康圆缘体-w2</i>文字</p>
+      <p font="DFZhouXingSC24-W3.otf"><i>华康周氏行楷-w3</i>文字</p> -->
+
+      <!-- 更多内容不断补充中 -->
+      <div class="supplement">更多内容正在持续补充中!</div>
     </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
 
 
 <style lang="less">
-
+.font {
+  background-image: linear-gradient(to top, #fddb92 0%, #8ffaff 100%);
+}
+p {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  padding-bottom: 20px;
+  box-shadow: 3px 3px 5px #888888;
+}
+i {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-family: none;
+  font-size: 12px;
+  font-style: normal;
+  color: #ccc;
+}
 </style>
