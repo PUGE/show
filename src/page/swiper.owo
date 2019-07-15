@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <temple name="flip" src="./src/module/swiper/flip.owo"></temple>
+    <temple name="flip" direction="x" src="./src/module/swiper/flip.owo"></temple>
+    <temple name="flip" direction="y" src="./src/module/swiper/flip.owo"></temple>
   </div>
 </template>
 
