@@ -1,0 +1,22 @@
+<template>
+  <div class="three-dimensional page">
+    <div class="box">
+      <p class="title">360° 模型</p>
+      <iframe class="three-dimensional-item" src="https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/"></iframe>
+      <p class="title">360° 图片</p>
+      <iframe class="three-dimensional-item" src="https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/"></iframe>
+    </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="@|logo.png|"/>
+  </div>
+</template>
+
+
+<style lang="less">
+iframe {
+  border: none;
+  height: 170px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+</style>

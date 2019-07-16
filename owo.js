@@ -129,6 +129,14 @@ module.exports = {
     {
       name: 'swiper',
       src: './src/page/swiper.owo'
+    },
+    {
+      name: '3d',
+      src: './src/page/3d.owo'
+    },
+    {
+      name: 'enter',
+      src: './src/page/enter.owo'
     }
   ],
   // 调试模式配置

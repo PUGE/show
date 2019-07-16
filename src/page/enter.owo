@@ -1,0 +1,29 @@
+<template>
+  <div class="three-dimensional page">
+    <!-- 趣动logo -->
+    <img class="show-logo" src="@|logo.png|"/>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: function () {
+      owo.tool.animate('bounce', this.query('.show-logo')[0])
+    }
+  }
+</script>
+
+<style lang="less">
+.show-logo {
+  position: absolute;
+  height: 30vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+</style>

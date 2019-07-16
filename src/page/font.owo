@@ -1,5 +1,5 @@
 <template>
-  <div class="font">
+  <div class="font page">
     <div class="box">
       <p font="FZHZGBJW.TTF"><i>方正汉真广标简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
       <p font="FZKATJW.TTF"><i>方正卡通简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
@@ -65,9 +65,6 @@
 
 
 <style lang="less">
-.font {
-  background-image: linear-gradient(to top, #fddb92 0%, #8ffaff 100%);
-}
 p {
   background-color: white;
   padding: 10px;

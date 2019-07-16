@@ -83,3 +83,7 @@ a {
   padding: 0;
   margin-bottom: 40px;
 }
+
+.page {
+  background-image: linear-gradient(to top, #fddb92 0%, #8ffaff 100%);
+}

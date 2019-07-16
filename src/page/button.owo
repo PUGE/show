@@ -1,5 +1,5 @@
 <template>
-  <div class="button">
+  <div class="button page">
     <div class="box">
       <!-- 单线按钮 -->
       <temple class="button-item" name="line" text="单线按钮" src="./src/module/button/line.owo"></temple>
@@ -18,10 +18,3 @@
     <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
-
-
-<style lang="less">
-.button {
-  background-image: linear-gradient(to top, #fddb92 0%, #8ffaff 100%);
-}
-</style>
