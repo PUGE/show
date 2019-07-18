@@ -163,6 +163,7 @@ module.exports = {
       minifyJs: false,
       // 输出文件自动追加版本号，可以用来消除缓存
       addVersion: false,
+      allAnimate: true
     },
     serverPort: 8000,
     // 静态文件服务
@@ -190,7 +191,9 @@ module.exports = {
       // 输出文件自动追加版本号，可以用来消除缓存
       addVersion: true,
       // 小于多大的资源会嵌入到代码中,单位kb,默认10,设置为0则不启用
-      embedSize: 1
+      embedSize: 1,
+      // 输出所有动画效果
+      allAnimate: true
     }
   }
 }

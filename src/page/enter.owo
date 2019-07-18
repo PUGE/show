@@ -1,7 +1,84 @@
 <template>
   <div class="three-dimensional page">
     <!-- 趣动logo -->
-    <img class="show-logo" src="@|logo.png|"/>
+    <div class="logo-box">
+      <img class="show-logo" src="@|logo.png|"/>
+    </div>
+    <!-- 按钮列表 -->
+    <div class="dimensional-button-box">
+      <div class="dimensional-title clear">动画</div>
+      <div class="dimensional-button-item" :click="animate('bounce')">反弹</div>
+      <div class="dimensional-button-item" :click="animate('flash')">闪烁</div>
+      <div class="dimensional-button-item" :click="animate('pulse')">脉冲</div>
+      <div class="dimensional-button-item" :click="animate('rubberBand')">橡皮筋</div>
+      <div class="dimensional-button-item" :click="animate('shake')">抖动</div>
+      <div class="dimensional-button-item" :click="animate('swing')">摆动</div>
+      <div class="dimensional-button-item" :click="animate('tada')">tada</div>
+      <div class="dimensional-button-item" :click="animate('wobble')">晃动</div>
+      <div class="dimensional-title clear">弹性进场</div>
+      <div class="dimensional-button-item" :click="animate('bounceIn')">前进</div>
+      <div class="dimensional-button-item" :click="animate('bounceInDown')">下落</div>
+      <div class="dimensional-button-item" :click="animate('bounceInLeft')">左侧</div>
+      <div class="dimensional-button-item" :click="animate('bounceInRight')">右侧</div>
+      <div class="dimensional-button-item" :click="animate('bounceInUp')">升起</div>
+      <div class="dimensional-title clear">弹性离场</div>
+      <div class="dimensional-button-item" :click="animate('bounceOut')">后退</div>
+      <div class="dimensional-button-item" :click="animate('bounceOutDown')">下落</div>
+      <div class="dimensional-button-item" :click="animate('bounceOutLeft')">左侧</div>
+      <div class="dimensional-button-item" :click="animate('bounceOutRight')">右侧</div>
+      <div class="dimensional-button-item" :click="animate('bounceOutUp')">升起</div>
+      <div class="dimensional-title clear">淡入进场</div>
+      <div class="dimensional-button-item" :click="animate('fadeIn')">前进</div>
+      <div class="dimensional-button-item" :click="animate('fadeInDown')">下落</div>
+      <div class="dimensional-button-item" :click="animate('fadeInDownBig')">下落2</div>
+      <div class="dimensional-button-item" :click="animate('fadeInLeft')">左侧</div>
+      <div class="dimensional-button-item" :click="animate('fadeInLeftBig')">左侧2</div>
+      <div class="dimensional-button-item" :click="animate('fadeInRight')">右侧</div>
+      <div class="dimensional-button-item" :click="animate('fadeInRightBig')">右侧2</div>
+      <div class="dimensional-button-item" :click="animate('fadeInUp')">升起</div>
+      <div class="dimensional-button-item" :click="animate('fadeInUpBig')">升起2</div>
+      <div class="dimensional-title clear">翻转</div>
+      <div class="dimensional-button-item" :click="animate('flip')">翻转</div>
+      <div class="dimensional-button-item" :click="animate('flipInX')">横向进场</div>
+      <div class="dimensional-button-item" :click="animate('flipInY')">纵向进场</div>
+      <div class="dimensional-button-item" :click="animate('flipOutX')">横向离场</div>
+      <div class="dimensional-button-item" :click="animate('flipOutY')">纵向离场</div>
+      <div class="dimensional-title clear">加速</div>
+      <div class="dimensional-button-item" :click="animate('lightSpeedIn')">减速进场</div>
+      <div class="dimensional-button-item" :click="animate('lightSpeedOut')">加速离场</div>
+      <div class="dimensional-title clear">旋转</div>
+      <div class="dimensional-button-item" :click="animate('rotateIn')">旋转入场</div>
+      <div class="dimensional-button-item" :click="animate('rotateInDownLeft')">左侧入场</div>
+      <div class="dimensional-button-item" :click="animate('rotateInDownRight')">右侧入场</div>
+      <div class="dimensional-button-item" :click="animate('rotateOutUpLeft')">左侧离场</div>
+      <div class="dimensional-button-item" :click="animate('rotateOutUpRight')">右侧离场</div>
+      <div class="dimensional-title clear">滑行入场</div>
+      <div class="dimensional-button-item" :click="animate('slideInUp')">升起</div>
+      <div class="dimensional-button-item" :click="animate('slideInDown')">下落</div>
+      <div class="dimensional-button-item" :click="animate('slideInLeft')">左侧</div>
+      <div class="dimensional-button-item" :click="animate('slideInRight')">右侧</div>
+      <div class="dimensional-title clear">滑行离场</div>
+      <div class="dimensional-button-item" :click="animate('slideOutUp')">升起</div>
+      <div class="dimensional-button-item" :click="animate('slideOutDown')">下落</div>
+      <div class="dimensional-button-item" :click="animate('slideOutLeft')">左侧</div>
+      <div class="dimensional-button-item" :click="animate('slideOutRight')">右侧</div>
+      <div class="dimensional-title clear">缩放入场</div>
+      <div class="dimensional-button-item" :click="animate('zoomIn')">前进</div>
+      <div class="dimensional-button-item" :click="animate('zoomInUp')">升起</div>
+      <div class="dimensional-button-item" :click="animate('zoomInDown')">下落</div>
+      <div class="dimensional-button-item" :click="animate('zoomInLeft')">左侧</div>
+      <div class="dimensional-button-item" :click="animate('zoomInRight')">右侧</div>
+      <div class="dimensional-title clear">缩放离场</div>
+      <div class="dimensional-button-item" :click="animate('zoomOut')">后退</div>
+      <div class="dimensional-button-item" :click="animate('zoomOutUp')">升起</div>
+      <div class="dimensional-button-item" :click="animate('zoomOutDown')">下落</div>
+      <div class="dimensional-button-item" :click="animate('zoomOutLeft')">左侧</div>
+      <div class="dimensional-button-item" :click="animate('zoomOutRight')">右侧</div>
+      <div class="dimensional-title clear">特殊</div>
+      <div class="dimensional-button-item" :click="animate('hinge')">铰链</div>
+      <div class="dimensional-button-item" :click="animate('rollIn')">滚入</div>
+      <div class="dimensional-button-item" :click="animate('rollOut')">滚出</div>
+    </div>
   </div>
 </template>
 
@@ -10,20 +87,52 @@
     data: {
     },
     created: function () {
-      owo.tool.animate('bounce', this.query('.show-logo')[0])
+      
+    },
+    animate: function (name) {
+      owo.tool.animate(name, this.query('.show-logo')[0])
     }
   }
 </script>
 
 <style lang="less">
+.logo-box {
+  height: 20%;
+  width: 100%;
+  overflow: hidden;
+}
 .show-logo {
-  position: absolute;
-  height: 30vw;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  height: 100%;
   z-index: -1;
   pointer-events: none;
+  display: block;
+  margin: 0 auto;
+}
+.dimensional-button-box {
+  height: 80%;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  overflow: auto;
+}
+.dimensional-button-item {
+  display: block;
+  float: left;
+  width: 44%;
+  height: 10vw;
+  text-align: center;
+  line-height: 10vw;
+  color: white;
+  margin: 5px 3%;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #00a9e7;
+  border: 1px solid #0096ce;
+  box-sizing: border-box;
+}
+.dimensional-title {
+  color: #333;
+  line-height: 40px;
+  padding: 0 4%;
 }
 </style>
