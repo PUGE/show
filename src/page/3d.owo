@@ -2,14 +2,25 @@
   <div class="three-dimensional page">
     <div class="box">
       <p class="title">360° 模型</p>
-      <iframe class="three-dimensional-item" src="https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/"></iframe>
+      <iframe class="three-dimensional-item"></iframe>
       <p class="title">360° 图片</p>
-      <iframe class="three-dimensional-item" src="https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/"></iframe>
+      <iframe class="three-dimensional-item"></iframe>
     </div>
     <!-- 趣动logo -->
     <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
+
+<script>
+module.exports = {
+  created: function () {
+    const dimensionalList = this.query('.three-dimensional-item')
+    dimensionalList[0].src = 'https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/'
+    dimensionalList[1].src = 'https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/'
+  }
+}
+</script>
+
 
 
 <style lang="less">

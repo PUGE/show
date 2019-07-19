@@ -109,11 +109,12 @@
   margin: 0 auto;
 }
 .dimensional-button-box {
-  height: 80%;
+  height: 78%;
   position: absolute;
   top: 20%;
-  width: 100%;
+  width: 96%;
   overflow: auto;
+  margin: 0 2%;
 }
 .dimensional-button-item {
   display: block;
