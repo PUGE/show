@@ -1,6 +1,8 @@
 <template>
   <div class="three-dimensional page">
     <div class="box">
+      <p class="title">3D文字</p>
+      <temple class="3d-text" name="3dtext" src="./src/module/3d/text.owo"></temple>
       <p class="title">360° 模型</p>
       <iframe class="three-dimensional-item"></iframe>
       <p class="title">360° 图片</p>

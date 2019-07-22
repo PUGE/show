@@ -1,6 +1,8 @@
 <template>
   <div class="swiper page">
     <div class="box">
+      <p class="title">经典轮播</p>
+      <temple class="swiper-item" name="swiper" src="./src/module/swiper.owo"></temple>
       <p class="title">左右翻转</p>
       <temple name="flip" direction="x" src="./src/module/swiper/flip.owo"></temple>
       <p class="title">上下翻转</p>
