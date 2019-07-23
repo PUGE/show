@@ -18,3 +18,19 @@
     <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: function () {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      })
+    }
+  }
+</script>

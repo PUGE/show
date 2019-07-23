@@ -27,14 +27,13 @@ a {
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
   min-height: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .box {
   margin: 0 auto;
   padding: 10px 10%;
-  overflow: auto;
-  height: calc(100% - 20px);
+  overflow: hidden;
 }
 .button-item {
   margin-bottom: 10px;
@@ -87,4 +86,5 @@ a {
 
 .page {
   background-image: linear-gradient(to top, #fddb92 0%, #8ffaff 100%);
+  overflow: hidden;
 }

@@ -19,6 +19,13 @@ module.exports = {
     const dimensionalList = this.query('.three-dimensional-item')
     dimensionalList[0].src = 'https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/'
     dimensionalList[1].src = 'https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/'
+    new IScroll(this.query('.scroll-box')[0], {
+      scrollbars: true,
+      mouseWheel: true,
+      interactiveScrollbars: true,
+      shrinkScrollbars: 'scale',
+      fadeScrollbars: true
+    })
   }
 }
 </script>

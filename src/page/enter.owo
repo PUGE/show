@@ -79,6 +79,7 @@
         <div class="dimensional-button-item" :click="animate('hinge')">铰链</div>
         <div class="dimensional-button-item" :click="animate('rollIn')">滚入</div>
         <div class="dimensional-button-item" :click="animate('rollOut')">滚出</div>
+        <div class="clear"></div>
       </div>
     </div>
     
@@ -91,7 +92,11 @@
     },
     created: function () {
       new IScroll(this.query('.scroll-box')[0], {
-        scrollbars: true
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
       })
     },
     animate: function (name) {

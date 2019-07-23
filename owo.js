@@ -89,8 +89,8 @@ module.exports = {
       src: "./src/resource/swiper.min.js"
     },
     {
-      name: "iscroll-lite",
-      src: "./src/resource/iscroll-lite.js"
+      name: "iscroll",
+      src: "./src/resource/iscroll.js"
     }
   ],
   // 使用到的样式列表
