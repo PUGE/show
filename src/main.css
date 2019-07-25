@@ -88,3 +88,10 @@ a {
   background-image: linear-gradient(to top, #fddb92 0%, #8ffaff 100%);
   overflow: hidden;
 }
+
+iframe {
+  border: none;
+  height: 170px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}

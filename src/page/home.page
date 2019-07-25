@@ -11,8 +11,12 @@
       <temple class="button-item" :click="owo.go('button', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')" name="line" text="按钮" src="./src/module/button/line.owo"></temple>
       <!-- 轮播图 -->
       <temple class="button-item" :click="owo.go('swiper', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')" name="line" text="轮播图" src="./src/module/button/line.owo"></temple>
-      <!-- VR/3D -->
-      <temple class="button-item" :click="owo.go('3d', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')" name="line" text="VR/3D" src="./src/module/button/line.owo"></temple>
+      <!-- 3D -->
+      <temple class="button-item" :click="owo.go('dimensional', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')" name="line" text="3D" src="./src/module/button/line.owo"></temple>
+      <!-- vr -->
+      <temple class="button-item" :click="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/index.html')" name="line" text="VR" src="./src/module/button/line.owo"></temple>
+      <!-- 360° 图片 -->
+      <temple class="button-item" :click="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/360.html')" name="line" text="全景图片" src="./src/module/button/line.owo"></temple>
       <!-- 趣动logo -->
       <img class="logo" src="@|logo.png|"/>
     </div>
@@ -23,8 +27,8 @@
   module.exports = {
     data: {
     },
-    created: function () {
-
+    turn: function (url) {
+      window.location.href = url
     }
   }
 </script>

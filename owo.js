@@ -135,7 +135,7 @@ module.exports = {
       src: './src/page/swiper.owo'
     },
     {
-      name: '3d',
+      name: 'dimensional',
       src: './src/page/3d.owo'
     },
     {

@@ -1,8 +1,6 @@
 <template>
   <div class="three-dimensional page">
     <div class="box">
-      <p class="title">3D文字</p>
-      <temple class="3d-text" name="3dtext" src="./src/module/3d/text.owo"></temple>
       <p class="title">360° 模型</p>
       <iframe class="three-dimensional-item"></iframe>
       <p class="title">360° 图片</p>
@@ -19,13 +17,6 @@ module.exports = {
     const dimensionalList = this.query('.three-dimensional-item')
     dimensionalList[0].src = 'https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/'
     dimensionalList[1].src = 'https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/'
-    new IScroll(this.query('.scroll-box')[0], {
-      scrollbars: true,
-      mouseWheel: true,
-      interactiveScrollbars: true,
-      shrinkScrollbars: 'scale',
-      fadeScrollbars: true
-    })
   }
 }
 </script>
