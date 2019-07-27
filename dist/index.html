@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>页面</title>
+  <!-- 页面的元信息 -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-orientation" content="portrait" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.main.mtd7km5aur.css">
+  <!-- 附属css文件 -->
+  <link rel="stylesheet" href="./static/css/swiper-3.4.2.css" charset="utf-8">
+  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+  <link rel="stylesheet" href="./static/css/owo.animation.mtd7km5aur.css">
+  <link rel="stylesheet" href="./static/css/owo.animate.mtd7km5aur.css">
+</head>
+
+<body>
+  <!-- 页面区域 -->
+  <div class="home page ox" template="home" style="display: none;">
+    <div class="box">
+      <!-- 文字字体 -->
+      <div class="line-button button-item" :click="owo.go('font', 'rotateCubeLeftOut', 'rotateCubeLeftIn', 'rotateCubeRightOut', 'rotateCubeRightIn')" template="line">
+        <span>文字字体</span>
+      </div>
+      <!-- 入场效果 -->
+      <div class="line-button button-item" :click="owo.go('enter', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" template="line1">
+        <span>入场效果</span>
+      </div>
+      <!-- 页面切换效果 -->
+      <div class="line-button button-item" :click="owo.go('switch', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" template="line2">
+        <span>页面切换效果</span>
+      </div>
+      <!-- 按钮 -->
+      <div class="line-button button-item" :click="owo.go('button', 'flipOutRight', 'flipInLeft&amp;&amp;delay500', 'flipOutLeft', 'flipInRight&amp;&amp;delay500')" template="line3">
+        <span>按钮</span>
+      </div>
+      <!-- 轮播图 -->
+      <div class="line-button button-item" :click="owo.go('swiper', 'flipOutRight', 'flipInLeft&amp;&amp;delay500', 'flipOutLeft', 'flipInRight&amp;&amp;delay500')" template="line4">
+        <span>轮播图</span>
+      </div>
+      <!-- 3D -->
+      <div class="line-button button-item" :click="owo.go('dimensional', 'rotateCarouselLeftOut&amp;&amp;ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&amp;&amp;ontop', 'rotateCarouselRightIn')" template="line5">
+        <span>3D/VR</span>
+      </div>
+      <!-- 趣动logo -->
+      <img class="logo" src="./static/resource/logo.png">
+    </div>
+  </div>
+  <div class="button page ox" template="button" style="display: none;">
+    <div class="box">
+      <!-- 单线按钮 -->
+      <div class="line-button button-item" template="line">
+        <span>单线按钮</span>
+      </div>
+      <!-- 单线按钮 -->
+      <div class="line-button-2 button-item" template="colorLine">
+        <span>边框按钮</span>
+      </div>
+      <!-- 炫彩按钮 -->
+      <div class="color-button button-item" template="color">
+        <span>炫彩按钮</span>
+      </div>
+      <!-- 立体按钮 -->
+      <div class="flat-button button-item" template="3d">
+        <span>立体按钮</span>
+      </div>
+      <!-- 水波纹按钮 -->
+      <div class="ripple button-item" template="waterRipple">
+        <span>水波纹特效</span>
+      </div>
+      <!-- 更多内容不断补充中 -->
+      <div class="supplement">更多内容正在持续补充中!</div>
+    </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="./static/resource/logo.png">
+  </div>
+  <div class="font page ox" template="font" style="display: none;">
+    <div class="box">
+      <p font="FZHZGBJW.TTF"><i>方正汉真广标简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZKATJW.TTF"><i>方正卡通简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZLTCHJW.TTF"><i>方正兰亭粗黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZLTHJW.TTF"><i>方正兰亭黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZXSHJW.TTF"><i>方正细珊瑚简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZYBKSJW.TTF"><i>方正硬笔楷书简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZZBHJW.TTF"><i>方正毡笔黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZZCHJW.TTF"><i>方正正粗黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZZXHJW.TTF"><i>方正纤黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <p font="FZZZHONGJW.TTF"><i>方正正中黑简体</i>今年8月，LGD在广州铺设的8.5G生产线即将投产，这条产线主要定位于超高清OLED电视大型面板，基板尺寸2200×2500mm，计划每月产能6万片。华星光电在深圳也铺设了一条11G生产线OLED基板计划产能为每月2万片，其中还规划了喷墨印刷OLED工艺的产能。</p>
+      <!-- 华康字体 -->
+      <!-- <p font="DFBuDingGB-W12.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFCaiDaiGB-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFChuSC24-W4.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFFangYuanGB-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFGangBiGB-W2.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFGBHNT5.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBHNT7.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBHZP3.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBHZP5.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBL7.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBMO9.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFGBYK7.ttc"><i>11111111111111111</i>文字</p>
+      <p font="DFHaiBaoGB-W12.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHannotateGB-W5.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHannotateGB-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHanziPenGB-W3.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHanziPenGB-W5.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W3.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W5.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W9.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFHeiGB-W12.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFJinWenGB-W3.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFKaiGB-W5.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFKanTingLiuGB-W9.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLangManFengSC24-W7.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLangManHuiSC24-W9.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLianLianSC24-W4.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLiJinHeiGB-W8.otf"><i>11111111111111111</i>文字</p>
+      <p font="DFLiuYeSC24-W3.otf"><i>11111111111111111</i>文字</p> -->
+      <!-- 华康新增字体 -->
+      <!-- <p font="DFLianLianSC24-W2.otf"><i>华康连连体-w2</i>文字</p>
+      <p font="DFLiuLi-SC24-W7.otf"><i>华康流隶体-w7</i>文字</p>
+      <p font="DFLiuLiuSC24-W7.otf"><i>华康溜溜体-w7</i>文字</p>
+      <p font="DFPingJuSC24-W7.otf"><i>华康平剧体-w7</i>文字</p>
+      <p font="DFPiPiSC24-W5.otf"><i>华康皮皮体-w5</i>文字</p>
+      <p font="DFQianLongXingSC24-W7.otf"><i>华康乾隆行楷-w7</i>文字</p>
+      <p font="DFXiangLeZhuSC24-W12.otf"><i>华康享乐猪体-w12</i>文字</p>
+      <p font="DFXinDongSC24-W4.otf"><i>华康心动体-w4</i>文字</p>
+      <p font="DFXingKaiSC24-W5.otf"><i>华康行楷体-w5</i>文字</p>
+      <p font="DFYuanYuan-SC24-W2.otf"><i>华康圆缘体-w2</i>文字</p>
+      <p font="DFZhouXingSC24-W3.otf"><i>华康周氏行楷-w3</i>文字</p> -->
+
+      <!-- 更多内容不断补充中 -->
+      <div class="supplement">更多内容正在持续补充中!</div>
+    </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="./static/resource/logo.png">
+  </div>
+  <div class="switch ox" template="switch" style="display: none;">
+    <div class="box">
+      <p class="title">移入/移出</p>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'moveToLeft', 'moveFromRight', 'moveToRight', 'moveFromLeft')" template="line">
+        <span>向右移出</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'moveToTop', 'moveFromBottom', 'moveToBottom', 'moveFromTop')" template="line1">
+        <span>向下移出</span>
+      </div>
+      <p class="title">淡入/淡出</p>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'fade', 'moveFromRight', 'fade', 'moveFromLeft')" template="line2">
+        <span>向右淡入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'fade', 'moveFromBottom', 'fade', 'moveFromTop')" template="line3">
+        <span>向下淡入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'moveToLeftFade', 'moveFromRightFade', 'moveToRightFade', 'moveFromLeftFade')" template="line4">
+        <span>向右淡入2</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'moveToTopFade', 'moveFromBottomFade', 'moveToBottomFade', 'moveFromTopFade')" template="line5">
+        <span>向下淡入2</span>
+      </div>
+      <p class="title">后退效果</p>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'scaleDown', 'moveFromRight', 'scaleDown', 'moveFromLeft')" template="line6">
+        <span>向后淡出/向左移入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'scaleDown', 'moveFromBottom', 'scaleDown', 'moveFromTop')" template="line7">
+        <span>向后淡出/向上移入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'scaleDown', 'scaleUpDown', 'scaleDown', 'scaleUp')" template="line8">
+        <span>向后淡出/向前淡入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'moveToLeft', 'scaleUp', 'moveToRight', 'scaleUp')" template="line9">
+        <span>向左移出/向前淡入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'moveToTop', 'scaleUp', 'moveToBottom', 'scaleUp')" template="line10">
+        <span>向上移出/向前淡入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400')" template="line11">
+        <span>向后移出/向前移入</span>
+      </div>
+      <p class="title">吸附效果</p>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateRightSideFirst', 'moveFromRight&amp;&amp;delay200', 'rotateLeftSideFirst', 'moveFromLeft&amp;&amp;delay200')" template="line12">
+        <span>左侧吸附/向左移入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateTopSideFirst', 'moveFromTop&amp;&amp;delay200', 'rotateBottomSideFirst', 'moveFromBottom&amp;&amp;delay200')" template="line13">
+        <span>下侧吸附/向下移入</span>
+      </div>
+      <p class="title">翻转效果</p>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'flipOutRight', 'flipInLeft&amp;&amp;delay500', 'flipOutLeft', 'flipInRight&amp;&amp;delay500')" template="line14">
+        <span>向右翻转/向左翻转</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'flipOutTop', 'flipInBottom&amp;&amp;delay500', 'flipOutBottom', 'flipInTop&amp;&amp;delay500')" template="line15">
+        <span>向下翻转/向向翻转</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateOutNewspaper', 'rotateInNewspaper&amp;&amp;delay500', 'rotateOutNewspaper', 'rotateInNewspaper&amp;&amp;delay500')" template="line16">
+        <span>向后螺旋/向前螺旋</span>
+      </div>
+      <p class="title">掉落效果</p>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" template="line17">
+        <span>向下掉落/向前移入</span>
+      </div>
+      <p class="title">推拉效果</p>
+      <!-- 待修复这里应该能控制什么在前 -->
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotatePushLeft', 'moveFromRight&amp;&amp;ontop', 'rotatePushRight', 'moveFromLeft&amp;&amp;ontop')" template="line18">
+        <span>向左推出/向左移入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotatePushTop', 'moveFromBottom&amp;&amp;ontop', 'rotatePushBottom', 'moveFromTop&amp;&amp;ontop')" template="line19">
+        <span>向上推出/向上移入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotatePushLeft', 'rotatePullRight&amp;&amp;ontop', 'rotatePushRight', 'rotatePullLeft&amp;&amp;ontop')" template="line20">
+        <span>向左推出/向左推入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotatePushTop', 'rotatePullBottom&amp;&amp;ontop', 'rotatePushBottom', 'rotatePullTop&amp;&amp;ontop')" template="line21">
+        <span>向上推出/向上推入</span>
+      </div>
+      <p class="title">盒子效果</p>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateRoomLeftOut&amp;&amp;ontop', 'rotateRoomLeftIn', 'rotateRoomRightOut&amp;&amp;ontop', 'rotateRoomRightIn')" template="line22">
+        <span>向左转动/向左转动</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateRoomTopOut&amp;&amp;ontop', 'rotateRoomTopIn', 'rotateRoomBottomOut&amp;&amp;ontop', 'rotateRoomBottomIn')" template="line23">
+        <span>向上转动/向上转动</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateCubeLeftOut', 'rotateCubeLeftIn', 'rotateCubeRightOut', 'rotateCubeRightIn')" template="line24">
+        <span>向右扭转/向右扭转</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateCubeTopOut', 'rotateCubeTopIn', 'rotateCubeBottomOut', 'rotateCubeBottomIn')" template="line25">
+        <span>向上扭转/向上扭转</span>
+      </div>
+      <p class="title">旋转木马</p>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateCarouselLeftOut&amp;&amp;ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&amp;&amp;ontop', 'rotateCarouselRightIn')" template="line26">
+        <span>向左飞出/向左飞入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateCarouselTopOut&amp;&amp;ontop', 'rotateCarouselTopIn', 'rotateCarouselBottomOut&amp;&amp;ontop', 'rotateCarouselBottomIn')" template="line27">
+        <span>向上飞出/向左飞入</span>
+      </div>
+      <div class="line-button button-item" :click="owo.go('exhibition', 'rotateSidesOut&amp;&amp;ontop', 'rotateSidesIn&amp;&amp;delay200', 'rotateSidesOut&amp;&amp;ontop', 'rotateSidesIn&amp;&amp;delay200')" template="line28">
+        <span>向左翻转/向左翻转</span>
+      </div>
+    </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="./static/resource/logo.png">
+  </div>
+  <div class="exhibition ox" template="exhibition" style="display: none;">
+    <div class="swiper-container swiper-item" template="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="http://www.people.com.cn/NMediaFile/2019/0715/MAIN201907150934246380428030916.jpg">
+        </div>
+        <div class="swiper-slide">
+          <img src="http://culture.people.com.cn/NMediaFile/2019/0706/MAIN201907061606184511014633123.jpg">
+        </div>
+        <div class="swiper-slide">
+          <img src="http://ent.people.com.cn/NMediaFile/2019/0709/MAIN201907090850000450350387315.jpg">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="box">
+      <div class="card" font="FZKATJW.TTF">
+        <p>三星首尔医院一项历时十年的研究显示，高收入群体的生存率高于低收入群体，而收入水平上升能够降低心脑血管疾病死亡率。</p>
+        <p>该院心内科研究团队根据2002—2013年间韩国国民健康保险公团数据对近18万韩国人的收入、体检记录和死因进行了分析。研究筛选了定期体检且没有缺血性心脏病、脑中风、心力衰竭、癌症等病史的数据。研究初始以2002年年收入为准，将研究对象分为高、中、低收入三个群体。</p>
+      </div>
+    </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="./static/resource/logo.png">
+  </div>
+  <div class="swiper page ox" template="swiper" style="display: none;">
+    <div class="box">
+      <p class="title">经典轮播</p>
+      <div class="swiper-container swiper-item" template="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="http://www.people.com.cn/NMediaFile/2019/0715/MAIN201907150934246380428030916.jpg">
+          </div>
+          <div class="swiper-slide">
+            <img src="http://culture.people.com.cn/NMediaFile/2019/0706/MAIN201907061606184511014633123.jpg">
+          </div>
+          <div class="swiper-slide">
+            <img src="http://ent.people.com.cn/NMediaFile/2019/0709/MAIN201907090850000450350387315.jpg">
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="title">左右翻转</p>
+      <div class="flip" :click="filp" template="flip">
+        <div class="front flip-item" data-text="Gongfu panda"></div>
+        <div class="back flip-item" data-text="Toy story"></div>
+      </div>
+      <p class="title">上下翻转</p>
+      <div class="flip" :click="filp" template="flip1">
+        <div class="front flip-item" data-text="Gongfu panda"></div>
+        <div class="back flip-item" data-text="Toy story"></div>
+      </div>
+    </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="./static/resource/logo.png">
+  </div>
+  <div class="three-dimensional page ox" template="dimensional" style="display: none;">
+    <div class="box">
+      <!-- 模型 -->
+      <div class="line-button button-item" :click="owo.script[owo.activePage].turn('https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/')" template="line">
+        <span>模型</span>
+      </div>
+      <!-- 全景图片 -->
+      <div class="line-button button-item" :click="owo.script[owo.activePage].turn('https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/')" template="line1">
+        <span>全景图片</span>
+      </div>
+      <!-- vr -->
+      <div class="line-button button-item" :click="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/index.html')" template="line2">
+        <span>VR</span>
+      </div>
+      <!-- 360° 图片 -->
+      <div class="line-button button-item" :click="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/360.html')" template="line3">
+        <span>全景图片2</span>
+      </div>
+      <!-- 3D模型 -->
+      <div class="line-button button-item" :click="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/model/index.html')" template="line4">
+        <span>3D模型</span>
+      </div>
+      <!-- 面部识别 -->
+      <div class="line-button button-item" :click="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/face/demos/threejs/headControls/index.html')" template="line5">
+        <span>3D模型</span>
+      </div>
+    </div>
+    <!-- 趣动logo -->
+    <img class="logo" src="./static/resource/logo.png">
+  </div>
+  <div class="three-dimensional page ox" template="enter" style="display: none;">
+    <!-- 趣动logo -->
+    <div class="logo-box">
+      <img class="show-logo" src="./static/resource/logo.png">
+    </div>
+    <!-- 按钮列表 -->
+    <div class="scroll-box">
+      <div class="dimensional-button-box">
+        <div class="dimensional-title clear">动画</div>
+        <div class="dimensional-button-item" :click="animate('bounce')">反弹</div>
+        <div class="dimensional-button-item" :click="animate('flash')">闪烁</div>
+        <div class="dimensional-button-item" :click="animate('pulse')">脉冲</div>
+        <div class="dimensional-button-item" :click="animate('rubberBand')">橡皮筋</div>
+        <div class="dimensional-button-item" :click="animate('shake')">抖动</div>
+        <div class="dimensional-button-item" :click="animate('swing')">摆动</div>
+        <div class="dimensional-button-item" :click="animate('tada')">tada</div>
+        <div class="dimensional-button-item" :click="animate('wobble')">晃动</div>
+        <div class="dimensional-title clear">弹性进场</div>
+        <div class="dimensional-button-item" :click="animate('bounceIn')">前进</div>
+        <div class="dimensional-button-item" :click="animate('bounceInDown')">下落</div>
+        <div class="dimensional-button-item" :click="animate('bounceInLeft')">左侧</div>
+        <div class="dimensional-button-item" :click="animate('bounceInRight')">右侧</div>
+        <div class="dimensional-button-item" :click="animate('bounceInUp')">升起</div>
+        <div class="dimensional-title clear">弹性离场</div>
+        <div class="dimensional-button-item" :click="animate('bounceOut')">后退</div>
+        <div class="dimensional-button-item" :click="animate('bounceOutDown')">下落</div>
+        <div class="dimensional-button-item" :click="animate('bounceOutLeft')">左侧</div>
+        <div class="dimensional-button-item" :click="animate('bounceOutRight')">右侧</div>
+        <div class="dimensional-button-item" :click="animate('bounceOutUp')">升起</div>
+        <div class="dimensional-title clear">淡入进场</div>
+        <div class="dimensional-button-item" :click="animate('fadeIn')">前进</div>
+        <div class="dimensional-button-item" :click="animate('fadeInDown')">下落</div>
+        <div class="dimensional-button-item" :click="animate('fadeInDownBig')">下落2</div>
+        <div class="dimensional-button-item" :click="animate('fadeInLeft')">左侧</div>
+        <div class="dimensional-button-item" :click="animate('fadeInLeftBig')">左侧2</div>
+        <div class="dimensional-button-item" :click="animate('fadeInRight')">右侧</div>
+        <div class="dimensional-button-item" :click="animate('fadeInRightBig')">右侧2</div>
+        <div class="dimensional-button-item" :click="animate('fadeInUp')">升起</div>
+        <div class="dimensional-button-item" :click="animate('fadeInUpBig')">升起2</div>
+        <div class="dimensional-title clear">翻转</div>
+        <div class="dimensional-button-item" :click="animate('flip')">翻转</div>
+        <div class="dimensional-button-item" :click="animate('flipInX')">横向进场</div>
+        <div class="dimensional-button-item" :click="animate('flipInY')">纵向进场</div>
+        <div class="dimensional-button-item" :click="animate('flipOutX')">横向离场</div>
+        <div class="dimensional-button-item" :click="animate('flipOutY')">纵向离场</div>
+        <div class="dimensional-title clear">加速</div>
+        <div class="dimensional-button-item" :click="animate('lightSpeedIn')">减速进场</div>
+        <div class="dimensional-button-item" :click="animate('lightSpeedOut')">加速离场</div>
+        <div class="dimensional-title clear">旋转</div>
+        <div class="dimensional-button-item" :click="animate('rotateIn')">旋转入场</div>
+        <div class="dimensional-button-item" :click="animate('rotateInDownLeft')">左侧入场</div>
+        <div class="dimensional-button-item" :click="animate('rotateInDownRight')">右侧入场</div>
+        <div class="dimensional-button-item" :click="animate('rotateOutUpLeft')">左侧离场</div>
+        <div class="dimensional-button-item" :click="animate('rotateOutUpRight')">右侧离场</div>
+        <div class="dimensional-title clear">滑行入场</div>
+        <div class="dimensional-button-item" :click="animate('slideInUp')">升起</div>
+        <div class="dimensional-button-item" :click="animate('slideInDown')">下落</div>
+        <div class="dimensional-button-item" :click="animate('slideInLeft')">左侧</div>
+        <div class="dimensional-button-item" :click="animate('slideInRight')">右侧</div>
+        <div class="dimensional-title clear">滑行离场</div>
+        <div class="dimensional-button-item" :click="animate('slideOutUp')">升起</div>
+        <div class="dimensional-button-item" :click="animate('slideOutDown')">下落</div>
+        <div class="dimensional-button-item" :click="animate('slideOutLeft')">左侧</div>
+        <div class="dimensional-button-item" :click="animate('slideOutRight')">右侧</div>
+        <div class="dimensional-title clear">缩放入场</div>
+        <div class="dimensional-button-item" :click="animate('zoomIn')">前进</div>
+        <div class="dimensional-button-item" :click="animate('zoomInUp')">升起</div>
+        <div class="dimensional-button-item" :click="animate('zoomInDown')">下落</div>
+        <div class="dimensional-button-item" :click="animate('zoomInLeft')">左侧</div>
+        <div class="dimensional-button-item" :click="animate('zoomInRight')">右侧</div>
+        <div class="dimensional-title clear">缩放离场</div>
+        <div class="dimensional-button-item" :click="animate('zoomOut')">后退</div>
+        <div class="dimensional-button-item" :click="animate('zoomOutUp')">升起</div>
+        <div class="dimensional-button-item" :click="animate('zoomOutDown')">下落</div>
+        <div class="dimensional-button-item" :click="animate('zoomOutLeft')">左侧</div>
+        <div class="dimensional-button-item" :click="animate('zoomOutRight')">右侧</div>
+        <div class="dimensional-title clear">特殊</div>
+        <div class="dimensional-button-item" :click="animate('hinge')">铰链</div>
+        <div class="dimensional-button-item" :click="animate('rollIn')">滚入</div>
+        <div class="dimensional-button-item" :click="animate('rollOut')">滚出</div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+  </div>
+  <!-- 框架script文件 -->
+  <script src="./static/js/owo.main.mtd7km5aur.js" type="text/javascript" charset="UTF-8"></script>
+
+  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/swiper-3.4.2.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/iscroll.js" type="text/javascript" charset="UTF-8"></script>
+</body>
+
+</html>
