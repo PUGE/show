@@ -95,3 +95,8 @@ iframe {
   margin-bottom: 10px;
   overflow: hidden;
 }
+
+/* 手机没有按钮悬浮效果 */
+.phone .to-hover-button {
+  display: none;
+}

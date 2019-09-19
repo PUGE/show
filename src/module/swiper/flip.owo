@@ -1,5 +1,5 @@
 <template>
-  <div class="flip" :click="filp">
+  <div class="flip" :tap="filp">
     <div class="front flip-item" data-text="Gongfu panda"></div>
     <div class="back flip-item" data-text="Toy story"></div>
   </div>
@@ -13,30 +13,30 @@
     },
     created: function () {
       if (this.prop.direction == 'y') {
-        this.query('.front')[0].style.transform = 'rotateX(180deg)'
-        this.query('.back')[0].style.transform = 'rotateX(0deg)'
+        owo.query('.front')[0].style.transform = 'rotateX(180deg)'
+        owo.query('.back')[0].style.transform = 'rotateX(0deg)'
       } else {
-        this.query('.front')[0].style.transform = 'rotateY(180deg)'
-        this.query('.back')[0].style.transform = 'rotateY(0deg)'
+        owo.query('.front')[0].style.transform = 'rotateY(180deg)'
+        owo.query('.back')[0].style.transform = 'rotateY(0deg)'
       }
     },
     filp: function () {
       // 判断横向还是竖向
       if (this.prop.direction == 'y') {
         if (this.data.isfilp) {
-          this.query('.front')[0].style.transform = 'rotateX(180deg)'
-          this.query('.back')[0].style.transform = 'rotateX(0deg)'
+          owo.query('.front')[0].style.transform = 'rotateX(180deg)'
+          owo.query('.back')[0].style.transform = 'rotateX(0deg)'
         } else {
-          this.query('.front')[0].style.transform = 'rotateX(0deg)'
-          this.query('.back')[0].style.transform = 'rotateX(180deg)'
+          owo.query('.front')[0].style.transform = 'rotateX(0deg)'
+          owo.query('.back')[0].style.transform = 'rotateX(180deg)'
         }
       } else {
         if (this.data.isfilp) {
-          this.query('.front')[0].style.transform = 'rotateY(180deg)'
-          this.query('.back')[0].style.transform = 'rotateY(0deg)'
+          owo.query('.front')[0].style.transform = 'rotateY(180deg)'
+          owo.query('.back')[0].style.transform = 'rotateY(0deg)'
         } else {
-          this.query('.front')[0].style.transform = 'rotateY(0deg)'
-          this.query('.back')[0].style.transform = 'rotateY(180deg)'
+          owo.query('.front')[0].style.transform = 'rotateY(0deg)'
+          owo.query('.back')[0].style.transform = 'rotateY(180deg)'
         }
       }
       

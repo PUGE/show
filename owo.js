@@ -108,10 +108,7 @@ module.exports = {
   // 页面清单
   pageList: [
     {
-      // 是否为页面主入口
-      main: true,
       name: 'home',
-      isPage: true,
       src: './src/page/home.page'
     },
     {
@@ -141,7 +138,11 @@ module.exports = {
     {
       name: 'enter',
       src: './src/page/enter.owo'
-    }
+    },
+    {
+      name: 'hover',
+      src: './src/page/hover.owo'
+    },
   ],
   // 调试模式配置
   dev: {
@@ -167,6 +168,7 @@ module.exports = {
       minifyJs: false,
       // 输出文件自动追加版本号，可以用来消除缓存
       addVersion: false,
+      allAnimation: true,
       allAnimate: true
     },
     serverPort: 8000,
@@ -197,7 +199,8 @@ module.exports = {
       // 小于多大的资源会嵌入到代码中,单位kb,默认10,设置为0则不启用
       embedSize: 1,
       // 输出所有动画效果
-      allAnimate: true
+      allAnimate: true,
+      allAnimation: true,
     }
   }
 }
