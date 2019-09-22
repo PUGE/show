@@ -1,4 +1,261 @@
-// Thu Sep 19 2019 15:06:20 GMT+0800 (GMT+08:00)
+// Sun Sep 22 2019 21:59:23 GMT+0800 (GMT+08:00)
+
+"use strict";
+
+// 存储页面基本信息
+var owo = {
+  // 页面默认入口 如果没有设置 则取第一个页面为默认页面
+  entry: "home",
+  // 全局方法变量
+  tool: {},
+  // 框架状态变量
+  state: {}
+};
+/*
+  存储每个页面的函数
+  键名：页面名称
+  键值：方法列表
+*/
+
+owo.script = {
+  "home": {
+    "template": {
+      "line": {
+        "prop": {
+          "class": "button-item to-hover-button",
+          ":tap": "owo.go('hover', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')",
+          "text": "鼠标悬停效果"
+        }
+      }
+    }
+  },
+  "button": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    },
+    "template": {
+      "line": {
+        "prop": {
+          "class": "button-item",
+          "text": "单线按钮"
+        }
+      },
+      "colorLine": {
+        "prop": {
+          "class": "button-item",
+          "text": "边框按钮"
+        }
+      },
+      "color": {
+        "prop": {
+          "class": "button-item",
+          "text": "炫彩按钮"
+        }
+      },
+      "3d": {
+        "prop": {
+          "class": "button-item",
+          "text": "立体按钮"
+        }
+      },
+      "waterRipple": {
+        "created": function created() {
+          function createRipple() {
+            //Create Ripple
+            var ripple = document.createElement("div");
+            ripple.className = "ripple-effect"; //Add Ripple to document
+
+            this.appendChild(ripple);
+            console.log(event); //Position Ripple
+
+            ripple.style.top = event.offsetY - ripple.offsetWidth / 2 + "px";
+            ripple.style.left = event.offsetX - ripple.offsetHeight / 2 + "px";
+            ripple.addEventListener("animationend", destroyRipple, false);
+            ripple.addEventListener("webkitAnimationEnd", destroyRipple, false);
+            ripple.addEventListener("oAnimationEnd", destroyRipple, false);
+            ripple.addEventListener("MSAnimationEnd", destroyRipple, false);
+          }
+
+          function destroyRipple() {
+            this.parentElement.removeChild(this);
+          }
+
+          this.$el.addEventListener('mousedown', createRipple, false); // this.$el.addEventListener('touchstart', createRipple, false)
+        },
+        "prop": {
+          "class": "button-item",
+          "text": "水波纹特效"
+        }
+      }
+    }
+  },
+  "font": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    }
+  },
+  "switch": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    },
+    "template": {
+      "line": {
+        "prop": {
+          "text": "向左翻转/向左翻转",
+          "class": "button-item",
+          ":tap": "owo.go('exhibition', 'rotateSidesOut&&ontop', 'rotateSidesIn&&delay200', 'rotateSidesOut&&ontop', 'rotateSidesIn&&delay200')"
+        }
+      }
+    }
+  },
+  "exhibition": {
+    "template": {
+      "swiper": {
+        "created": function created() {
+          new Swiper(this.$el, {
+            autoplay: true,
+            pagination: {
+              el: '.swiper-pagination'
+            }
+          });
+        },
+        "prop": {
+          "class": "swiper-item"
+        }
+      }
+    }
+  },
+  "swiper": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    },
+    "template": {
+      "swiper": {
+        "created": function created() {
+          new Swiper(this.$el, {
+            autoplay: true,
+            pagination: {
+              el: '.swiper-pagination'
+            }
+          });
+        },
+        "prop": {
+          "class": "swiper-item",
+          "name": "swiper",
+          "src": "./src/module/swiper.owo"
+        }
+      }
+    }
+  },
+  "swiper1": {
+    "template": {
+      "flip": {
+        "data": {
+          "isfilp": false
+        },
+        "created": function created() {
+          if (this.prop.direction == 'y') {
+            owo.query('.front')[0].style.transform = 'rotateX(180deg)';
+            owo.query('.back')[0].style.transform = 'rotateX(0deg)';
+          } else {
+            owo.query('.front')[0].style.transform = 'rotateY(180deg)';
+            owo.query('.back')[0].style.transform = 'rotateY(0deg)';
+          }
+        },
+        "filp": function filp() {
+          // 判断横向还是竖向
+          if (this.prop.direction == 'y') {
+            if (this.data.isfilp) {
+              owo.query('.front')[0].style.transform = 'rotateX(180deg)';
+              owo.query('.back')[0].style.transform = 'rotateX(0deg)';
+            } else {
+              owo.query('.front')[0].style.transform = 'rotateX(0deg)';
+              owo.query('.back')[0].style.transform = 'rotateX(180deg)';
+            }
+          } else {
+            if (this.data.isfilp) {
+              owo.query('.front')[0].style.transform = 'rotateY(180deg)';
+              owo.query('.back')[0].style.transform = 'rotateY(0deg)';
+            } else {
+              owo.query('.front')[0].style.transform = 'rotateY(0deg)';
+              owo.query('.back')[0].style.transform = 'rotateY(180deg)';
+            }
+          }
+
+          this.data.isfilp = !this.data.isfilp;
+        },
+        "prop": {
+          "direction": "y"
+        }
+      }
+    }
+  },
+  "dimensional": {
+    "created": function created() {},
+    "turn": function turn(url) {
+      window.location.href = url;
+    },
+    "template": {
+      "line": {
+        "prop": {
+          "class": "button-item",
+          ":tap": "owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/face/demos/threejs/headControls/index.html')",
+          "text": "3D模型"
+        }
+      }
+    }
+  },
+  "enter": {
+    "created": function created() {
+      new IScroll(owo.query('.scroll-box')[0], {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    },
+    "animate": function animate(name) {
+      copyText("owo.tool.animate(\"".concat(name, "\", owo.query('dom')[0])"), 0);
+      owo.tool.animate(name, owo.query('.show-logo')[0]);
+    }
+  },
+  "hover": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    }
+  }
+};
 
 /* 方法合集 */
 var _owo = {
