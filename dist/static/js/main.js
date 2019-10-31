@@ -9,3 +9,12 @@ if (_owo.isMobi) {
 } else {
   document.body.classList.add('pc')
 }
+
+function copyText (text) {
+  var createInput = document.createElement('input');
+  createInput.value = text
+  document.body.appendChild(createInput)
+  createInput.select()
+  document.execCommand("Copy")
+  createInput.remove()
+}
