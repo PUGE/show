@@ -2,11 +2,11 @@
   <div class="swiper page">
     <div class="box">
       <p class="title">经典轮播</p>
-      <temple class="swiper-item" name="swiper" src="./src/module/swiper.owo"></temple>
+      <plug class="swiper-item" name="swiper" src="./src/module/swiper.owo"></plug>
       <p class="title">左右翻转</p>
-      <temple name="flip" direction="x" src="./src/module/swiper/flip.owo"></temple>
+      <plug name="flip" direction="x" src="./src/module/swiper/flip.owo"></plug>
       <p class="title">上下翻转</p>
-      <temple name="flip" direction="y" src="./src/module/swiper/flip.owo"></temple>
+      <plug name="flip" direction="y" src="./src/module/swiper/flip.owo"></plug>
     </div>
     <!-- 趣动logo -->
     <img class="logo" src="@|logo.png|"/>

@@ -1,62 +1,126 @@
-// Thu Sep 19 2019 15:06:20 GMT+0800 (GMT+08:00)
+// Thu Oct 31 2019 09:59:58 GMT+0800 (GMT+08:00)
+
+// 存储页面基本信息
+var owo = {
+  // 手机入口
+  phoneEnter: "null",
+  // 全局方法变量
+  tool: {},
+  // 框架状态变量
+  state: {}
+};
+/*
+  存储每个页面的函数
+  键名：页面名称
+  键值：方法列表
+*/
+
+owo.script = {
+  "home": {},
+  "button": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    }
+  },
+  "font": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    }
+  },
+  "switch": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    }
+  },
+  "exhibition": {},
+  "swiper": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    }
+  },
+  "dimensional": {
+    "created": function created() {},
+    "turn": function turn(url) {
+      window.location.href = url;
+    }
+  },
+  "enter": {
+    "created": function created() {
+      new IScroll(owo.query('.scroll-box')[0], {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    },
+    "animate": function animate(name) {
+      owo.tool.animate(name, owo.query('.show-logo')[0]);
+    }
+  },
+  "hover": {
+    "created": function created() {
+      new IScroll(this.$el, {
+        scrollbars: true,
+        mouseWheel: true,
+        interactiveScrollbars: true,
+        shrinkScrollbars: 'scale',
+        fadeScrollbars: true
+      });
+    }
+  }
+};
 
 /* 方法合集 */
-var _owo = {
-  /* 运行页面初始化方法 */
-  runCreated: function (pageFunction) {
-    try {
-      // console.log(pageFunction)
-      // 确保created事件只被执行一次
-      if (!pageFunction["_isCreated"]) {
-        pageFunction._isCreated = true
-        if (pageFunction.created) {
-          pageFunction.created.apply(pageFunction)
-        }
-      }
-      // 模板插值处理
-      _owo.showHandle(pageFunction)
+var _owo = {}
 
-      // console.log(pageFunction)
-      if (pageFunction.show) {
-        pageFunction.show.apply(pageFunction)
-      }
+/* 运行页面初始化方法 */
+_owo.runCreated = function (pageFunction) {
+  try {
+    // console.log(pageFunction)
+    if (pageFunction.show) {
+      pageFunction.show.apply(pageFunction)
     }
-    catch (e) {
-      console.error(e)
+    if (pageFunction["_isCreated"]) return
+
+    // 确保created事件只被执行一次
+    pageFunction._isCreated = true
+    
+    if (pageFunction.created) {
+      pageFunction.created.apply(pageFunction)
     }
+    
+  } catch (e) {
+    console.error(e)
   }
 }
 
 
-_owo.getValFromObj = function (str, value) {
-  // 如果模块没有数据则直接返回null
-  if (!value) value = window
-  var arr = str.split('.')
-  for (var index = 0; index < arr.length; index++) {
-    var element = arr[index]
-    if (value[element]) {
-      value = value[element]
-    } else {
-      return undefined
-    }
-  }
-  return value
-}
 
-_owo.showHandle = function (pageFunction) {
-  var linkList = pageFunction.$el.querySelectorAll('[innerText]')
-  for (var ind = 0; ind < linkList.length; ind++) {
-    var element = linkList[ind]
-    var dataFor = element.getAttribute("innerText")
-    // 获取对应的值
-    var value = _owo.getValFromObj(dataFor, pageFunction)
-    if (value == undefined) {
-      // console.log('从全局获取值!')
-      value = _owo.getValFromObj(dataFor)
-    }
-    element.innerText = value
-  }
-}
 
 // 判断是否为手机
 _owo.isMobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null
@@ -96,12 +160,13 @@ _owo._run = function (eventFor, templateName, event) {
       // console.log(parameterArr[i])
     }
   }
-  eventForCopy = eventFor.replace(/\(.*\)/, '')
+  eventForCopy = eventFor.replace(/\([\d\D]*\)/, '')
   // console.log(newPageFunction, eventForCopy)
   // 如果有方法,则运行它
   if (newPageFunction && newPageFunction[eventForCopy]) {
     // 绑定window.owo对象
     newPageFunction.$event = event
+    newPageFunction.$target = event.target
     newPageFunction[eventForCopy].apply(newPageFunction, parameterArr)
   } else {
     // 如果没有此方法则交给浏览器引擎尝试运行
@@ -111,7 +176,7 @@ _owo._run = function (eventFor, templateName, event) {
 
 _owo.bindEvent = function (eventName, eventFor, tempDom, templateName) {
   tempDom['on' + eventName] = function(event) {
-    _owo._run(eventFor, templateName, event)
+    _owo._run(eventFor, templateName, event || this)
   }
 }
 
@@ -128,7 +193,7 @@ _owo.handleEvent = function (tempDom, templateName) {
       // ie不支持startsWith
       if (attribute.name[0] == ':') {
         var eventName = attribute.name.slice(1)
-        var eventFor = attribute.textContent
+        var eventFor = attribute.textContent || attribute.value
         switch (eventName) {
           case 'show' : {
             // 初步先简单处理吧
@@ -145,7 +210,7 @@ _owo.handleEvent = function (tempDom, templateName) {
             // 根据手机和PC做不同处理
             if (_owo.isMobi) {
               _owo._event_tap(tempDom, function (event) {
-                _owo._run(eventFor, templateName, event)
+                _owo._run(eventFor, templateName, event || this)
               })
             } else _owo.bindEvent('click', eventFor, tempDom, templateName)
             break
@@ -182,7 +247,7 @@ _owo.handleEvent = function (tempDom, templateName) {
 
 // 快速选择器
 owo.query = function (str) {
-  return document.querySelectorAll('.ox[template=' + owo.activePage +'] ' + str)
+  return document.querySelectorAll('.owo[template=' + owo.activePage +'] ' + str)
 }
 
 /* 运行页面所属的方法 */
@@ -197,31 +262,30 @@ _owo.handlePage = function (newPageFunction, entryDom) {
   // 判断页面是否有下属模板,如果有运行所有模板的初始化方法
   for (var key in newPageFunction.template) {
     var templateScript = newPageFunction.template[key]
-    // 待修复,临时获取方式,这种方式获取到的dom不准确
-    var childDom = entryDom.querySelectorAll('[template="' + key +'"]')[0]
-    if (!childDom) {
-      console.error('组件丢失:', key)
-      continue
-    }
-    // 递归处理
+    var childDom = entryDom.querySelector('[template="' + key +'"]')
+    // 判断相关模块是否在存在
+    if (!childDom) {continue}
     _owo.handlePage(templateScript, childDom)
   }
 }
 _owo.getarg = function (url) { // 获取URL #后面内容
   if (!url) return null
-  const arg = url.split("#");
+  var arg = url.split("#");
   return arg[1] ? arg[1].split('?')[0] : null
 }
 
 // 页面资源加载完毕事件
 _owo.showPage = function() {
+  // window.location.href = ''
   owo.entry = document.querySelector('[template]').getAttribute('template')
   // 取出URL地址判断当前所在页面
   var pageArg = _owo.getarg(window.location.hash)
+  
+  
   // 从配置项中取出程序入口
   var page = pageArg ? pageArg : owo.entry
   if (page) {
-    var entryDom = document.querySelector('.ox[template="' + page + '"]')
+    var entryDom = document.querySelector('.owo[template="' + page + '"]')
     if (entryDom) {
       // 显示主页面
       entryDom.style.display = 'block'
@@ -234,6 +298,7 @@ _owo.showPage = function() {
   } else {
     console.error('未设置程序入口!')
   }
+  
   // 设置当前页面为活跃页面
   owo.state.newUrlParam = _owo.getarg(document.URL)
 }
@@ -246,10 +311,7 @@ _owo.showPage = function() {
 */
 owo.go = function (pageName, inAnimation, outAnimation, backInAnimation, backOutAnimation, noBack, param) {
   // console.log(owo.script[pageName])
-  if (!owo.script[pageName]) {
-    console.error('导航到不存在的页面!')
-    return
-  }
+  if (!owo.script[pageName]) { document.querySelector('[template]').getAttribute('template')}
   owo.script[pageName]._animation = {
     "in": inAnimation,
     "out": outAnimation,
@@ -259,7 +321,7 @@ owo.go = function (pageName, inAnimation, outAnimation, backInAnimation, backOut
   if (param && typeof param == 'object') {
     paramString += '?'
     // 生成URL参数
-    for (let paramKey in param) {
+    for (var paramKey in param) {
       paramString += paramKey + '=' + param[paramKey] + '&'
     }
     // 去掉尾端的&
@@ -302,124 +364,36 @@ _owo.hashchange = function (e) {
 
 // ios的QQ有BUG 无法触发onhashchange事件
 if(/iPhone\sOS.*QQ[^B]/.test(navigator.userAgent)) {window.onpopstate = _owo.hashchange;} else {window.onhashchange = _owo.hashchange;}
-// 切换页面动画
-function animation (oldDom, newDom, animationIn, animationOut, forward) {
-  // 动画延迟
-  let delay = 0
-  // 获取父元素
-  var parentDom = newDom.parentElement
-  if (!oldDom) {
-    console.error('旧页面不存在!')
-  }
-  oldDom.addEventListener("animationend", oldDomFun)
-  newDom.addEventListener("animationend", newDomFun)
-  
-  oldDom.style.position = 'absolute'
-
-  newDom.style.display = 'block'
-  newDom.style.position = 'absolute'
-  // 给即将生效的页面加上“未来”标识
-  if (forward) {
-    newDom.classList.add('owo-animation-forward')
-  } else {
-    oldDom.classList.add('owo-animation-forward')
-  }
-  // document.body.style.overflow = 'hidden'
-
-  parentDom.style.perspective = '1200px'
-  oldDom.classList.add('owo-animation')
-  animationIn.forEach(value => {
-    //判断是否为延迟属性
-    if (value.startsWith('delay')) {
-      const tempDelay = parseInt(value.slice(5))
-      if (delay < tempDelay)  delay = tempDelay
-    }
-    oldDom.classList.add('o-page-' + value)
-  })
-
-  newDom.classList.add('owo-animation')
-  animationOut.forEach(value => {
-    if (value.startsWith('delay')) {
-      const tempDelay = parseInt(value.slice(5))
-      if (delay < tempDelay)  delay = tempDelay
-    }
-    newDom.classList.add('o-page-' + value)
-  })
-  // 旧DOM执行函数
-  function oldDomFun (e) {
-    // 排除非框架引起的结束事件
-    if (e.target.getAttribute('template')) {
-      // 移除监听
-      oldDom.removeEventListener('animationend', oldDomFun, false)
-      // 延迟后再清除，防止动画还没完成
-      setTimeout(() => {
-        oldDom.style.display = 'none'
-        // console.log(oldDom)
-        oldDom.style.position = ''
-        oldDom.classList.remove('owo-animation')
-        oldDom.classList.remove('owo-animation-forward')
-        parentDom.style.perspective = ''
-        // 清除临时设置的class
-        animationIn.forEach(value => {
-          oldDom.classList.remove('o-page-' + value)
-        })
-      }, delay);
-    }
-  }
-
-  // 新DOM执行函数
-  function newDomFun () {
-    // 移除监听
-    newDom.removeEventListener('animationend', newDomFun, false)
-    // 延迟后再清除，防止动画还没完成
-    setTimeout(() => {
-      // 清除临时设置的style
-      newDom.style.position = '';
-      newDom.classList.remove('owo-animation');
-      newDom.classList.remove('owo-animation-forward');
-      animationOut.forEach(function (value) {
-        newDom.classList.remove('o-page-' + value);
-      });
-    }, delay);
-  }
-}
 
 
-// 切换页面前的准备工作
+
+
+
+
 function switchPage (oldUrlParam, newUrlParam) {
   var oldPage = oldUrlParam ? oldUrlParam.split('&')[0] : owo.entry
   var newPage = newUrlParam ? newUrlParam.split('&')[0] : owo.entry
-  // console.log(oldPage, newPage)
-  var oldDom = document.querySelector('.ox[template="' + oldPage + '"]')
-  var newDom = document.querySelector('.ox[template="' + newPage + '"]')
+  // 查找页面跳转前的page页(dom节点)
+  var oldDom = document.querySelector('[template=' + oldPage + ']')
+  var newDom = document.querySelector('.owo[template="' + newPage + '"]')
   
   if (!newDom) {
     console.error('页面不存在!')
     return
   }
-  // console.log(owo.state.animation)
-  // 判断是否有动画效果
-  if (!owo.script[newPage]._animation) owo.script[newPage]._animation = {}
-  // 直接.in会在ie下报错
-  var animationIn = owo.script[newPage]._animation['in']
-  var animationOut = owo.script[newPage]._animation['out']
-  if (animationIn || animationOut) {
-    owo.state.animation = {}
-    animation(oldDom, newDom, animationIn.split('&&'), animationOut.split('&&'), owo.state.animation['forward'])
-  } else {
-    if (oldDom) {
-      // 隐藏掉旧的节点
-      oldDom.style.display = 'none'
-    }
-    // 查找页面跳转后的page
-    newDom.style.display = 'block'
+  newDom.style.display = 'block'
+
+  if (oldDom) {
+    // 隐藏掉旧的节点
+    oldDom.style.display = 'none'
   }
+  // 查找页面跳转后的page
   
   window.owo.activePage = newPage
+  _owo.handlePage(window.owo.script[newPage], newDom)
   if (!window.owo.script[newPage]._isCreated) {
     _owo.handleEvent(newDom, null)
   }
-  _owo.handlePage(window.owo.script[newPage], newDom)
 }
 /*
  * 传递函数给whenReady()
@@ -430,13 +404,13 @@ _owo.ready = (function() {               //这个函数返回whenReady()函数
   
   //当文档就绪时,调用事件处理程序
   function handler(e) {
-    // 确保事件处理程序只运行一次
-    if(window.owo.state.isRrady) return
-    window.owo.state.isRrady = true
     //如果发生onreadystatechange事件，但其状态不是complete的话,那么文档尚未准备好
     if(e.type === 'onreadystatechange' && document.readyState !== 'complete') {
       return
     }
+    // 确保事件处理程序只运行一次
+    if(window.owo.state.isRrady) return
+    window.owo.state.isRrady = true
     
     // 运行所有注册函数
     for(var i=0; i<funcs.length; i++) {

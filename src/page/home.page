@@ -2,19 +2,19 @@
   <div class="home page">
     <div class="box">
       <!-- 文字字体 -->
-      <temple class="button-item" :tap="owo.go('font', 'rotateCubeLeftOut', 'rotateCubeLeftIn', 'rotateCubeRightOut', 'rotateCubeRightIn')" name="line" text="文字字体" src="./src/module/button/line.owo"></temple>
+      <plug class="button-item" :tap="owo.go('font', 'rotateCubeLeftOut', 'rotateCubeLeftIn', 'rotateCubeRightOut', 'rotateCubeRightIn')" name="line" text="文字字体" src="./src/module/button/line.owo"></plug>
       <!-- 入场效果 -->
-      <temple class="button-item" :tap="owo.go('enter', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" name="line" text="入场效果" src="./src/module/button/line.owo"></temple>
+      <plug class="button-item" :tap="owo.go('enter', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" name="line" text="入场效果" src="./src/module/button/line.owo"></plug>
       <!-- 页面切换效果 -->
-      <temple class="button-item" :tap="owo.go('switch', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" name="line" text="页面切换效果" src="./src/module/button/line.owo"></temple>
+      <plug class="button-item" :tap="owo.go('switch', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" name="line" text="页面切换效果" src="./src/module/button/line.owo"></plug>
       <!-- 按钮 -->
-      <temple class="button-item" :tap="owo.go('button', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')" name="line" text="按钮" src="./src/module/button/line.owo"></temple>
+      <plug class="button-item" :tap="owo.go('button', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')" name="line" text="按钮" src="./src/module/button/line.owo"></plug>
       <!-- 轮播图 -->
-      <temple class="button-item" :tap="owo.go('swiper', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')" name="line" text="轮播图" src="./src/module/button/line.owo"></temple>
+      <plug class="button-item" :tap="owo.go('swiper', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')" name="line" text="轮播图" src="./src/module/button/line.owo"></plug>
       <!-- 3D -->
-      <temple class="button-item" :tap="owo.go('dimensional', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')" name="line" text="3D/VR" src="./src/module/button/line.owo"></temple>
+      <plug class="button-item" :tap="owo.go('dimensional', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')" name="line" text="3D/VR" src="./src/module/button/line.owo"></plug>
       <!-- 鼠标悬停效果 -->
-      <temple class="button-item to-hover-button" :tap="owo.go('hover', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')" name="line" text="鼠标悬停效果" src="./src/module/button/line.owo"></temple>
+      <plug class="button-item to-hover-button" :tap="owo.go('hover', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')" name="line" text="鼠标悬停效果" src="./src/module/button/line.owo"></plug>
       <!-- 趣动logo -->
       <img class="logo" src="@|logo.png|"/>
     </div>
