@@ -1,4 +1,4 @@
-// Fri Nov 01 2019 00:15:08 GMT+0800 (GMT+08:00)
+// Wed Dec 04 2019 09:40:51 GMT+0800 (GMT+08:00)
 
 /* 方法合集 */
 var _owo = {}
@@ -103,9 +103,7 @@ _owo.handleEvent = function (tempDom, templateName) {
           case 'show' : {
             // 初步先简单处理吧
             var temp = eventFor.replace(/ /g, '')
-            // 取出条件
-            var condition = temp.split("==")
-            if (activePage.data[condition[0]] != condition[1]) {
+            if (!activePage.data[temp]) {
               tempDom.style.display = 'none'
             }
             break
@@ -225,25 +223,37 @@ _owo.getarg = function (url) { // 获取URL #后面内容
 
 // 页面资源加载完毕事件
 _owo.showPage = function() {
-  // window.location.href = ''
   owo.entry = document.querySelector('[template]').getAttribute('template')
   // 取出URL地址判断当前所在页面
   var pageArg = _owo.getarg(window.location.hash)
   
   
+
+  // 计算$dom
+  for(var page in owo.script) {
+    var idList = document.querySelectorAll('.owo[template="' + page + '"] [id]')
+    owo.script[page].$dom = {}
+    for (var ind = 0; ind < idList.length; ind++) {
+      owo.script[page].$dom[idList[ind].getAttribute('id')] = idList[ind]
+    }
+  }
+
   // 从配置项中取出程序入口
   var page = pageArg ? pageArg : owo.entry
   if (page) {
     var entryDom = document.querySelector('.owo[template="' + page + '"]')
-    if (entryDom) {
-      // 显示主页面
-      entryDom.style.display = 'block'
-      window.owo.activePage = page
-      _owo.handlePage(window.owo.script[page], entryDom)
-      _owo.handleEvent(entryDom, null)
-    } else {
+    if (!entryDom) {
       console.error('入口文件设置错误,错误值为: ', page)
+      entryDom = document.querySelector('.owo')
+      page = entryDom.getAttribute('template')
+      window.location.replace('#' + page)
+      return
     }
+    // 显示主页面
+    entryDom.style.display = 'block'
+    window.owo.activePage = page
+    _owo.handlePage(owo.script[page], entryDom)
+    _owo.handleEvent(entryDom, null)
   } else {
     console.error('未设置程序入口!')
   }
@@ -260,7 +270,10 @@ _owo.showPage = function() {
 */
 owo.go = function (pageName, inAnimation, outAnimation, backInAnimation, backOutAnimation, noBack, param) {
   // console.log(owo.script[pageName])
-  if (!owo.script[pageName]) { document.querySelector('[template]').getAttribute('template')}
+  if (!owo.script[pageName]) {
+    console.error("导航到不存在的页面!")
+    return
+  }
   owo.script[pageName]._animation = {
     "in": inAnimation,
     "out": outAnimation,
@@ -357,6 +370,7 @@ owo.tool.animate = function (name, dom, delay) {
     }
   }
 }
+
 
 
 

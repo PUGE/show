@@ -91,6 +91,10 @@ module.exports = {
     {
       name: "iscroll",
       src: "./src/resource/iscroll.js"
+    },
+    {
+      name: "clipboard.min",
+      src: "./src/resource/clipboard.min.js"
     }
   ],
   // 使用到的样式列表
@@ -109,15 +113,11 @@ module.exports = {
   pageList: [
     {
       name: 'home',
-      src: './src/page/home.page'
+      src: './src/page/home.owo'
     },
     {
       name: 'button',
       src: './src/page/button.owo'
-    },
-    {
-      name: 'font',
-      src: './src/page/font.owo'
     },
     {
       name: 'switch',
