@@ -8,77 +8,77 @@
     <div class="scroll-box">
       <div class="dimensional-button-box">
         <div class="dimensional-title clear">动画</div>
-        <div class="dimensional-button-item" :tap="animate('bounce')">反弹</div>
-        <div class="dimensional-button-item" :tap="animate('flash')">闪烁</div>
-        <div class="dimensional-button-item" :tap="animate('pulse')">脉冲</div>
-        <div class="dimensional-button-item" :tap="animate('rubberBand')">橡皮筋</div>
-        <div class="dimensional-button-item" :tap="animate('shake')">抖动</div>
-        <div class="dimensional-button-item" :tap="animate('swing')">摆动</div>
-        <div class="dimensional-button-item" :tap="animate('tada')">tada</div>
-        <div class="dimensional-button-item" :tap="animate('wobble')">晃动</div>
+        <div class="dimensional-button-item" :tap="animate('bounce')" data-clipboard-text="owo.tool.animate('bounce', element)">反弹</div>
+        <div class="dimensional-button-item" :tap="animate('flash')" data-clipboard-text="owo.tool.animate('flash', element)">闪烁</div>
+        <div class="dimensional-button-item" :tap="animate('pulse')" data-clipboard-text="owo.tool.animate('pulse', element)">脉冲</div>
+        <div class="dimensional-button-item" :tap="animate('rubberBand')" data-clipboard-text="owo.tool.animate('rubberBand', element)">橡皮筋</div>
+        <div class="dimensional-button-item" :tap="animate('shake')" data-clipboard-text="owo.tool.animate('shake', element)">抖动</div>
+        <div class="dimensional-button-item" :tap="animate('swing')" data-clipboard-text="owo.tool.animate('swing', element)">摆动</div>
+        <div class="dimensional-button-item" :tap="animate('tada')" data-clipboard-text="owo.tool.animate('tada', element)">tada</div>
+        <div class="dimensional-button-item" :tap="animate('wobble')" data-clipboard-text="owo.tool.animate('wobble', element)">晃动</div>
         <div class="dimensional-title clear">弹性进场</div>
-        <div class="dimensional-button-item" :tap="animate('bounceIn')">前进</div>
-        <div class="dimensional-button-item" :tap="animate('bounceInDown')">下落</div>
-        <div class="dimensional-button-item" :tap="animate('bounceInLeft')">左侧</div>
-        <div class="dimensional-button-item" :tap="animate('bounceInRight')">右侧</div>
-        <div class="dimensional-button-item" :tap="animate('bounceInUp')">升起</div>
+        <div class="dimensional-button-item" :tap="animate('bounceIn')" data-clipboard-text="owo.tool.animate('bounceIn', element)">前进</div>
+        <div class="dimensional-button-item" :tap="animate('bounceInDown')" data-clipboard-text="owo.tool.animate('bounceInDown', element)">下落</div>
+        <div class="dimensional-button-item" :tap="animate('bounceInLeft')" data-clipboard-text="owo.tool.animate('bounceInLeft', element)">左侧</div>
+        <div class="dimensional-button-item" :tap="animate('bounceInRight')" data-clipboard-text="owo.tool.animate('bounceInRight', element)">右侧</div>
+        <div class="dimensional-button-item" :tap="animate('bounceInUp')" data-clipboard-text="owo.tool.animate('bounceInUp', element)">升起</div>
         <div class="dimensional-title clear">弹性离场</div>
-        <div class="dimensional-button-item" :tap="animate('bounceOut')">后退</div>
-        <div class="dimensional-button-item" :tap="animate('bounceOutDown')">下落</div>
-        <div class="dimensional-button-item" :tap="animate('bounceOutLeft')">左侧</div>
-        <div class="dimensional-button-item" :tap="animate('bounceOutRight')">右侧</div>
-        <div class="dimensional-button-item" :tap="animate('bounceOutUp')">升起</div>
+        <div class="dimensional-button-item" :tap="animate('bounceOut')" data-clipboard-text="owo.tool.animate('bounceOut', element)">后退</div>
+        <div class="dimensional-button-item" :tap="animate('bounceOutDown')" data-clipboard-text="owo.tool.animate('bounceOutDown', element)">下落</div>
+        <div class="dimensional-button-item" :tap="animate('bounceOutLeft')" data-clipboard-text="owo.tool.animate('bounceOutLeft', element)">左侧</div>
+        <div class="dimensional-button-item" :tap="animate('bounceOutRight')" data-clipboard-text="owo.tool.animate('bounceOutRight', element)">右侧</div>
+        <div class="dimensional-button-item" :tap="animate('bounceOutUp')" data-clipboard-text="owo.tool.animate('bounceOutUp', element)">升起</div>
         <div class="dimensional-title clear">淡入进场</div>
-        <div class="dimensional-button-item" :tap="animate('fadeIn')">前进</div>
-        <div class="dimensional-button-item" :tap="animate('fadeInDown')">下落</div>
-        <div class="dimensional-button-item" :tap="animate('fadeInDownBig')">下落2</div>
-        <div class="dimensional-button-item" :tap="animate('fadeInLeft')">左侧</div>
-        <div class="dimensional-button-item" :tap="animate('fadeInLeftBig')">左侧2</div>
-        <div class="dimensional-button-item" :tap="animate('fadeInRight')">右侧</div>
-        <div class="dimensional-button-item" :tap="animate('fadeInRightBig')">右侧2</div>
-        <div class="dimensional-button-item" :tap="animate('fadeInUp')">升起</div>
-        <div class="dimensional-button-item" :tap="animate('fadeInUpBig')">升起2</div>
+        <div class="dimensional-button-item" :tap="animate('fadeIn')" data-clipboard-text="owo.tool.animate('fadeIn', element)">前进</div>
+        <div class="dimensional-button-item" :tap="animate('fadeInDown')" data-clipboard-text="owo.tool.animate('fadeInDown', element)">下落</div>
+        <div class="dimensional-button-item" :tap="animate('fadeInDownBig')" data-clipboard-text="owo.tool.animate('fadeInDownBig', element)">下落2</div>
+        <div class="dimensional-button-item" :tap="animate('fadeInLeft')" data-clipboard-text="owo.tool.animate('fadeInLeft', element)">左侧</div>
+        <div class="dimensional-button-item" :tap="animate('fadeInLeftBig')" data-clipboard-text="owo.tool.animate('fadeInLeftBig', element)">左侧2</div>
+        <div class="dimensional-button-item" :tap="animate('fadeInRight')" data-clipboard-text="owo.tool.animate('fadeInRight', element)">右侧</div>
+        <div class="dimensional-button-item" :tap="animate('fadeInRightBig')" data-clipboard-text="owo.tool.animate('fadeInRightBig', element)">右侧2</div>
+        <div class="dimensional-button-item" :tap="animate('fadeInUp')" data-clipboard-text="owo.tool.animate('fadeInUp', element)">升起</div>
+        <div class="dimensional-button-item" :tap="animate('fadeInUpBig')" data-clipboard-text="owo.tool.animate('fadeInUpBig', element)">升起2</div>
         <div class="dimensional-title clear">翻转</div>
-        <div class="dimensional-button-item" :tap="animate('flip')">翻转</div>
-        <div class="dimensional-button-item" :tap="animate('flipInX')">横向进场</div>
-        <div class="dimensional-button-item" :tap="animate('flipInY')">纵向进场</div>
-        <div class="dimensional-button-item" :tap="animate('flipOutX')">横向离场</div>
-        <div class="dimensional-button-item" :tap="animate('flipOutY')">纵向离场</div>
+        <div class="dimensional-button-item" :tap="animate('flip')" data-clipboard-text="owo.tool.animate('flip', element)">翻转</div>
+        <div class="dimensional-button-item" :tap="animate('flipInX')" data-clipboard-text="owo.tool.animate('flipInX', element)">横向进场</div>
+        <div class="dimensional-button-item" :tap="animate('flipInY')" data-clipboard-text="owo.tool.animate('flipInY', element)">纵向进场</div>
+        <div class="dimensional-button-item" :tap="animate('flipOutX')" data-clipboard-text="owo.tool.animate('flipOutX', element)">横向离场</div>
+        <div class="dimensional-button-item" :tap="animate('flipOutY')" data-clipboard-text="owo.tool.animate('flipOutY', element)">纵向离场</div>
         <div class="dimensional-title clear">加速</div>
-        <div class="dimensional-button-item" :tap="animate('lightSpeedIn')">减速进场</div>
-        <div class="dimensional-button-item" :tap="animate('lightSpeedOut')">加速离场</div>
+        <div class="dimensional-button-item" :tap="animate('lightSpeedIn')" data-clipboard-text="owo.tool.animate('lightSpeedIn', element)">减速进场</div>
+        <div class="dimensional-button-item" :tap="animate('lightSpeedOut')" data-clipboard-text="owo.tool.animate('lightSpeedOut', element)">加速离场</div>
         <div class="dimensional-title clear">旋转</div>
-        <div class="dimensional-button-item" :tap="animate('rotateIn')">旋转入场</div>
-        <div class="dimensional-button-item" :tap="animate('rotateInDownLeft')">左侧入场</div>
-        <div class="dimensional-button-item" :tap="animate('rotateInDownRight')">右侧入场</div>
-        <div class="dimensional-button-item" :tap="animate('rotateOutUpLeft')">左侧离场</div>
-        <div class="dimensional-button-item" :tap="animate('rotateOutUpRight')">右侧离场</div>
+        <div class="dimensional-button-item" :tap="animate('rotateIn')" data-clipboard-text="owo.tool.animate('rotateIn', element)">旋转入场</div>
+        <div class="dimensional-button-item" :tap="animate('rotateInDownLeft')" data-clipboard-text="owo.tool.animate('rotateInDownLeft', element)">左侧入场</div>
+        <div class="dimensional-button-item" :tap="animate('rotateInDownRight')" data-clipboard-text="owo.tool.animate('rotateInDownRight', element)">右侧入场</div>
+        <div class="dimensional-button-item" :tap="animate('rotateOutUpLeft')" data-clipboard-text="owo.tool.animate('rotateOutUpLeft', element)">左侧离场</div>
+        <div class="dimensional-button-item" :tap="animate('rotateOutUpRight')" data-clipboard-text="owo.tool.animate('rotateOutUpRight', element)">右侧离场</div>
         <div class="dimensional-title clear">滑行入场</div>
-        <div class="dimensional-button-item" :tap="animate('slideInUp')">升起</div>
-        <div class="dimensional-button-item" :tap="animate('slideInDown')">下落</div>
-        <div class="dimensional-button-item" :tap="animate('slideInLeft')">左侧</div>
-        <div class="dimensional-button-item" :tap="animate('slideInRight')">右侧</div>
+        <div class="dimensional-button-item" :tap="animate('slideInUp')" data-clipboard-text="owo.tool.animate('slideInUp', element)">升起</div>
+        <div class="dimensional-button-item" :tap="animate('slideInDown')" data-clipboard-text="owo.tool.animate('slideInDown', element)">下落</div>
+        <div class="dimensional-button-item" :tap="animate('slideInLeft')" data-clipboard-text="owo.tool.animate('slideInLeft', element)">左侧</div>
+        <div class="dimensional-button-item" :tap="animate('slideInRight')" data-clipboard-text="owo.tool.animate('slideInRight', element)">右侧</div>
         <div class="dimensional-title clear">滑行离场</div>
-        <div class="dimensional-button-item" :tap="animate('slideOutUp')">升起</div>
-        <div class="dimensional-button-item" :tap="animate('slideOutDown')">下落</div>
-        <div class="dimensional-button-item" :tap="animate('slideOutLeft')">左侧</div>
-        <div class="dimensional-button-item" :tap="animate('slideOutRight')">右侧</div>
+        <div class="dimensional-button-item" :tap="animate('slideOutUp')" data-clipboard-text="owo.tool.animate('slideOutUp', element)">升起</div>
+        <div class="dimensional-button-item" :tap="animate('slideOutDown')" data-clipboard-text="owo.tool.animate('slideOutDown', element)">下落</div>
+        <div class="dimensional-button-item" :tap="animate('slideOutLeft')" data-clipboard-text="owo.tool.animate('slideOutLeft', element)">左侧</div>
+        <div class="dimensional-button-item" :tap="animate('slideOutRight')" data-clipboard-text="owo.tool.animate('slideOutRight', element)">右侧</div>
         <div class="dimensional-title clear">缩放入场</div>
-        <div class="dimensional-button-item" :tap="animate('zoomIn')">前进</div>
-        <div class="dimensional-button-item" :tap="animate('zoomInUp')">升起</div>
-        <div class="dimensional-button-item" :tap="animate('zoomInDown')">下落</div>
-        <div class="dimensional-button-item" :tap="animate('zoomInLeft')">左侧</div>
-        <div class="dimensional-button-item" :tap="animate('zoomInRight')">右侧</div>
+        <div class="dimensional-button-item" :tap="animate('zoomIn')" data-clipboard-text="owo.tool.animate('zoomIn', element)">前进</div>
+        <div class="dimensional-button-item" :tap="animate('zoomInUp')" data-clipboard-text="owo.tool.animate('zoomInUp', element)">升起</div>
+        <div class="dimensional-button-item" :tap="animate('zoomInDown')" data-clipboard-text="owo.tool.animate('zoomInDown', element)">下落</div>
+        <div class="dimensional-button-item" :tap="animate('zoomInLeft')" data-clipboard-text="owo.tool.animate('zoomInLeft', element)">左侧</div>
+        <div class="dimensional-button-item" :tap="animate('zoomInRight')" data-clipboard-text="owo.tool.animate('zoomInRight', element)">右侧</div>
         <div class="dimensional-title clear">缩放离场</div>
-        <div class="dimensional-button-item" :tap="animate('zoomOut')">后退</div>
-        <div class="dimensional-button-item" :tap="animate('zoomOutUp')">升起</div>
-        <div class="dimensional-button-item" :tap="animate('zoomOutDown')">下落</div>
-        <div class="dimensional-button-item" :tap="animate('zoomOutLeft')">左侧</div>
-        <div class="dimensional-button-item" :tap="animate('zoomOutRight')">右侧</div>
+        <div class="dimensional-button-item" :tap="animate('zoomOut')" data-clipboard-text="owo.tool.animate('zoomOut', element)">后退</div>
+        <div class="dimensional-button-item" :tap="animate('zoomOutUp')" data-clipboard-text="owo.tool.animate('zoomOutUp', element)">升起</div>
+        <div class="dimensional-button-item" :tap="animate('zoomOutDown')" data-clipboard-text="owo.tool.animate('zoomOutDown', element)">下落</div>
+        <div class="dimensional-button-item" :tap="animate('zoomOutLeft')" data-clipboard-text="owo.tool.animate('zoomOutLeft', element)">左侧</div>
+        <div class="dimensional-button-item" :tap="animate('zoomOutRight')" data-clipboard-text="owo.tool.animate('zoomOutRight', element)">右侧</div>
         <div class="dimensional-title clear">特殊</div>
-        <div class="dimensional-button-item" :tap="animate('hinge')">铰链</div>
-        <div class="dimensional-button-item" :tap="animate('rollIn')">滚入</div>
-        <div class="dimensional-button-item" :tap="animate('rollOut')">滚出</div>
+        <div class="dimensional-button-item" :tap="animate('hinge')" data-clipboard-text="owo.tool.animate('hinge', element)">铰链</div>
+        <div class="dimensional-button-item" :tap="animate('rollIn')" data-clipboard-text="owo.tool.animate('rollIn', element)">滚入</div>
+        <div class="dimensional-button-item" :tap="animate('rollOut')" data-clipboard-text="owo.tool.animate('rollOut', element)">滚出</div>
         <div class="clear"></div>
       </div>
     </div>
@@ -98,6 +98,7 @@
         shrinkScrollbars: 'scale',
         fadeScrollbars: true
       })
+      new ClipboardJS('.dimensional-button-item')
     },
     animate: function (name) {
       copyText(`owo.tool.animate("${name}", owo.query('dom')[0])`, 0)

@@ -1,9 +1,12 @@
 <template>
   <div class="home page">
     <div class="box">
+<<<<<<< HEAD:src/page/home.owo
       
       <!-- 文字字体 -->
       <plug class="button-item" :tap="owo.go('font', 'rotateCubeLeftOut', 'rotateCubeLeftIn', 'rotateCubeRightOut', 'rotateCubeRightIn')" name="line" text="文字字体" src="./src/module/button/line.owo"></plug>
+=======
+>>>>>>> cedf22d96ad3d53ea5b058a1b89c2b65d1812586:src/page/home.page
       <!-- 入场效果 -->
       <plug class="button-item" :tap="owo.go('enter', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" name="line" text="入场效果" src="./src/module/button/line.owo"></plug>
       <!-- 页面切换效果 -->
