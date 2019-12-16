@@ -109,7 +109,7 @@ module.exports = {
   pageList: [
     {
       name: 'home',
-      src: './src/page/home.page'
+      src: './src/page/home.owo'
     },
     {
       name: 'button',

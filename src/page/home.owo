@@ -1,6 +1,7 @@
 <template>
   <div class="home page">
     <div class="box">
+      
       <!-- 文字字体 -->
       <plug class="button-item" :tap="owo.go('font', 'rotateCubeLeftOut', 'rotateCubeLeftIn', 'rotateCubeRightOut', 'rotateCubeRightIn')" name="line" text="文字字体" src="./src/module/button/line.owo"></plug>
       <!-- 入场效果 -->
