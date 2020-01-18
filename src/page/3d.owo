@@ -2,17 +2,17 @@
   <div class="three-dimensional page">
     <div class="box">
       <!-- 模型 -->
-      <plug class="button-item" :tap="owo.script[owo.activePage].turn('https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/')" name="line" text="模型" src="./src/module/button/line.owo"></plug>
+      <plug class="button-item" o-tap="owo.script[owo.activePage].turn('https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/')" name="line" text="模型" src="./src/module/button/line.owo"></plug>
       <!-- 全景图片 -->
-      <plug class="button-item" :tap="owo.script[owo.activePage].turn('https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/')" name="line" text="全景图片" src="./src/module/button/line.owo"></plug>
+      <plug class="button-item" o-tap="owo.script[owo.activePage].turn('https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/')" name="line" text="全景图片" src="./src/module/button/line.owo"></plug>
       <!-- vr -->
-      <plug class="button-item" :tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/index.html')" name="line" text="VR" src="./src/module/button/line.owo"></plug>
+      <plug class="button-item" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/index.html')" name="line" text="VR" src="./src/module/button/line.owo"></plug>
       <!-- 360° 图片 -->
-      <plug class="button-item" :tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/360.html')" name="line" text="全景图片2" src="./src/module/button/line.owo"></plug>
+      <plug class="button-item" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/360.html')" name="line" text="全景图片2" src="./src/module/button/line.owo"></plug>
       <!-- 3D模型 -->
-      <plug class="button-item" :tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/model/index.html')" name="line" text="3D模型" src="./src/module/button/line.owo"></plug>
+      <plug class="button-item" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/model/index.html')" name="line" text="3D模型" src="./src/module/button/line.owo"></plug>
       <!-- 面部识别 -->
-      <plug class="button-item" :tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/face/demos/threejs/headControls/index.html')" name="line" text="3D模型" src="./src/module/button/line.owo"></plug>
+      <plug class="button-item" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/face/demos/threejs/headControls/index.html')" name="line" text="3D模型" src="./src/module/button/line.owo"></plug>
     </div>
     <!-- 趣动logo -->
     <img class="logo" src="@|logo.png|"/>

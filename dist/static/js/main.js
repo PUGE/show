@@ -4,11 +4,12 @@ document.addEventListener('touchmove', function(e) {
   e.preventDefault()
 }, { passive: false })
 
-if (_owo.isMobi) {
-  document.body.classList.add('phone')
-} else {
-  document.body.classList.add('pc')
-}
+
+// if (_owo.isMobi) {
+//   document.body.classList.add('phone')
+// } else {
+//   document.body.classList.add('pc')
+// }
 
 function copyText (text) {
   var createInput = document.createElement('input');

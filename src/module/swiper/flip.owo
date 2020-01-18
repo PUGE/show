@@ -1,5 +1,5 @@
 <template>
-  <div class="flip" :tap="filp">
+  <div class="flip" o-tap="filp">
     <div class="front flip-item" data-text="Gongfu panda"></div>
     <div class="back flip-item" data-text="Toy story"></div>
   </div>

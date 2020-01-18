@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-// Tue Nov 05 2019 21:35:12 GMT+0800 (GMT+08:00)
-=======
-// Wed Dec 04 2019 09:40:51 GMT+0800 (GMT+08:00)
->>>>>>> cedf22d96ad3d53ea5b058a1b89c2b65d1812586
-
+// Sat Jan 18 2020 20:10:38 GMT+0800 (GMT+08:00)
+var owo = {tool: {},state: {},};
 /* 方法合集 */
 var _owo = {}
 
@@ -35,16 +31,9 @@ _owo.runCreated = function (pageFunction) {
 _owo.isMobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null
 
 
-_owo._run = function (eventFor, templateName, event) {
+_owo._run = function (eventFor, event, newPageFunction) {
   // 复制eventFor防止污染
   var eventForCopy = eventFor
-  // 判断页面是否有自己的方法
-  var newPageFunction = window.owo.script[window.owo.activePage]
-  // console.log(this.attributes)
-  if (templateName && templateName !== owo.activePage) {
-    // 如果模板注册到newPageFunction中，那么证明模板没有script那么直接使用eval执行
-    if (newPageFunction.template) newPageFunction = newPageFunction.template[templateName]
-  }
   // 待优化可以单独提出来
   // 取出参数
   var parameterArr = []
@@ -78,78 +67,105 @@ _owo._run = function (eventFor, templateName, event) {
     newPageFunction.$target = event.target
     newPageFunction[eventForCopy].apply(newPageFunction, parameterArr)
   } else {
-    // 如果没有此方法则交给浏览器引擎尝试运行
-    eval(eventFor)
+    shaheRun.apply(newPageFunction, [eventFor])
   }
 }
 
-_owo.bindEvent = function (eventName, eventFor, tempDom, templateName) {
+_owo.bindEvent = function (eventName, eventFor, tempDom, moudleScript) {
   tempDom['on' + eventName] = function(event) {
-    _owo._run(eventFor, templateName, event || this)
+    _owo._run(eventFor, event || this, moudleScript)
+  }
+}
+
+// 沙盒运行
+function shaheRun (code) {
+  try {
+    return eval(code)
+  } catch (error) {
+    console.error(error)
+    console.log('执行代码: ' + code)
+    return undefined
   }
 }
 
 /* owo事件处理 */
 // 参数1: 当前正在处理的dom节点
 // 参数2: 当前正在处理的模块名称
-_owo.handleEvent = function (tempDom, templateName) {
-  var activePage = window.owo.script[owo.activePage]
-  
-  if (tempDom.attributes) {
-    for (var ind = 0; ind < tempDom.attributes.length; ind++) {
-      var attribute = tempDom.attributes[ind]
-      // 判断是否为owo的事件
-      // ie不支持startsWith
-      if (attribute.name[0] == ':') {
-        var eventName = attribute.name.slice(1)
+_owo.handleEvent = function (moudleScript) {
+  if (!moudleScript.$el) throw 'error'
+  var tempDom = moudleScript.$el
+  // 递归处理元素属性
+  function recursion(tempDom) {
+    if (tempDom.attributes) {
+      for (var ind = 0; ind < tempDom.attributes.length; ind++) {
+        var attribute = tempDom.attributes[ind]
+        // ie不支持startsWith
         var eventFor = attribute.textContent || attribute.value
-        switch (eventName) {
-          case 'show' : {
-            // 初步先简单处理吧
-            var temp = eventFor.replace(/ /g, '')
-            if (!activePage.data[temp]) {
-              tempDom.style.display = 'none'
+        eventFor = eventFor.replace(/ /g, '')
+        // 判断是否为owo的事件
+        if (new RegExp("^o-").test(attribute.name)) {
+          var eventName = attribute.name.slice(2)
+          switch (eventName) {
+            
+            case 'tap': {
+              // 待优化 可合并
+              // 根据手机和PC做不同处理
+              if (_owo.isMobi) {
+                if (!_owo._event_tap) {console.error('找不到_event_tap方法！'); break;}
+                _owo._event_tap(tempDom, eventFor, function (event, eventFor) {
+                  _owo._run(eventFor, event || this, moudleScript)
+                })
+              } else _owo.bindEvent('click', eventFor, tempDom, moudleScript)
+              break
             }
-            break
+            
+            
+            
+            
+            default: {
+              _owo.bindEvent(eventName, eventFor, tempDom, moudleScript)
+            }
           }
-          case 'tap': {
-            // 待优化 可合并
-            // 根据手机和PC做不同处理
-            if (_owo.isMobi) {
-              if (!_owo._event_tap) {console.error('找不到_event_tap方法！'); break;}
-              _owo._event_tap(tempDom, function (event) {
-                _owo._run(eventFor, templateName, event || this)
-              })
-            } else _owo.bindEvent('click', eventFor, tempDom, templateName)
-            break
-          }
-          default: {
-            _owo.bindEvent(eventName, eventFor, tempDom, templateName)
-          }
+        } else if (attribute.name == 'view') {
+          viewName = eventFor
+        } else if (attribute.name == 'route') {
+          routeName = eventFor
         }
       }
     }
-  }
-  
-  // 判断是否有子节点需要处理
-  if (tempDom.children) {
-    // 递归处理所有子Dom结点
-    for (var i = 0; i < tempDom.children.length; i++) {
-      // 获取子节点实例
-      var childrenDom = tempDom.children[i]
-      // 每个子节点均要判断是否为模块
-      if (childrenDom.getAttribute('template')) {
-        
-        // 如果即将遍历进入模块 设置即将进入的模块为当前模块
-        // 获取模块的模块名
-        _owo.handleEvent(childrenDom, childrenDom.getAttribute('template'))
-      } else {
-        _owo.handleEvent(childrenDom, templateName)
+    // 判断是否有子节点需要处理
+    if (tempDom.children) {
+      
+      // 递归处理所有子Dom结点
+      for (var i = 0; i < tempDom.children.length; i++) {
+        // 获取子节点实例
+        var childrenDom = tempDom.children[i]
+        // o-if处理
+        var ifValue = childrenDom.getAttribute('o-if')
+        if (ifValue) {
+          var temp = ifValue.replace(/ /g, '')
+          var show = shaheRun.apply(moudleScript, [temp])
+          if (!show) {
+            childrenDom.style.display = 'none'
+            return
+          } else {
+            childrenDom.style.display = ''
+          }
+        }
+        if (!childrenDom.hasAttribute('template') && !childrenDom.hasAttribute('view')) {
+          recursion(childrenDom)
+        }
       }
+    } else {
+      console.info('元素不存在子节点!')
+      console.info(tempDom)
     }
-  } else {
-    console.info('元素不存在子节点!')
-    console.info(tempDom)
+  }
+  recursion(moudleScript.$el)
+  // 递归处理子模板
+  for (var key in moudleScript.template) {
+    moudleScript.template[key].$el = tempDom.querySelector('[template=' + key + ']')
+    _owo.handleEvent(moudleScript.template[key])
   }
 }
 
@@ -170,11 +186,76 @@ _owo.handlePage = function (newPageFunction, entryDom) {
   // 判断页面是否有下属模板,如果有运行所有模板的初始化方法
   for (var key in newPageFunction.template) {
     var templateScript = newPageFunction.template[key]
-    var childDom = entryDom.querySelector('[template="' + key +'"]')
-    // 判断相关模块是否在存在
-    if (!childDom) {continue}
-    _owo.handlePage(templateScript, childDom)
+    
+    templateScript.$el = entryDom.querySelector('[template="' + key +'"]')
+    _owo.runCreated(templateScript)
   }
+
+  owo.state.urlVariable = _owo.getQueryVariable()
+  // 判断页面中是否有路由
+  if (newPageFunction.view) {
+    for (var viewName in newPageFunction.view) {
+      var routeList = newPageFunction.view[viewName]
+      // 标识是否没有指定显示哪个路由
+      var activeRouteIndex = 0
+      var urlViewName = owo.state.urlVariable['view-' + viewName]
+      for (var routeInd in routeList) {
+        var routeItem = routeList[routeInd]
+        routeList[routeInd].$el = entryDom.querySelector('[view="' + viewName +'"] [route="' + routeItem._name +'"]')
+        // 错误处理
+        if (!routeList[routeInd].$el) {
+          console.error('找不到视窗 ' + viewName + ' 中的路由: ' + routeItem._name)
+          break
+        }
+        routeList[routeInd].$el.setAttribute('route-ind', routeInd)
+        // console.log(urlViewName, )
+        if (urlViewName && urlViewName == routeItem._name) {
+          activeRouteIndex = routeInd
+        }
+      }
+      // 激活对应路由
+      _owo.showViewIndex(routeList, activeRouteIndex)
+      _owo.handlePage(routeList[activeRouteIndex], routeList[activeRouteIndex].$el)
+    }
+  }
+}
+
+_owo.showViewIndex = function (routeList, ind) {
+  for (var routeIndex = 0; routeIndex < routeList.length; routeIndex++) {
+    var element = routeList[routeIndex];
+    if (routeIndex == ind) {
+      element.$el.style.display = 'block'
+      element.$el.classList.add('route-active')
+    } else {
+      element.$el.style.display = 'none'
+      element.$el.classList.remove('route-active')
+    }
+  }
+}
+
+_owo.showViewName = function (routeList, name) {
+  for (var routeIndex = 0; routeIndex < routeList.length; routeIndex++) {
+    var element = routeList[routeIndex];
+    if (element._name == name) {
+      element.$el.style.display = 'block'
+      element.$el.classList.add('route-active')
+    } else {
+      element.$el.style.display = 'none'
+      element.$el.classList.remove('route-active')
+    }
+  }
+}
+
+// 获取URL中的参数
+_owo.getQueryVariable = function () {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  var temp = {}
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    temp[pair[0]] = pair[1];
+  }
+  return temp;
 }
 /*
  * 传递函数给whenReady()
@@ -257,7 +338,17 @@ _owo.showPage = function() {
     entryDom.style.display = 'block'
     window.owo.activePage = page
     _owo.handlePage(owo.script[page], entryDom)
-    _owo.handleEvent(entryDom, null)
+    _owo.handleEvent(owo.script[page])
+    // 处理插件
+    var plugList = document.querySelectorAll('.owo-block')
+    for (var ind = 0; ind < plugList.length; ind++) {
+      var plugEL = plugList[ind]
+      var plugName = plugEL.getAttribute('template')
+      owo.script[plugName].$el = plugEL
+      _owo.handlePage(owo.script[plugName], plugEL)
+      _owo.handleEvent(owo.script[plugName])
+    }
+    
   } else {
     console.error('未设置程序入口!')
   }
@@ -273,9 +364,8 @@ _owo.showPage = function() {
   参数3: 进入页面动画
 */
 owo.go = function (pageName, inAnimation, outAnimation, backInAnimation, backOutAnimation, noBack, param) {
-  // console.log(owo.script[pageName])
   if (!owo.script[pageName]) {
-    console.error("导航到不存在的页面!")
+    console.error("导航到不存在的页面: " + pageName)
     return
   }
   owo.script[pageName]._animation = {
@@ -333,7 +423,7 @@ if(/iPhone\sOS.*QQ[^B]/.test(navigator.userAgent)) {window.onpopstate = _owo.has
 
 // 执行页面加载完毕方法
 _owo.ready(_owo.showPage)
-_owo._event_tap = function (tempDom, callBack) {
+_owo._event_tap = function (tempDom, eventFor, callBack) {
   // 变量
   var startTime = 0
   var isMove = false
@@ -345,7 +435,7 @@ _owo._event_tap = function (tempDom, callBack) {
   })
   tempDom.addEventListener('touchend', function(e) {
     if (Date.now() - startTime < 300 && !isMove) {
-      callBack(e)
+      callBack(e, eventFor)
     }
     // 清零
     startTime = 0;
@@ -394,34 +484,6 @@ if ("WebSocket" in window) {
   console.error('浏览器不支持WebSocket')
 }
 
-console.log('owo-远程调试已开启!')
-// 这是用于远程调试的代码，他不应该出现在正式上线版本!
-if ("WebSocket" in window) {
-  // 打开一个 web socket
-  if (!window._owo.ws) window._owo.ws = new WebSocket("ws://" + window.location.host)
-  window.log = function (message) {
-    console.info(message)
-    // 判断ws连接成功后，才会发送消息
-    if (window._owo.ws.readyState == 1) {
-      window._owo.ws.send(JSON.stringify({
-        type: "log",
-        message: message
-      }))
-    }
-  }
-  window.onerror = function() {
-    window._owo.ws.send(JSON.stringify({
-      type: "log",
-      message: arguments[1] + ' 第 ' + arguments[2] + ' 行 ' + arguments[3] + ' 列 发生错误: ' + arguments[0] + ' 调用堆栈: ' + arguments[4]
-    }))
-  }
-} else {
-  window.log = function (message) {
-    console.info(message)
-  }
-  console.error('浏览器不支持WebSocket')
-}
-
 // 切换页面动画
 function animation (oldDom, newDom, animationIn, animationOut, forward) {
   // 动画延迟
@@ -451,7 +513,7 @@ function animation (oldDom, newDom, animationIn, animationOut, forward) {
   for (var ind =0; ind < animationIn.length; ind++) {
     var value = animationIn[ind]
     //判断是否为延迟属性
-    if (value.startsWith('delay')) {
+    if (value.slice(0, 5) == 'delay') {
       var tempDelay = parseInt(value.slice(5))
       if (delay < tempDelay)  delay = tempDelay
     }
@@ -461,7 +523,7 @@ function animation (oldDom, newDom, animationIn, animationOut, forward) {
   newDom.classList.add('owo-animation')
   for (var ind =0; ind < animationOut.length; ind++) {
     var value = animationOut[ind]
-    if (value.startsWith('delay')) {
+    if (value.slice(0, 5) == 'delay') {
       var tempDelay = parseInt(value.slice(5))
       if (delay < tempDelay)  delay = tempDelay
     }
@@ -508,7 +570,6 @@ function animation (oldDom, newDom, animationIn, animationOut, forward) {
   }
 }
 
-
 // 切换页面前的准备工作
 function switchPage (oldUrlParam, newUrlParam) {
   var oldPage = oldUrlParam ? oldUrlParam.split('&')[0] : owo.entry
@@ -527,9 +588,13 @@ function switchPage (oldUrlParam, newUrlParam) {
   // 直接.in会在ie下报错
   var animationIn = owo.script[newPage]._animation['in']
   var animationOut = owo.script[newPage]._animation['out']
+  // 全局跳转设置判断
+  if (owo.state.go) {
+    animationIn = animationIn || owo.state.go.inAnimation
+    animationOut = animationOut || owo.state.go.outAnimation
+  }
   if (animationIn || animationOut) {
-    owo.state.animation = {}
-    animation(oldDom, newDom, animationIn.split('&&'), animationOut.split('&&'), owo.state.animation['forward'])
+    animation(oldDom, newDom, animationIn.split('&&'), animationOut.split('&&'))
   } else {
     if (oldDom) {
       // 隐藏掉旧的节点
@@ -540,10 +605,88 @@ function switchPage (oldUrlParam, newUrlParam) {
   }
   
   window.owo.activePage = newPage
-  // 不可调换位置
-  if (!window.owo.script[newPage]._isCreated) {
-    _owo.handleEvent(newDom, null)
-  }
-  // 不可调换位置
   _owo.handlePage(window.owo.script[newPage], newDom)
+  _owo.handleEvent(window.owo.script[newPage])
+  
+  // 显示路由
+  var viewList = newDom.querySelectorAll('[view]')
+  _owo.showViewIndex(viewList, 0)
+}
+
+// 切换路由前的准备工作
+function switchRoute (view, newRouteName, animationIn, animationOut) {
+  var view = document.querySelector('[template=' + owo.activePage + '] [view=' + view + ']')
+  var oldDom = view.querySelector('.active-route')
+  var newDom = view.querySelector('[route=' + newRouteName +']')
+  oldDom.addEventListener("animationend", oldDomFun)
+  newDom.addEventListener("animationend", newDomFun)
+  // 动画延迟
+  var delay = 0
+  oldDom.style.position = 'absolute'
+
+  newDom.style.display = 'block'
+  newDom.style.position = 'absolute'
+  // 给即将生效的页面加上“未来”标识
+  newDom.classList.add('owo-animation-forward')
+  // document.body.style.overflow = 'hidden'
+
+  // parentDom.style.perspective = '1200px'
+  oldDom.classList.add('owo-animation')
+  for (var ind =0; ind < animationIn.length; ind++) {
+    var value = animationIn[ind]
+    //判断是否为延迟属性
+    if (value.slice(0, 5) == 'delay') {
+      var tempDelay = parseInt(value.slice(5))
+      if (delay < tempDelay)  delay = tempDelay
+    }
+    oldDom.classList.add('o-page-' + value)
+  }
+
+  newDom.classList.add('owo-animation')
+  for (var ind =0; ind < animationOut.length; ind++) {
+    var value = animationOut[ind]
+    if (value.startsWith('delay')) {
+      var tempDelay = parseInt(value.slice(5))
+      if (delay < tempDelay)  delay = tempDelay
+    }
+    newDom.classList.add('o-page-' + value)
+  }
+  // 旧DOM执行函数
+  function oldDomFun (e) {
+    // 排除非框架引起的结束事件
+    if (e.target.getAttribute('view')) {
+      // 移除监听
+      oldDom.removeEventListener('animationend', oldDomFun, false)
+      // 延迟后再清除，防止动画还没完成
+      setTimeout(function () {
+        oldDom.style.display = 'none'
+        // console.log(oldDom)
+        oldDom.style.position = ''
+        oldDom.classList.remove('owo-animation')
+        parentDom.style.perspective = ''
+        // 清除临时设置的class
+        for (var ind =0; ind < animationIn.length; ind++) {
+          var value = animationIn[ind]
+          oldDom.classList.remove('o-page-' + value)
+        }
+      }, delay);
+    }
+  }
+
+  // 新DOM执行函数
+  function newDomFun () {
+    // 移除监听
+    newDom.removeEventListener('animationend', newDomFun, false)
+    // 延迟后再清除，防止动画还没完成
+    setTimeout(function () {
+      // 清除临时设置的style
+      newDom.style.position = '';
+      newDom.classList.remove('owo-animation');
+      newDom.classList.remove('owo-animation-forward');
+      for (var ind =0; ind < animationOut.length; ind++) {
+        var value = animationOut[ind]
+        newDom.classList.remove('o-page-' + value);
+      }
+    }, delay);
+  }
 }

@@ -1,0 +1,175 @@
+{
+	"basePath": "./",
+	"root": "/src",
+	"title": "展示页面",
+	"scheme": [],
+	"outFolder": "./dist",
+	"resourceFolder": "./src/resource",
+	"headList": [
+		{
+			"http-equiv": "content-type",
+			"content": "text/html; charset=UTF-8"
+		},
+		{
+			"name": "viewport",
+			"content": "width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+		},
+		{
+			"name": "format-detection",
+			"content": "telephone=no, email=no"
+		},
+		{
+			"name": "apple-mobile-web-app-capable",
+			"content": "yes"
+		},
+		{
+			"name": "apple-mobile-web-app-status-bar-style",
+			"content": "white"
+		},
+		{
+			"name": "renderer",
+			"content": "webkit"
+		},
+		{
+			"http-equiv": "X-UA-Compatible",
+			"content": "IE=edge,chrome=1"
+		},
+		{
+			"name": "filetype",
+			"content": "1"
+		},
+		{
+			"name": "publishedtype",
+			"content": "1"
+		},
+		{
+			"name": "pagetype",
+			"content": "2"
+		},
+		{
+			"name": "screen-orientation",
+			"content": "landscape"
+		},
+		{
+			"name": "x5-orientation",
+			"content": "landscape"
+		},
+		{
+			"name": "full-screen",
+			"content": "yes"
+		},
+		{
+			"name": "x5-fullscreen",
+			"content": "true"
+		},
+		{
+			"name": "browsermode",
+			"content": "application"
+		},
+		{
+			"name": "x5-page-mode",
+			"content": "app"
+		}
+	],
+	"scriptList": [
+		{
+      "name": "main",
+      "src": "./src/main.js"
+		},
+		{
+      "name": "check",
+      "src": "./src/check.js"
+    },
+    {
+      "name": "swiper-3.4.2",
+      "src": "./src/resource/swiper.min.js"
+    },
+    {
+      "name": "iscroll",
+      "src": "./src/resource/iscroll.js"
+    },
+    {
+      "name": "clipboard.min",
+      "src": "./src/resource/clipboard.min.js"
+    }
+	],
+	"styleList": [
+		{
+      "name": "swiper-3.4.2",
+      "src": "./src/resource/swiper.min.css"
+    },
+    {
+      "resource": true,
+      "name": "main",
+      "src": "./src/main.css"
+    }
+	],
+	"pageList": [
+		{
+      "name": "home",
+      "src": "./src/page/home.owo"
+    },
+    {
+      "name": "button",
+      "src": "./src/page/button.owo"
+    },
+    {
+      "name": "switch",
+      "src": "./src/page/switch.owo"
+    },
+    {
+      "name": "exhibition",
+      "src": "./src/page/exhibition.owo"
+    },
+    {
+      "name": "swiper",
+      "src": "./src/page/swiper.owo"
+    },
+    {
+      "name": "dimensional",
+      "src": "./src/page/3d.owo"
+    },
+    {
+      "name": "enter",
+      "src": "./src/page/enter.owo"
+    },
+    {
+      "name": "hover",
+      "src": "./src/page/hover.owo"
+		},
+		{
+      "name": "animation",
+      "src": "./src/page/animation.owo"
+    }
+	],
+	"mode": {
+		"dev": {
+			"basePath": "./",
+			"debug": true,
+			"watcherEnable": true,
+			"watcherIgnored": "./dist/*",
+			"watcherdepth": 99,
+			"merge": true,
+			"minifyCss": false,
+			"minifyJs": false,
+			"addVersion": false,
+			"allAnimate": false,
+			"serverPort": 8000,
+			"server": true,
+			"autoReload": true,
+			"remoteDebug": false
+		},
+		"build": {
+			"debug": false,
+			"basePath": "./",
+			"alertLink": false,
+			"startAtHome": true,
+			"minifyCss": false,
+			"minifyJs": false,
+			"addVersion": true,
+			"embedSize": 0,
+			"merge": false,
+			"allAnimate": false
+		}
+	}
+}

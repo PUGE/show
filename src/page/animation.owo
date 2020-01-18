@@ -1,0 +1,39 @@
+<template lang="pug">
+.animation-box.page
+  img.show-logo(src="@|logo.png|" o-animation="bottomToTopHide")
+  img.show-logo(src="@|logo.png|" o-animation="flicker")
+  img.show-logo(src="@|logo.png|" o-animation="floatLeftRight")
+  img.show-logo(src="@|logo.png|" o-animation="floatUpDown")
+  img.show-logo(src="@|logo.png|" o-animation="leftToRight")
+  img.show-logo(src="@|logo.png|" o-animation="shrink")
+  img.show-logo(src="@|logo.png|" o-animation="turn")
+  img.show-logo(src="@|logo.png|" o-animation="rotate")
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    // created: function () {
+    //   new IScroll(owo.query('.scroll-box')[0], {
+    //     scrollbars: true,
+    //     mouseWheel: true,
+    //     interactiveScrollbars: true,
+    //     shrinkScrollbars: 'scale',
+    //     fadeScrollbars: true
+    //   })
+    //   new ClipboardJS('.dimensional-button-item')
+    // }
+  }
+</script>
+
+<style lang="less">
+.logo-box {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.show-logo {
+  width: 50vw;
+}
+</style>

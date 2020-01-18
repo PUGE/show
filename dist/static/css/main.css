@@ -11,6 +11,10 @@ body, html, .owo {
   background-color: skyblue;
   overflow: hidden;
 }
+body {
+  max-width: 57vh;
+  margin: 0 auto;
+}
 /* 清除浮动 */
 .clear {
   clear: both;
