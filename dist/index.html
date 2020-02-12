@@ -1,152 +1,169 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <title>展示页面</title>
-    <!-- 页面的元信息 -->
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <meta name="format-detection" content="telephone=no, email=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
-    <meta name="renderer" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="filetype" content="1"/>
-    <meta name="publishedtype" content="1"/>
-    <meta name="pagetype" content="2"/>
-    <meta name="screen-orientation" content="landscape"/>
-    <meta name="x5-orientation" content="landscape"/>
-    <meta name="full-screen" content="yes"/>
-    <meta name="x5-fullscreen" content="true"/>
-    <meta name="browsermode" content="application"/>
-    <meta name="x5-page-mode" content="app"/>
-    
-      <!-- 页面主样式文件 -->
-      <link charset="utf-8"  rel="stylesheet" href="./static/css/owo.main.css">
-      
-    <!-- 附属css文件 -->
-    <link rel="stylesheet" href="./static/css/swiper-3.4.2.css" charset="utf-8">
-    <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
-      
-  </head>
-  <body>
-    <!-- 页面区域 -->
-    <!-- 页面[home]-->
-    <div class="home page" template="home" style="display: none;"><div class="box"><div class="owo-go line-button" page="enter" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">入场效果</div><div class="owo-go line-button" page="switch" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">页面切换效果</div><div class="owo-go line-button" page="animation" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">动画效果</div><div class="owo-go line-button" page="swiper" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">轮播图</div><div class="owo-go line-button" page="dimensional" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">3D/VR</div><div class="owo-go line-button" page="hover" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">鼠标悬停效果</div></div></div>
-    <!-- 页面[switch]-->
-    <div class="switch page" template="switch" style="display: none;">
+
+<head>
+  <title>展示页面</title>
+  <!-- 页面的元信息 -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="landscape" />
+  <meta name="x5-orientation" content="landscape" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.main.8ril3jap11g.css">
+
+  <!-- 附属css文件 -->
+  <link rel="stylesheet" href="./static/css/swiper-3.4.2.css" charset="utf-8">
+  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+
+</head>
+
+<body>
+  <!-- 页面区域 -->
+  <!-- 页面[home]-->
+  <div class="home page" template="home" style="display: none;">
+    <div class="box">
+      <div class="owo-go line-button" page="enter" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">入场效果</div>
+      <div class="owo-go line-button" page="switch" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">页面切换效果</div>
+      <div class="owo-go line-button" page="animation" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">动画效果</div>
+      <div class="owo-go line-button" page="swiper" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">轮播图</div>
+      <div class="owo-go line-button" page="dimensional" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">3D/VR</div>
+      <div class="owo-go line-button" page="hover" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">鼠标悬停效果</div>
+    </div>
+  </div>
+  <!-- 页面[switch]-->
+  <div class="switch page" template="switch" style="display: none;">
     <div class="box">
       <p class="title">移入/移出</p>
       <div class="owo-go line-button button-item" page="exhibition" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">
-    <span>向右移出</span>
-  </div>
+        <span>向右移出</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="moveToTop/moveFromBottom/moveToBottom/moveFromTop">
-    <span>向下移出</span>
-  </div>
+        <span>向下移出</span>
+      </div>
       <p class="title">淡入/淡出</p>
       <div class="owo-go line-button button-item" page="exhibition" ani="fade/moveFromRight/fade/moveFromLeft">
-    <span>向右淡入</span>
-  </div>
+        <span>向右淡入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="fade/moveFromBottom/fade/moveFromTop">
-    <span>向下淡入</span>
-  </div>
+        <span>向下淡入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="moveToLeftFade/moveFromRightFade/moveToRightFade/moveFromLeftFade">
-    <span>向右淡入2</span>
-  </div>
+        <span>向右淡入2</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="moveToTopFade/moveFromBottomFade/moveToBottomFade/moveFromTopFade">
-    <span>向下淡入2</span>
-  </div>
+        <span>向下淡入2</span>
+      </div>
       <p class="title">后退效果</p>
       <div class="owo-go line-button button-item" page="exhibition" ani="scaleDown/moveFromRight/scaleDown/moveFromLeft">
-    <span>向后淡出/向左移入</span>
-  </div>
+        <span>向后淡出/向左移入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="scaleDown/moveFromBottom/scaleDown/moveFromTop">
-    <span>向后淡出/向上移入</span>
-  </div>
+        <span>向后淡出/向上移入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="scaleDown/scaleUpDown/scaleDown/scaleUp">
-    <span>向后淡出/向前淡入</span>
-  </div>
+        <span>向后淡出/向前淡入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="moveToLeft/scaleUp/moveToRight/scaleUp">
-    <span>向左移出/向前淡入</span>
-  </div>
+        <span>向左移出/向前淡入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="moveToTop/scaleUp/moveToBottom/scaleUp">
-    <span>向上移出/向前淡入</span>
-  </div>
+        <span>向上移出/向前淡入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="scaleDownCenter/scaleUpCenter&amp;&amp;delay400/scaleDownCenter/scaleUpCenter&amp;&amp;delay400">
-    <span>向后移出/向前移入</span>
-  </div>
+        <span>向后移出/向前移入</span>
+      </div>
       <p class="title">吸附效果</p>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateRightSideFirst/moveFromRight&amp;&amp;delay200/rotateLeftSideFirst/moveFromLeft&amp;&amp;delay200">
-    <span>左侧吸附/向左移入</span>
-  </div>
+        <span>左侧吸附/向左移入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateTopSideFirst/moveFromTop&amp;&amp;delay200/rotateBottomSideFirst/moveFromBottom&amp;&amp;delay200">
-    <span>下侧吸附/向下移入</span>
-  </div>
+        <span>下侧吸附/向下移入</span>
+      </div>
       <p class="title">翻转效果</p>
       <div class="owo-go line-button button-item" page="exhibition" ani="flipOutRight/flipInLeft&amp;&amp;delay500/flipOutLeft/flipInRight&amp;&amp;delay500">
-    <span>向右翻转/向左翻转</span>
-  </div>
+        <span>向右翻转/向左翻转</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="flipOutTop/flipInBottom&amp;&amp;delay500/flipOutBottom/flipInTop&amp;&amp;delay500">
-    <span>向下翻转/向向翻转</span>
-  </div>
+        <span>向下翻转/向向翻转</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateOutNewspaper/rotateInNewspaper&amp;&amp;delay500/rotateOutNewspaper/rotateInNewspaper&amp;&amp;delay500">
-    <span>向后螺旋/向前螺旋</span>
-  </div>
+        <span>向后螺旋/向前螺旋</span>
+      </div>
       <p class="title">掉落效果</p>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateFall/scaleUp/rotateFall/scaleUp">
-    <span>向下掉落/向前移入</span>
-  </div>
+        <span>向下掉落/向前移入</span>
+      </div>
       <p class="title">推拉效果</p>
       <!-- 待修复这里应该能控制什么在前 -->
       <div class="owo-go line-button button-item" page="exhibition" ani="rotatePushLeft/moveFromRight&amp;&amp;ontop/rotatePushRight/moveFromLeft&amp;&amp;ontop">
-    <span>向左推出/向左移入</span>
-  </div>
+        <span>向左推出/向左移入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotatePushTop/moveFromBottom&amp;&amp;ontop/rotatePushBottom/moveFromTop&amp;&amp;ontop">
-    <span>向上推出/向上移入</span>
-  </div>
+        <span>向上推出/向上移入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotatePushLeft/rotatePullRight&amp;&amp;ontop/rotatePushRight/rotatePullLeft&amp;&amp;ontop">
-    <span>向左推出/向左推入</span>
-  </div>
+        <span>向左推出/向左推入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotatePushTop/rotatePullBottom&amp;&amp;ontop/rotatePushBottom/rotatePullTop&amp;&amp;ontop">
-    <span>向上推出/向上推入</span>
-  </div>
+        <span>向上推出/向上推入</span>
+      </div>
       <p class="title">盒子效果</p>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateRoomLeftOut&amp;&amp;ontop/rotateRoomLeftIn/rotateRoomRightOut&amp;&amp;ontop/rotateRoomRightIn">
-    <span>向左转动/向左转动</span>
-  </div>
+        <span>向左转动/向左转动</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateRoomTopOut&amp;&amp;ontop/rotateRoomTopIn/rotateRoomBottomOut&amp;&amp;ontop/rotateRoomBottomIn">
-    <span>向上转动/向上转动</span>
-  </div>
+        <span>向上转动/向上转动</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn">
-    <span>向右扭转/向右扭转</span>
-  </div>
+        <span>向右扭转/向右扭转</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateCubeTopOut/rotateCubeTopIn/rotateCubeBottomOut/rotateCubeBottomIn">
-    <span>向上扭转/向上扭转</span>
-  </div>
+        <span>向上扭转/向上扭转</span>
+      </div>
       <p class="title">旋转木马</p>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateCarouselLeftOut&amp;&amp;ontop/rotateCarouselLeftIn/rotateCarouselRightOut&amp;&amp;ontop/rotateCarouselRightIn">
-    <span>向左飞出/向左飞入</span>
-  </div>
+        <span>向左飞出/向左飞入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateCarouselTopOut&amp;&amp;ontop/rotateCarouselTopIn/rotateCarouselBottomOut&amp;&amp;ontop/rotateCarouselBottomIn">
-    <span>向上飞出/向左飞入</span>
-  </div>
+        <span>向上飞出/向左飞入</span>
+      </div>
       <div class="owo-go line-button button-item" page="exhibition" ani="rotateSidesOut&amp;&amp;ontop/rotateSidesIn&amp;&amp;delay200/rotateSidesOut&amp;&amp;ontop/rotateSidesIn&amp;&amp;delay200">
-    <span>向左翻转/向左翻转</span>
-  </div>
+        <span>向左翻转/向左翻转</span>
+      </div>
     </div>
     <!-- 趣动logo -->
     <img class="logo" src="./static/resource/logo.png">
   </div>
-    <!-- 页面[exhibition]-->
-    <div class="exhibition page" template="exhibition" style="display: none;">
+  <!-- 页面[exhibition]-->
+  <div class="exhibition page" template="exhibition" style="display: none;">
     <div class="swiper-container swiper-item" template="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="http://www.people.com.cn/NMediaFile/2019/0715/MAIN201907150934246380428030916.jpg"></div>
-      <div class="swiper-slide"><img src="http://culture.people.com.cn/NMediaFile/2019/0706/MAIN201907061606184511014633123.jpg"></div>
-      <div class="swiper-slide"><img src="http://ent.people.com.cn/NMediaFile/2019/0709/MAIN201907090850000450350387315.jpg"></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="http://www.people.com.cn/NMediaFile/2019/0715/MAIN201907150934246380428030916.jpg">
+        </div>
+        <div class="swiper-slide">
+          <img src="http://culture.people.com.cn/NMediaFile/2019/0706/MAIN201907061606184511014633123.jpg">
+        </div>
+        <div class="swiper-slide">
+          <img src="http://ent.people.com.cn/NMediaFile/2019/0709/MAIN201907090850000450350387315.jpg">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
     <div class="box">
       <div class="card" font="FZKATJW.TTF">
         <p>三星首尔医院一项历时十年的研究显示，高收入群体的生存率高于低收入群体，而收入水平上升能够降低心脑血管疾病死亡率。</p>
@@ -156,66 +173,72 @@
     <!-- 趣动logo -->
     <img class="logo" src="./static/resource/logo.png">
   </div>
-    <!-- 页面[swiper]-->
-    <div class="swiper page" template="swiper" style="display: none;">
+  <!-- 页面[swiper]-->
+  <div class="swiper page" template="swiper" style="display: none;">
     <div class="box">
       <p class="title">经典轮播</p>
       <div class="swiper-container swiper-item" template="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="http://www.people.com.cn/NMediaFile/2019/0715/MAIN201907150934246380428030916.jpg"></div>
-      <div class="swiper-slide"><img src="http://culture.people.com.cn/NMediaFile/2019/0706/MAIN201907061606184511014633123.jpg"></div>
-      <div class="swiper-slide"><img src="http://ent.people.com.cn/NMediaFile/2019/0709/MAIN201907090850000450350387315.jpg"></div>
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="http://www.people.com.cn/NMediaFile/2019/0715/MAIN201907150934246380428030916.jpg">
+          </div>
+          <div class="swiper-slide">
+            <img src="http://culture.people.com.cn/NMediaFile/2019/0706/MAIN201907061606184511014633123.jpg">
+          </div>
+          <div class="swiper-slide">
+            <img src="http://ent.people.com.cn/NMediaFile/2019/0709/MAIN201907090850000450350387315.jpg">
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
       <p class="title">左右翻转</p>
       <div class="flip" o-tap="filp" template="flip">
-    <div class="front flip-item" data-text="Gongfu panda"></div>
-    <div class="back flip-item" data-text="Toy story"></div>
-  </div>
+        <div class="front flip-item" data-text="Gongfu panda"></div>
+        <div class="back flip-item" data-text="Toy story"></div>
+      </div>
       <p class="title">上下翻转</p>
       <div class="flip" o-tap="filp" template="flip-1">
-    <div class="front flip-item" data-text="Gongfu panda"></div>
-    <div class="back flip-item" data-text="Toy story"></div>
-  </div>
+        <div class="front flip-item" data-text="Gongfu panda"></div>
+        <div class="back flip-item" data-text="Toy story"></div>
+      </div>
     </div>
     <!-- 趣动logo -->
     <img class="logo" src="./static/resource/logo.png">
   </div>
-    <!-- 页面[dimensional]-->
-    <div class="three-dimensional page" template="dimensional" style="display: none;">
+  <!-- 页面[dimensional]-->
+  <div class="three-dimensional page" template="dimensional" style="display: none;">
     <div class="box">
       <!-- 模型 -->
       <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/')">
-    <span>模型</span>
-  </div>
+        <span>模型</span>
+      </div>
       <!-- 全景图片 -->
       <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/')">
-    <span>全景图片</span>
-  </div>
+        <span>全景图片</span>
+      </div>
       <!-- vr -->
       <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/index.html')">
-    <span>VR</span>
-  </div>
+        <span>VR</span>
+      </div>
       <!-- 360° 图片 -->
       <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/360.html')">
-    <span>全景图片2</span>
-  </div>
+        <span>全景图片2</span>
+      </div>
       <!-- 3D模型 -->
       <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/model/index.html')">
-    <span>3D模型</span>
-  </div>
+        <span>3D模型</span>
+      </div>
       <!-- 面部识别 -->
       <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/face/demos/threejs/headControls/index.html')">
-    <span>3D模型</span>
-  </div>
+        <span>3D模型</span>
+      </div>
     </div>
     <!-- 趣动logo -->
     <img class="logo" src="./static/resource/logo.png">
   </div>
-    <!-- 页面[enter]-->
-    <div class="three-dimensional page" template="enter" style="display: none;">
+  <!-- 页面[enter]-->
+  <div class="three-dimensional page" template="enter" style="display: none;">
     <!-- 趣动logo -->
     <div class="logo-box">
       <img class="show-logo" src="./static/resource/logo.png">
@@ -298,10 +321,10 @@
         <div class="clear"></div>
       </div>
     </div>
-    
+
   </div>
-    <!-- 页面[hover]-->
-    <div class="hover page" template="hover" style="display: none;">
+  <!-- 页面[hover]-->
+  <div class="hover page" template="hover" style="display: none;">
     <div class="box">
       <h2>2D Transitions</h2>
 
@@ -409,378 +432,391 @@
       <div class="button owo-hover-curl-bottom-left">Curl Bottom Left</div>
     </div>
   </div>
-    <!-- 页面[animation]-->
-    <div class="animation-box page" template="animation" style="display: none;"><img class="show-logo owo-animation-bottomToTopHide" src="./static/resource/logo.png" o-animation="bottomToTopHide"><img class="show-logo owo-animation-flicker" src="./static/resource/logo.png" o-animation="flicker"><img class="show-logo owo-animation-floatLeftRight" src="./static/resource/logo.png" o-animation="floatLeftRight"><img class="show-logo owo-animation-floatUpDown" src="./static/resource/logo.png" o-animation="floatUpDown"><img class="show-logo owo-animation-leftToRight" src="./static/resource/logo.png" o-animation="leftToRight"><img class="show-logo owo-animation-shrink" src="./static/resource/logo.png" o-animation="shrink"><img class="show-logo owo-animation-turn" src="./static/resource/logo.png" o-animation="turn"><img class="show-logo owo-animation-rotate" src="./static/resource/logo.png" o-animation="rotate"></div>
-    
+  <!-- 页面[animation]-->
+  <div class="animation-box page" template="animation" style="display: none;">
+    <img class="show-logo owo-animation-bottomToTopHide" src="./static/resource/logo.png" o-animation="bottomToTopHide">
+    <img class="show-logo owo-animation-flicker" src="./static/resource/logo.png" o-animation="flicker">
+    <img class="show-logo owo-animation-floatLeftRight" src="./static/resource/logo.png" o-animation="floatLeftRight">
+    <img class="show-logo owo-animation-floatUpDown" src="./static/resource/logo.png" o-animation="floatUpDown">
+    <img class="show-logo owo-animation-leftToRight" src="./static/resource/logo.png" o-animation="leftToRight">
+    <img class="show-logo owo-animation-shrink" src="./static/resource/logo.png" o-animation="shrink">
+    <img class="show-logo owo-animation-turn" src="./static/resource/logo.png" o-animation="turn">
+    <img class="show-logo owo-animation-rotate" src="./static/resource/logo.png" o-animation="rotate">
+  </div>
 
-    <script src="./static/js/main.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/check.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/swiper-3.4.2.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/iscroll.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/clipboard.min.js" type="text/javascript"  charset="UTF-8"></script><!-- 框架script代码 --><!-- 框架script文件 -->
-<script src="./static/js/owo.main.js" type="text/javascript" charset="UTF-8"></script>
-<script>/*
+
+  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/check.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/swiper-3.4.2.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/iscroll.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/clipboard.min.js" type="text/javascript" charset="UTF-8"></script><!-- 框架script代码 -->
+  <!-- 框架script文件 -->
+  <script src="./static/js/owo.main.8ril3jap11g.js" type="text/javascript" charset="UTF-8"></script>
+  <script>
+    /*
   存储每个页面的函数
   键名：页面名称
   键值：方法列表
 */
-owo.phoneEnter = "null";
-owo.script = {
-  "home": {},
-  "switch": {
-    "created": function created() {
-      new IScroll(this.$el, {
-        scrollbars: true,
-        mouseWheel: true,
-        interactiveScrollbars: true,
-        shrinkScrollbars: 'scale',
-        fadeScrollbars: true
-      });
-    },
-    "template": {
-      "line": {
-        "prop": {
-          "text": "向右移出",
-          "ani": "moveToLeft/moveFromRight/moveToRight/moveFromLeft"
+    owo.phoneEnter = "null";
+    owo.script = {
+      "home": {},
+      "switch": {
+        "created": function created() {
+          new IScroll(this.$el, {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+          });
+        },
+        "template": {
+          "line": {
+            "prop": {
+              "text": "向右移出",
+              "ani": "moveToLeft/moveFromRight/moveToRight/moveFromLeft"
+            }
+          },
+          "line-1": {
+            "prop": {
+              "text": "向下移出",
+              "ani": "moveToTop/moveFromBottom/moveToBottom/moveFromTop"
+            }
+          },
+          "line-2": {
+            "prop": {
+              "text": "向右淡入",
+              "ani": "fade/moveFromRight/fade/moveFromLeft"
+            }
+          },
+          "line-3": {
+            "prop": {
+              "text": "向下淡入",
+              "ani": "fade/moveFromBottom/fade/moveFromTop"
+            }
+          },
+          "line-4": {
+            "prop": {
+              "text": "向右淡入2",
+              "ani": "moveToLeftFade/moveFromRightFade/moveToRightFade/moveFromLeftFade"
+            }
+          },
+          "line-5": {
+            "prop": {
+              "text": "向下淡入2",
+              "ani": "moveToTopFade/moveFromBottomFade/moveToBottomFade/moveFromTopFade"
+            }
+          },
+          "line-6": {
+            "prop": {
+              "text": "向后淡出/向左移入",
+              "ani": "scaleDown/moveFromRight/scaleDown/moveFromLeft"
+            }
+          },
+          "line-7": {
+            "prop": {
+              "text": "向后淡出/向上移入",
+              "ani": "scaleDown/moveFromBottom/scaleDown/moveFromTop"
+            }
+          },
+          "line-8": {
+            "prop": {
+              "text": "向后淡出/向前淡入",
+              "ani": "scaleDown/scaleUpDown/scaleDown/scaleUp"
+            }
+          },
+          "line-9": {
+            "prop": {
+              "text": "向左移出/向前淡入",
+              "ani": "moveToLeft/scaleUp/moveToRight/scaleUp"
+            }
+          },
+          "line-10": {
+            "prop": {
+              "text": "向上移出/向前淡入",
+              "ani": "moveToTop/scaleUp/moveToBottom/scaleUp"
+            }
+          },
+          "line-11": {
+            "prop": {
+              "text": "向后移出/向前移入",
+              "ani": "scaleDownCenter/scaleUpCenter&&delay400/scaleDownCenter/scaleUpCenter&&delay400"
+            }
+          },
+          "line-12": {
+            "prop": {
+              "text": "左侧吸附/向左移入",
+              "ani": "rotateRightSideFirst/moveFromRight&&delay200/rotateLeftSideFirst/moveFromLeft&&delay200"
+            }
+          },
+          "line-13": {
+            "prop": {
+              "text": "下侧吸附/向下移入",
+              "ani": "rotateTopSideFirst/moveFromTop&&delay200/rotateBottomSideFirst/moveFromBottom&&delay200"
+            }
+          },
+          "line-14": {
+            "prop": {
+              "text": "向右翻转/向左翻转",
+              "ani": "flipOutRight/flipInLeft&&delay500/flipOutLeft/flipInRight&&delay500"
+            }
+          },
+          "line-15": {
+            "prop": {
+              "text": "向下翻转/向向翻转",
+              "ani": "flipOutTop/flipInBottom&&delay500/flipOutBottom/flipInTop&&delay500"
+            }
+          },
+          "line-16": {
+            "prop": {
+              "text": "向后螺旋/向前螺旋",
+              "ani": "rotateOutNewspaper/rotateInNewspaper&&delay500/rotateOutNewspaper/rotateInNewspaper&&delay500"
+            }
+          },
+          "line-17": {
+            "prop": {
+              "text": "向下掉落/向前移入",
+              "ani": "rotateFall/scaleUp/rotateFall/scaleUp"
+            }
+          },
+          "line-18": {
+            "prop": {
+              "text": "向左推出/向左移入",
+              "ani": "rotatePushLeft/moveFromRight&&ontop/rotatePushRight/moveFromLeft&&ontop"
+            }
+          },
+          "line-19": {
+            "prop": {
+              "text": "向上推出/向上移入",
+              "ani": "rotatePushTop/moveFromBottom&&ontop/rotatePushBottom/moveFromTop&&ontop"
+            }
+          },
+          "line-20": {
+            "prop": {
+              "text": "向左推出/向左推入",
+              "ani": "rotatePushLeft/rotatePullRight&&ontop/rotatePushRight/rotatePullLeft&&ontop"
+            }
+          },
+          "line-21": {
+            "prop": {
+              "text": "向上推出/向上推入",
+              "ani": "rotatePushTop/rotatePullBottom&&ontop/rotatePushBottom/rotatePullTop&&ontop"
+            }
+          },
+          "line-22": {
+            "prop": {
+              "text": "向左转动/向左转动",
+              "ani": "rotateRoomLeftOut&&ontop/rotateRoomLeftIn/rotateRoomRightOut&&ontop/rotateRoomRightIn"
+            }
+          },
+          "line-23": {
+            "prop": {
+              "text": "向上转动/向上转动",
+              "ani": "rotateRoomTopOut&&ontop/rotateRoomTopIn/rotateRoomBottomOut&&ontop/rotateRoomBottomIn"
+            }
+          },
+          "line-24": {
+            "prop": {
+              "text": "向右扭转/向右扭转",
+              "ani": "rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn"
+            }
+          },
+          "line-25": {
+            "prop": {
+              "text": "向上扭转/向上扭转",
+              "ani": "rotateCubeTopOut/rotateCubeTopIn/rotateCubeBottomOut/rotateCubeBottomIn"
+            }
+          },
+          "line-26": {
+            "prop": {
+              "text": "向左飞出/向左飞入",
+              "ani": "rotateCarouselLeftOut&&ontop/rotateCarouselLeftIn/rotateCarouselRightOut&&ontop/rotateCarouselRightIn"
+            }
+          },
+          "line-27": {
+            "prop": {
+              "text": "向上飞出/向左飞入",
+              "ani": "rotateCarouselTopOut&&ontop/rotateCarouselTopIn/rotateCarouselBottomOut&&ontop/rotateCarouselBottomIn"
+            }
+          },
+          "line-28": {
+            "prop": {
+              "text": "向左翻转/向左翻转",
+              "ani": "rotateSidesOut&&ontop/rotateSidesIn&&delay200/rotateSidesOut&&ontop/rotateSidesIn&&delay200"
+            }
+          }
         }
       },
-      "line-1": {
-        "prop": {
-          "text": "向下移出",
-          "ani": "moveToTop/moveFromBottom/moveToBottom/moveFromTop"
-        }
-      },
-      "line-2": {
-        "prop": {
-          "text": "向右淡入",
-          "ani": "fade/moveFromRight/fade/moveFromLeft"
-        }
-      },
-      "line-3": {
-        "prop": {
-          "text": "向下淡入",
-          "ani": "fade/moveFromBottom/fade/moveFromTop"
-        }
-      },
-      "line-4": {
-        "prop": {
-          "text": "向右淡入2",
-          "ani": "moveToLeftFade/moveFromRightFade/moveToRightFade/moveFromLeftFade"
-        }
-      },
-      "line-5": {
-        "prop": {
-          "text": "向下淡入2",
-          "ani": "moveToTopFade/moveFromBottomFade/moveToBottomFade/moveFromTopFade"
-        }
-      },
-      "line-6": {
-        "prop": {
-          "text": "向后淡出/向左移入",
-          "ani": "scaleDown/moveFromRight/scaleDown/moveFromLeft"
-        }
-      },
-      "line-7": {
-        "prop": {
-          "text": "向后淡出/向上移入",
-          "ani": "scaleDown/moveFromBottom/scaleDown/moveFromTop"
-        }
-      },
-      "line-8": {
-        "prop": {
-          "text": "向后淡出/向前淡入",
-          "ani": "scaleDown/scaleUpDown/scaleDown/scaleUp"
-        }
-      },
-      "line-9": {
-        "prop": {
-          "text": "向左移出/向前淡入",
-          "ani": "moveToLeft/scaleUp/moveToRight/scaleUp"
-        }
-      },
-      "line-10": {
-        "prop": {
-          "text": "向上移出/向前淡入",
-          "ani": "moveToTop/scaleUp/moveToBottom/scaleUp"
-        }
-      },
-      "line-11": {
-        "prop": {
-          "text": "向后移出/向前移入",
-          "ani": "scaleDownCenter/scaleUpCenter&&delay400/scaleDownCenter/scaleUpCenter&&delay400"
-        }
-      },
-      "line-12": {
-        "prop": {
-          "text": "左侧吸附/向左移入",
-          "ani": "rotateRightSideFirst/moveFromRight&&delay200/rotateLeftSideFirst/moveFromLeft&&delay200"
-        }
-      },
-      "line-13": {
-        "prop": {
-          "text": "下侧吸附/向下移入",
-          "ani": "rotateTopSideFirst/moveFromTop&&delay200/rotateBottomSideFirst/moveFromBottom&&delay200"
-        }
-      },
-      "line-14": {
-        "prop": {
-          "text": "向右翻转/向左翻转",
-          "ani": "flipOutRight/flipInLeft&&delay500/flipOutLeft/flipInRight&&delay500"
-        }
-      },
-      "line-15": {
-        "prop": {
-          "text": "向下翻转/向向翻转",
-          "ani": "flipOutTop/flipInBottom&&delay500/flipOutBottom/flipInTop&&delay500"
-        }
-      },
-      "line-16": {
-        "prop": {
-          "text": "向后螺旋/向前螺旋",
-          "ani": "rotateOutNewspaper/rotateInNewspaper&&delay500/rotateOutNewspaper/rotateInNewspaper&&delay500"
-        }
-      },
-      "line-17": {
-        "prop": {
-          "text": "向下掉落/向前移入",
-          "ani": "rotateFall/scaleUp/rotateFall/scaleUp"
-        }
-      },
-      "line-18": {
-        "prop": {
-          "text": "向左推出/向左移入",
-          "ani": "rotatePushLeft/moveFromRight&&ontop/rotatePushRight/moveFromLeft&&ontop"
-        }
-      },
-      "line-19": {
-        "prop": {
-          "text": "向上推出/向上移入",
-          "ani": "rotatePushTop/moveFromBottom&&ontop/rotatePushBottom/moveFromTop&&ontop"
-        }
-      },
-      "line-20": {
-        "prop": {
-          "text": "向左推出/向左推入",
-          "ani": "rotatePushLeft/rotatePullRight&&ontop/rotatePushRight/rotatePullLeft&&ontop"
-        }
-      },
-      "line-21": {
-        "prop": {
-          "text": "向上推出/向上推入",
-          "ani": "rotatePushTop/rotatePullBottom&&ontop/rotatePushBottom/rotatePullTop&&ontop"
-        }
-      },
-      "line-22": {
-        "prop": {
-          "text": "向左转动/向左转动",
-          "ani": "rotateRoomLeftOut&&ontop/rotateRoomLeftIn/rotateRoomRightOut&&ontop/rotateRoomRightIn"
-        }
-      },
-      "line-23": {
-        "prop": {
-          "text": "向上转动/向上转动",
-          "ani": "rotateRoomTopOut&&ontop/rotateRoomTopIn/rotateRoomBottomOut&&ontop/rotateRoomBottomIn"
-        }
-      },
-      "line-24": {
-        "prop": {
-          "text": "向右扭转/向右扭转",
-          "ani": "rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn"
-        }
-      },
-      "line-25": {
-        "prop": {
-          "text": "向上扭转/向上扭转",
-          "ani": "rotateCubeTopOut/rotateCubeTopIn/rotateCubeBottomOut/rotateCubeBottomIn"
-        }
-      },
-      "line-26": {
-        "prop": {
-          "text": "向左飞出/向左飞入",
-          "ani": "rotateCarouselLeftOut&&ontop/rotateCarouselLeftIn/rotateCarouselRightOut&&ontop/rotateCarouselRightIn"
-        }
-      },
-      "line-27": {
-        "prop": {
-          "text": "向上飞出/向左飞入",
-          "ani": "rotateCarouselTopOut&&ontop/rotateCarouselTopIn/rotateCarouselBottomOut&&ontop/rotateCarouselBottomIn"
-        }
-      },
-      "line-28": {
-        "prop": {
-          "text": "向左翻转/向左翻转",
-          "ani": "rotateSidesOut&&ontop/rotateSidesIn&&delay200/rotateSidesOut&&ontop/rotateSidesIn&&delay200"
-        }
-      }
-    }
-  },
-  "exhibition": {},
-  "swiper": {
-    "created": function created() {
-      new IScroll(this.$el, {
-        scrollbars: true,
-        mouseWheel: true,
-        interactiveScrollbars: true,
-        shrinkScrollbars: 'scale',
-        fadeScrollbars: true
-      });
-    },
-    "template": {
+      "exhibition": {},
       "swiper": {
         "created": function created() {
-          new Swiper(this.$el, {
-            autoplay: true,
-            pagination: {
-              el: '.swiper-pagination'
+          new IScroll(this.$el, {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+          });
+        },
+        "template": {
+          "swiper": {
+            "created": function created() {
+              new Swiper(this.$el, {
+                autoplay: true,
+                pagination: {
+                  el: '.swiper-pagination'
+                }
+              });
             }
+          },
+          "flip": {
+            "data": {
+              "isfilp": false
+            },
+            "created": function created() {
+              if (this.prop.direction == 'y') {
+                owo.query('.front')[0].style.transform = 'rotateX(180deg)';
+                owo.query('.back')[0].style.transform = 'rotateX(0deg)';
+              } else {
+                owo.query('.front')[0].style.transform = 'rotateY(180deg)';
+                owo.query('.back')[0].style.transform = 'rotateY(0deg)';
+              }
+            },
+            "filp": function filp() {
+              // 判断横向还是竖向
+              if (this.prop.direction == 'y') {
+                if (this.data.isfilp) {
+                  owo.query('.front')[0].style.transform = 'rotateX(180deg)';
+                  owo.query('.back')[0].style.transform = 'rotateX(0deg)';
+                } else {
+                  owo.query('.front')[0].style.transform = 'rotateX(0deg)';
+                  owo.query('.back')[0].style.transform = 'rotateX(180deg)';
+                }
+              } else {
+                if (this.data.isfilp) {
+                  owo.query('.front')[0].style.transform = 'rotateY(180deg)';
+                  owo.query('.back')[0].style.transform = 'rotateY(0deg)';
+                } else {
+                  owo.query('.front')[0].style.transform = 'rotateY(0deg)';
+                  owo.query('.back')[0].style.transform = 'rotateY(180deg)';
+                }
+              }
+
+              this.data.isfilp = !this.data.isfilp;
+            },
+            "prop": {
+              "direction": "x"
+            }
+          },
+          "flip-1": {
+            "data": {
+              "isfilp": false
+            },
+            "created": function created() {
+              if (this.prop.direction == 'y') {
+                owo.query('.front')[0].style.transform = 'rotateX(180deg)';
+                owo.query('.back')[0].style.transform = 'rotateX(0deg)';
+              } else {
+                owo.query('.front')[0].style.transform = 'rotateY(180deg)';
+                owo.query('.back')[0].style.transform = 'rotateY(0deg)';
+              }
+            },
+            "filp": function filp() {
+              // 判断横向还是竖向
+              if (this.prop.direction == 'y') {
+                if (this.data.isfilp) {
+                  owo.query('.front')[0].style.transform = 'rotateX(180deg)';
+                  owo.query('.back')[0].style.transform = 'rotateX(0deg)';
+                } else {
+                  owo.query('.front')[0].style.transform = 'rotateX(0deg)';
+                  owo.query('.back')[0].style.transform = 'rotateX(180deg)';
+                }
+              } else {
+                if (this.data.isfilp) {
+                  owo.query('.front')[0].style.transform = 'rotateY(180deg)';
+                  owo.query('.back')[0].style.transform = 'rotateY(0deg)';
+                } else {
+                  owo.query('.front')[0].style.transform = 'rotateY(0deg)';
+                  owo.query('.back')[0].style.transform = 'rotateY(180deg)';
+                }
+              }
+
+              this.data.isfilp = !this.data.isfilp;
+            },
+            "prop": {
+              "direction": "y"
+            }
+          }
+        }
+      },
+      "dimensional": {
+        "turn": function turn(url) {
+          window.location.href = url;
+        },
+        "template": {
+          "line": {
+            "prop": {
+              "text": "模型"
+            }
+          },
+          "line-1": {
+            "prop": {
+              "text": "全景图片"
+            }
+          },
+          "line-2": {
+            "prop": {
+              "text": "VR"
+            }
+          },
+          "line-3": {
+            "prop": {
+              "text": "全景图片2"
+            }
+          },
+          "line-4": {
+            "prop": {
+              "text": "3D模型"
+            }
+          },
+          "line-5": {
+            "prop": {
+              "text": "3D模型"
+            }
+          }
+        }
+      },
+      "enter": {
+        "created": function created() {
+          new IScroll(owo.query('.scroll-box')[0], {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+          });
+          new ClipboardJS('.dimensional-button-item');
+        },
+        "animate": function animate(name) {
+          copyText("owo.tool.animate(\"" + name + "\", owo.query('dom')[0])", 0);
+          owo.tool.animate(name, owo.query('.show-logo')[0]);
+        }
+      },
+      "hover": {
+        "created": function created() {
+          new IScroll(this.$el, {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
           });
         }
       },
-      "flip": {
-        "data": {
-          "isfilp": false
-        },
-        "created": function created() {
-          if (this.prop.direction == 'y') {
-            owo.query('.front')[0].style.transform = 'rotateX(180deg)';
-            owo.query('.back')[0].style.transform = 'rotateX(0deg)';
-          } else {
-            owo.query('.front')[0].style.transform = 'rotateY(180deg)';
-            owo.query('.back')[0].style.transform = 'rotateY(0deg)';
-          }
-        },
-        "filp": function filp() {
-          // 判断横向还是竖向
-          if (this.prop.direction == 'y') {
-            if (this.data.isfilp) {
-              owo.query('.front')[0].style.transform = 'rotateX(180deg)';
-              owo.query('.back')[0].style.transform = 'rotateX(0deg)';
-            } else {
-              owo.query('.front')[0].style.transform = 'rotateX(0deg)';
-              owo.query('.back')[0].style.transform = 'rotateX(180deg)';
-            }
-          } else {
-            if (this.data.isfilp) {
-              owo.query('.front')[0].style.transform = 'rotateY(180deg)';
-              owo.query('.back')[0].style.transform = 'rotateY(0deg)';
-            } else {
-              owo.query('.front')[0].style.transform = 'rotateY(0deg)';
-              owo.query('.back')[0].style.transform = 'rotateY(180deg)';
-            }
-          }
+      "animation": {}
+    };
+  </script>
+</body>
 
-          this.data.isfilp = !this.data.isfilp;
-        },
-        "prop": {
-          "direction": "x"
-        }
-      },
-      "flip-1": {
-        "data": {
-          "isfilp": false
-        },
-        "created": function created() {
-          if (this.prop.direction == 'y') {
-            owo.query('.front')[0].style.transform = 'rotateX(180deg)';
-            owo.query('.back')[0].style.transform = 'rotateX(0deg)';
-          } else {
-            owo.query('.front')[0].style.transform = 'rotateY(180deg)';
-            owo.query('.back')[0].style.transform = 'rotateY(0deg)';
-          }
-        },
-        "filp": function filp() {
-          // 判断横向还是竖向
-          if (this.prop.direction == 'y') {
-            if (this.data.isfilp) {
-              owo.query('.front')[0].style.transform = 'rotateX(180deg)';
-              owo.query('.back')[0].style.transform = 'rotateX(0deg)';
-            } else {
-              owo.query('.front')[0].style.transform = 'rotateX(0deg)';
-              owo.query('.back')[0].style.transform = 'rotateX(180deg)';
-            }
-          } else {
-            if (this.data.isfilp) {
-              owo.query('.front')[0].style.transform = 'rotateY(180deg)';
-              owo.query('.back')[0].style.transform = 'rotateY(0deg)';
-            } else {
-              owo.query('.front')[0].style.transform = 'rotateY(0deg)';
-              owo.query('.back')[0].style.transform = 'rotateY(180deg)';
-            }
-          }
-
-          this.data.isfilp = !this.data.isfilp;
-        },
-        "prop": {
-          "direction": "y"
-        }
-      }
-    }
-  },
-  "dimensional": {
-    "turn": function turn(url) {
-      window.location.href = url;
-    },
-    "template": {
-      "line": {
-        "prop": {
-          "text": "模型"
-        }
-      },
-      "line-1": {
-        "prop": {
-          "text": "全景图片"
-        }
-      },
-      "line-2": {
-        "prop": {
-          "text": "VR"
-        }
-      },
-      "line-3": {
-        "prop": {
-          "text": "全景图片2"
-        }
-      },
-      "line-4": {
-        "prop": {
-          "text": "3D模型"
-        }
-      },
-      "line-5": {
-        "prop": {
-          "text": "3D模型"
-        }
-      }
-    }
-  },
-  "enter": {
-    "created": function created() {
-      new IScroll(owo.query('.scroll-box')[0], {
-        scrollbars: true,
-        mouseWheel: true,
-        interactiveScrollbars: true,
-        shrinkScrollbars: 'scale',
-        fadeScrollbars: true
-      });
-      new ClipboardJS('.dimensional-button-item');
-    },
-    "animate": function animate(name) {
-      copyText("owo.tool.animate(\"" + name + "\", owo.query('dom')[0])", 0);
-      owo.tool.animate(name, owo.query('.show-logo')[0]);
-    }
-  },
-  "hover": {
-    "created": function created() {
-      new IScroll(this.$el, {
-        scrollbars: true,
-        mouseWheel: true,
-        interactiveScrollbars: true,
-        shrinkScrollbars: 'scale',
-        fadeScrollbars: true
-      });
-    }
-  },
-  "animation": {}
-};</script>
-  </body>
 </html>
