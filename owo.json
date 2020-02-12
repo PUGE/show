@@ -110,10 +110,6 @@
       "src": "./src/page/home.owo"
     },
     {
-      "name": "button",
-      "src": "./src/page/button.owo"
-    },
-    {
       "name": "switch",
       "src": "./src/page/switch.owo"
     },

@@ -1,7 +1,7 @@
 <template>
-  <div class="line-button-2">
+  <go class="line-button-2" ani="{{prop.ani}}">
     <span>{{prop.text}}</span>
-  </div>
+  </go>
 </template>
 
 <style>

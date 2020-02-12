@@ -31,167 +31,105 @@
   <body>
     <!-- 页面区域 -->
     <!-- 页面[home]-->
-    <div class="home page owo" template="home" style="display: none;">
-    <div class="box">
-      <!-- 入场效果 -->
-      <div class="line-button button-item" o-tap="owo.go('enter', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" template="line">
-    <span>入场效果</span>
-  </div>
-      <!-- 页面切换效果 -->
-      <div class="line-button button-item" o-tap="owo.go('switch', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" template="line-1">
-    <span>页面切换效果</span>
-  </div>
-      <!-- 动画效果 -->
-      <div class="line-button button-item" o-tap="owo.go('animation', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" template="line-2">
-    <span>动画效果</span>
-  </div>
-      <!-- 按钮 -->
-      <div class="line-button button-item" o-tap="owo.go('button', 'flipOutRight', 'flipInLeft&amp;&amp;delay500', 'flipOutLeft', 'flipInRight&amp;&amp;delay500')" template="line-3">
-    <span>按钮</span>
-  </div>
-      <!-- 轮播图 -->
-      <div class="line-button button-item" o-tap="owo.go('swiper', 'flipOutRight', 'flipInLeft&amp;&amp;delay500', 'flipOutLeft', 'flipInRight&amp;&amp;delay500')" template="line-4">
-    <span>轮播图</span>
-  </div>
-      <!-- 3D -->
-      <div class="line-button button-item" o-tap="owo.go('dimensional', 'rotateCarouselLeftOut&amp;&amp;ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&amp;&amp;ontop', 'rotateCarouselRightIn')" template="line-5">
-    <span>3D/VR</span>
-  </div>
-      <!-- 鼠标悬停效果 -->
-      <div class="line-button button-item to-hover-button" o-tap="owo.go('hover', 'rotateCarouselLeftOut&amp;&amp;ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&amp;&amp;ontop', 'rotateCarouselRightIn')" template="line-6">
-    <span>鼠标悬停效果</span>
-  </div>
-      <!-- 趣动logo -->
-      <img class="logo" src="./static/resource/logo.png">
-    </div>
-  </div>
-    <!-- 页面[button]-->
-    <div class="button page owo" template="button" style="display: none;">
-    <div class="box">
-      <!-- 单线按钮 -->
-      <div class="line-button button-item" template="line">
-    <span>单线按钮</span>
-  </div>
-      <!-- 单线按钮 -->
-      <div class="line-button-2 button-item" template="colorLine">
-    <span>边框按钮</span>
-  </div>
-      <!-- 炫彩按钮 -->
-      <div class="color-button button-item" template="color">
-    <span>炫彩按钮</span>
-  </div>
-      <!-- 立体按钮 -->
-      <div class="flat-button button-item" template="3d">
-    <span>立体按钮</span>
-  </div>
-      <!-- 水波纹按钮 -->
-      <div class="ripple button-item" template="waterRipple">
-    <span>水波纹特效</span>
-  </div>
-      <!-- 更多内容不断补充中 -->
-      <div class="supplement">更多内容正在持续补充中!</div>
-    </div>
-    <!-- 趣动logo -->
-    <img class="logo" src="./static/resource/logo.png">
-  </div>
+    <div class="home page" template="home" style="display: none;"><div class="box"><div class="owo-go line-button" page="enter" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">入场效果</div><div class="owo-go line-button" page="switch" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">页面切换效果</div><div class="owo-go line-button" page="animation" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">动画效果</div><div class="owo-go line-button" page="swiper" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">轮播图</div><div class="owo-go line-button" page="dimensional" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">3D/VR</div><div class="owo-go line-button" page="hover" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">鼠标悬停效果</div></div></div>
     <!-- 页面[switch]-->
-    <div class="switch owo" template="switch" style="display: none;">
+    <div class="switch page" template="switch" style="display: none;">
     <div class="box">
       <p class="title">移入/移出</p>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'moveToLeft', 'moveFromRight', 'moveToRight', 'moveFromLeft')" template="line">
+      <div class="owo-go line-button button-item" page="exhibition" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft">
     <span>向右移出</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'moveToTop', 'moveFromBottom', 'moveToBottom', 'moveFromTop')" template="line-1">
+      <div class="owo-go line-button button-item" page="exhibition" ani="moveToTop/moveFromBottom/moveToBottom/moveFromTop">
     <span>向下移出</span>
   </div>
       <p class="title">淡入/淡出</p>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'fade', 'moveFromRight', 'fade', 'moveFromLeft')" template="line-2">
+      <div class="owo-go line-button button-item" page="exhibition" ani="fade/moveFromRight/fade/moveFromLeft">
     <span>向右淡入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'fade', 'moveFromBottom', 'fade', 'moveFromTop')" template="line-3">
+      <div class="owo-go line-button button-item" page="exhibition" ani="fade/moveFromBottom/fade/moveFromTop">
     <span>向下淡入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'moveToLeftFade', 'moveFromRightFade', 'moveToRightFade', 'moveFromLeftFade')" template="line-4">
+      <div class="owo-go line-button button-item" page="exhibition" ani="moveToLeftFade/moveFromRightFade/moveToRightFade/moveFromLeftFade">
     <span>向右淡入2</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'moveToTopFade', 'moveFromBottomFade', 'moveToBottomFade', 'moveFromTopFade')" template="line-5">
+      <div class="owo-go line-button button-item" page="exhibition" ani="moveToTopFade/moveFromBottomFade/moveToBottomFade/moveFromTopFade">
     <span>向下淡入2</span>
   </div>
       <p class="title">后退效果</p>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'scaleDown', 'moveFromRight', 'scaleDown', 'moveFromLeft')" template="line-6">
+      <div class="owo-go line-button button-item" page="exhibition" ani="scaleDown/moveFromRight/scaleDown/moveFromLeft">
     <span>向后淡出/向左移入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'scaleDown', 'moveFromBottom', 'scaleDown', 'moveFromTop')" template="line-7">
+      <div class="owo-go line-button button-item" page="exhibition" ani="scaleDown/moveFromBottom/scaleDown/moveFromTop">
     <span>向后淡出/向上移入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'scaleDown', 'scaleUpDown', 'scaleDown', 'scaleUp')" template="line-8">
+      <div class="owo-go line-button button-item" page="exhibition" ani="scaleDown/scaleUpDown/scaleDown/scaleUp">
     <span>向后淡出/向前淡入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'moveToLeft', 'scaleUp', 'moveToRight', 'scaleUp')" template="line-9">
+      <div class="owo-go line-button button-item" page="exhibition" ani="moveToLeft/scaleUp/moveToRight/scaleUp">
     <span>向左移出/向前淡入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'moveToTop', 'scaleUp', 'moveToBottom', 'scaleUp')" template="line-10">
+      <div class="owo-go line-button button-item" page="exhibition" ani="moveToTop/scaleUp/moveToBottom/scaleUp">
     <span>向上移出/向前淡入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400', 'scaleDownCenter', 'scaleUpCenter&amp;&amp;delay400')" template="line-11">
+      <div class="owo-go line-button button-item" page="exhibition" ani="scaleDownCenter/scaleUpCenter&amp;&amp;delay400/scaleDownCenter/scaleUpCenter&amp;&amp;delay400">
     <span>向后移出/向前移入</span>
   </div>
       <p class="title">吸附效果</p>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateRightSideFirst', 'moveFromRight&amp;&amp;delay200', 'rotateLeftSideFirst', 'moveFromLeft&amp;&amp;delay200')" template="line-12">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateRightSideFirst/moveFromRight&amp;&amp;delay200/rotateLeftSideFirst/moveFromLeft&amp;&amp;delay200">
     <span>左侧吸附/向左移入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateTopSideFirst', 'moveFromTop&amp;&amp;delay200', 'rotateBottomSideFirst', 'moveFromBottom&amp;&amp;delay200')" template="line-13">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateTopSideFirst/moveFromTop&amp;&amp;delay200/rotateBottomSideFirst/moveFromBottom&amp;&amp;delay200">
     <span>下侧吸附/向下移入</span>
   </div>
       <p class="title">翻转效果</p>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'flipOutRight', 'flipInLeft&amp;&amp;delay500', 'flipOutLeft', 'flipInRight&amp;&amp;delay500')" template="line-14">
+      <div class="owo-go line-button button-item" page="exhibition" ani="flipOutRight/flipInLeft&amp;&amp;delay500/flipOutLeft/flipInRight&amp;&amp;delay500">
     <span>向右翻转/向左翻转</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'flipOutTop', 'flipInBottom&amp;&amp;delay500', 'flipOutBottom', 'flipInTop&amp;&amp;delay500')" template="line-15">
+      <div class="owo-go line-button button-item" page="exhibition" ani="flipOutTop/flipInBottom&amp;&amp;delay500/flipOutBottom/flipInTop&amp;&amp;delay500">
     <span>向下翻转/向向翻转</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateOutNewspaper', 'rotateInNewspaper&amp;&amp;delay500', 'rotateOutNewspaper', 'rotateInNewspaper&amp;&amp;delay500')" template="line-16">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateOutNewspaper/rotateInNewspaper&amp;&amp;delay500/rotateOutNewspaper/rotateInNewspaper&amp;&amp;delay500">
     <span>向后螺旋/向前螺旋</span>
   </div>
       <p class="title">掉落效果</p>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')" template="line-17">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateFall/scaleUp/rotateFall/scaleUp">
     <span>向下掉落/向前移入</span>
   </div>
       <p class="title">推拉效果</p>
       <!-- 待修复这里应该能控制什么在前 -->
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotatePushLeft', 'moveFromRight&amp;&amp;ontop', 'rotatePushRight', 'moveFromLeft&amp;&amp;ontop')" template="line-18">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotatePushLeft/moveFromRight&amp;&amp;ontop/rotatePushRight/moveFromLeft&amp;&amp;ontop">
     <span>向左推出/向左移入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotatePushTop', 'moveFromBottom&amp;&amp;ontop', 'rotatePushBottom', 'moveFromTop&amp;&amp;ontop')" template="line-19">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotatePushTop/moveFromBottom&amp;&amp;ontop/rotatePushBottom/moveFromTop&amp;&amp;ontop">
     <span>向上推出/向上移入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotatePushLeft', 'rotatePullRight&amp;&amp;ontop', 'rotatePushRight', 'rotatePullLeft&amp;&amp;ontop')" template="line-20">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotatePushLeft/rotatePullRight&amp;&amp;ontop/rotatePushRight/rotatePullLeft&amp;&amp;ontop">
     <span>向左推出/向左推入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotatePushTop', 'rotatePullBottom&amp;&amp;ontop', 'rotatePushBottom', 'rotatePullTop&amp;&amp;ontop')" template="line-21">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotatePushTop/rotatePullBottom&amp;&amp;ontop/rotatePushBottom/rotatePullTop&amp;&amp;ontop">
     <span>向上推出/向上推入</span>
   </div>
       <p class="title">盒子效果</p>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateRoomLeftOut&amp;&amp;ontop', 'rotateRoomLeftIn', 'rotateRoomRightOut&amp;&amp;ontop', 'rotateRoomRightIn')" template="line-22">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateRoomLeftOut&amp;&amp;ontop/rotateRoomLeftIn/rotateRoomRightOut&amp;&amp;ontop/rotateRoomRightIn">
     <span>向左转动/向左转动</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateRoomTopOut&amp;&amp;ontop', 'rotateRoomTopIn', 'rotateRoomBottomOut&amp;&amp;ontop', 'rotateRoomBottomIn')" template="line-23">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateRoomTopOut&amp;&amp;ontop/rotateRoomTopIn/rotateRoomBottomOut&amp;&amp;ontop/rotateRoomBottomIn">
     <span>向上转动/向上转动</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateCubeLeftOut', 'rotateCubeLeftIn', 'rotateCubeRightOut', 'rotateCubeRightIn')" template="line-24">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn">
     <span>向右扭转/向右扭转</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateCubeTopOut', 'rotateCubeTopIn', 'rotateCubeBottomOut', 'rotateCubeBottomIn')" template="line-25">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateCubeTopOut/rotateCubeTopIn/rotateCubeBottomOut/rotateCubeBottomIn">
     <span>向上扭转/向上扭转</span>
   </div>
       <p class="title">旋转木马</p>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateCarouselLeftOut&amp;&amp;ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&amp;&amp;ontop', 'rotateCarouselRightIn')" template="line-26">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateCarouselLeftOut&amp;&amp;ontop/rotateCarouselLeftIn/rotateCarouselRightOut&amp;&amp;ontop/rotateCarouselRightIn">
     <span>向左飞出/向左飞入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateCarouselTopOut&amp;&amp;ontop', 'rotateCarouselTopIn', 'rotateCarouselBottomOut&amp;&amp;ontop', 'rotateCarouselBottomIn')" template="line-27">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateCarouselTopOut&amp;&amp;ontop/rotateCarouselTopIn/rotateCarouselBottomOut&amp;&amp;ontop/rotateCarouselBottomIn">
     <span>向上飞出/向左飞入</span>
   </div>
-      <div class="line-button button-item" o-tap="owo.go('exhibition', 'rotateSidesOut&amp;&amp;ontop', 'rotateSidesIn&amp;&amp;delay200', 'rotateSidesOut&amp;&amp;ontop', 'rotateSidesIn&amp;&amp;delay200')" template="line-28">
+      <div class="owo-go line-button button-item" page="exhibition" ani="rotateSidesOut&amp;&amp;ontop/rotateSidesIn&amp;&amp;delay200/rotateSidesOut&amp;&amp;ontop/rotateSidesIn&amp;&amp;delay200">
     <span>向左翻转/向左翻转</span>
   </div>
     </div>
@@ -199,7 +137,7 @@
     <img class="logo" src="./static/resource/logo.png">
   </div>
     <!-- 页面[exhibition]-->
-    <div class="exhibition owo" template="exhibition" style="display: none;">
+    <div class="exhibition page" template="exhibition" style="display: none;">
     <div class="swiper-container swiper-item" template="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="http://www.people.com.cn/NMediaFile/2019/0715/MAIN201907150934246380428030916.jpg"></div>
@@ -219,7 +157,7 @@
     <img class="logo" src="./static/resource/logo.png">
   </div>
     <!-- 页面[swiper]-->
-    <div class="swiper page owo" template="swiper" style="display: none;">
+    <div class="swiper page" template="swiper" style="display: none;">
     <div class="box">
       <p class="title">经典轮播</p>
       <div class="swiper-container swiper-item" template="swiper">
@@ -246,30 +184,30 @@
     <img class="logo" src="./static/resource/logo.png">
   </div>
     <!-- 页面[dimensional]-->
-    <div class="three-dimensional page owo" template="dimensional" style="display: none;">
+    <div class="three-dimensional page" template="dimensional" style="display: none;">
     <div class="box">
       <!-- 模型 -->
-      <div class="line-button button-item" o-tap="owo.script[owo.activePage].turn('https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/')" template="line">
+      <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/')">
     <span>模型</span>
   </div>
       <!-- 全景图片 -->
-      <div class="line-button button-item" o-tap="owo.script[owo.activePage].turn('https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/')" template="line-1">
+      <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/')">
     <span>全景图片</span>
   </div>
       <!-- vr -->
-      <div class="line-button button-item" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/index.html')" template="line-2">
+      <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/index.html')">
     <span>VR</span>
   </div>
       <!-- 360° 图片 -->
-      <div class="line-button button-item" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/360.html')" template="line-3">
+      <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/360.html')">
     <span>全景图片2</span>
   </div>
       <!-- 3D模型 -->
-      <div class="line-button button-item" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/model/index.html')" template="line-4">
+      <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/model/index.html')">
     <span>3D模型</span>
   </div>
       <!-- 面部识别 -->
-      <div class="line-button button-item" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/face/demos/threejs/headControls/index.html')" template="line-5">
+      <div class="owo-go line-button button-item" page="exhibition" ani="" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/face/demos/threejs/headControls/index.html')">
     <span>3D模型</span>
   </div>
     </div>
@@ -277,7 +215,7 @@
     <img class="logo" src="./static/resource/logo.png">
   </div>
     <!-- 页面[enter]-->
-    <div class="three-dimensional page owo" template="enter" style="display: none;">
+    <div class="three-dimensional page" template="enter" style="display: none;">
     <!-- 趣动logo -->
     <div class="logo-box">
       <img class="show-logo" src="./static/resource/logo.png">
@@ -363,7 +301,7 @@
     
   </div>
     <!-- 页面[hover]-->
-    <div class="hover owo" template="hover" style="display: none;">
+    <div class="hover page" template="hover" style="display: none;">
     <div class="box">
       <h2>2D Transitions</h2>
 
@@ -472,7 +410,7 @@
     </div>
   </div>
     <!-- 页面[animation]-->
-    <div class="animation-box page owo" template="animation" style="display: none;"><img class="show-logo owo-animation-bottomToTopHide" src="./static/resource/logo.png" o-animation="bottomToTopHide"><img class="show-logo owo-animation-flicker" src="./static/resource/logo.png" o-animation="flicker"><img class="show-logo owo-animation-floatLeftRight" src="./static/resource/logo.png" o-animation="floatLeftRight"><img class="show-logo owo-animation-floatUpDown" src="./static/resource/logo.png" o-animation="floatUpDown"><img class="show-logo owo-animation-leftToRight" src="./static/resource/logo.png" o-animation="leftToRight"><img class="show-logo owo-animation-shrink" src="./static/resource/logo.png" o-animation="shrink"><img class="show-logo owo-animation-turn" src="./static/resource/logo.png" o-animation="turn"><img class="show-logo owo-animation-rotate" src="./static/resource/logo.png" o-animation="rotate"></div>
+    <div class="animation-box page" template="animation" style="display: none;"><img class="show-logo owo-animation-bottomToTopHide" src="./static/resource/logo.png" o-animation="bottomToTopHide"><img class="show-logo owo-animation-flicker" src="./static/resource/logo.png" o-animation="flicker"><img class="show-logo owo-animation-floatLeftRight" src="./static/resource/logo.png" o-animation="floatLeftRight"><img class="show-logo owo-animation-floatUpDown" src="./static/resource/logo.png" o-animation="floatUpDown"><img class="show-logo owo-animation-leftToRight" src="./static/resource/logo.png" o-animation="leftToRight"><img class="show-logo owo-animation-shrink" src="./static/resource/logo.png" o-animation="shrink"><img class="show-logo owo-animation-turn" src="./static/resource/logo.png" o-animation="turn"><img class="show-logo owo-animation-rotate" src="./static/resource/logo.png" o-animation="rotate"></div>
     
 
     <script src="./static/js/main.js" type="text/javascript"  charset="UTF-8"></script>
@@ -488,161 +426,7 @@
 */
 owo.phoneEnter = "null";
 owo.script = {
-  "home": {
-    "template": {
-      "line": {
-        "prop": {
-          "class": "button-item",
-          "o-tap": "owo.go('enter', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')",
-          "name": "line",
-          "text": "入场效果",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
-      },
-      "line-1": {
-        "prop": {
-          "class": "button-item",
-          "o-tap": "owo.go('switch', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')",
-          "name": "line",
-          "text": "页面切换效果",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
-      },
-      "line-2": {
-        "prop": {
-          "class": "button-item",
-          "o-tap": "owo.go('animation', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')",
-          "name": "line",
-          "text": "动画效果",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
-      },
-      "line-3": {
-        "prop": {
-          "class": "button-item",
-          "o-tap": "owo.go('button', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')",
-          "name": "line",
-          "text": "按钮",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
-      },
-      "line-4": {
-        "prop": {
-          "class": "button-item",
-          "o-tap": "owo.go('swiper', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')",
-          "name": "line",
-          "text": "轮播图",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
-      },
-      "line-5": {
-        "prop": {
-          "class": "button-item",
-          "o-tap": "owo.go('dimensional', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')",
-          "name": "line",
-          "text": "3D/VR",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
-      },
-      "line-6": {
-        "prop": {
-          "class": "button-item to-hover-button",
-          "o-tap": "owo.go('hover', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')",
-          "name": "line",
-          "text": "鼠标悬停效果",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
-      }
-    }
-  },
-  "button": {
-    "created": function created() {
-      new IScroll(this.$el, {
-        scrollbars: true,
-        mouseWheel: true,
-        interactiveScrollbars: true,
-        shrinkScrollbars: 'scale',
-        fadeScrollbars: true
-      });
-    },
-    "template": {
-      "line": {
-        "prop": {
-          "class": "button-item",
-          "name": "line",
-          "text": "单线按钮",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
-      },
-      "colorLine": {
-        "prop": {
-          "class": "button-item",
-          "name": "colorLine",
-          "text": "边框按钮",
-          "src": "./src/module/button/colorLine.owo"
-        },
-        "propMap": {}
-      },
-      "color": {
-        "prop": {
-          "class": "button-item",
-          "name": "color",
-          "text": "炫彩按钮",
-          "src": "./src/module/color.owo"
-        },
-        "propMap": {}
-      },
-      "3d": {
-        "prop": {
-          "class": "button-item",
-          "name": "3d",
-          "text": "立体按钮",
-          "src": "./src/module/button/3d.owo"
-        },
-        "propMap": {}
-      },
-      "waterRipple": {
-        "created": function created() {
-          function createRipple() {
-            //Create Ripple
-            var ripple = document.createElement("div");
-            ripple.className = "ripple-effect"; //Add Ripple to document
-
-            this.appendChild(ripple);
-            console.log(event); //Position Ripple
-
-            ripple.style.top = event.offsetY - ripple.offsetWidth / 2 + "px";
-            ripple.style.left = event.offsetX - ripple.offsetHeight / 2 + "px";
-            ripple.addEventListener("animationend", destroyRipple, false);
-            ripple.addEventListener("webkitAnimationEnd", destroyRipple, false);
-            ripple.addEventListener("oAnimationEnd", destroyRipple, false);
-            ripple.addEventListener("MSAnimationEnd", destroyRipple, false);
-          }
-
-          function destroyRipple() {
-            this.parentElement.removeChild(this);
-          }
-
-          this.$el.addEventListener('mousedown', createRipple, false); // this.$el.addEventListener('touchstart', createRipple, false)
-        },
-        "prop": {
-          "class": "button-item",
-          "name": "waterRipple",
-          "text": "水波纹特效",
-          "src": "./src/module/waterRipple.owo"
-        },
-        "propMap": {}
-      }
-    }
-  },
+  "home": {},
   "switch": {
     "created": function created() {
       new IScroll(this.$el, {
@@ -657,292 +441,176 @@ owo.script = {
       "line": {
         "prop": {
           "text": "向右移出",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'moveToLeft', 'moveFromRight', 'moveToRight', 'moveFromLeft')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "moveToLeft/moveFromRight/moveToRight/moveFromLeft"
+        }
       },
       "line-1": {
         "prop": {
           "text": "向下移出",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'moveToTop', 'moveFromBottom', 'moveToBottom', 'moveFromTop')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "moveToTop/moveFromBottom/moveToBottom/moveFromTop"
+        }
       },
       "line-2": {
         "prop": {
           "text": "向右淡入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'fade', 'moveFromRight', 'fade', 'moveFromLeft')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "fade/moveFromRight/fade/moveFromLeft"
+        }
       },
       "line-3": {
         "prop": {
           "text": "向下淡入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'fade', 'moveFromBottom', 'fade', 'moveFromTop')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "fade/moveFromBottom/fade/moveFromTop"
+        }
       },
       "line-4": {
         "prop": {
           "text": "向右淡入2",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'moveToLeftFade', 'moveFromRightFade', 'moveToRightFade', 'moveFromLeftFade')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "moveToLeftFade/moveFromRightFade/moveToRightFade/moveFromLeftFade"
+        }
       },
       "line-5": {
         "prop": {
           "text": "向下淡入2",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'moveToTopFade', 'moveFromBottomFade', 'moveToBottomFade', 'moveFromTopFade')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "moveToTopFade/moveFromBottomFade/moveToBottomFade/moveFromTopFade"
+        }
       },
       "line-6": {
         "prop": {
           "text": "向后淡出/向左移入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'scaleDown', 'moveFromRight', 'scaleDown', 'moveFromLeft')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "scaleDown/moveFromRight/scaleDown/moveFromLeft"
+        }
       },
       "line-7": {
         "prop": {
           "text": "向后淡出/向上移入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'scaleDown', 'moveFromBottom', 'scaleDown', 'moveFromTop')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "scaleDown/moveFromBottom/scaleDown/moveFromTop"
+        }
       },
       "line-8": {
         "prop": {
           "text": "向后淡出/向前淡入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'scaleDown', 'scaleUpDown', 'scaleDown', 'scaleUp')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "scaleDown/scaleUpDown/scaleDown/scaleUp"
+        }
       },
       "line-9": {
         "prop": {
           "text": "向左移出/向前淡入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'moveToLeft', 'scaleUp', 'moveToRight', 'scaleUp')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "moveToLeft/scaleUp/moveToRight/scaleUp"
+        }
       },
       "line-10": {
         "prop": {
           "text": "向上移出/向前淡入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'moveToTop', 'scaleUp', 'moveToBottom', 'scaleUp')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "moveToTop/scaleUp/moveToBottom/scaleUp"
+        }
       },
       "line-11": {
         "prop": {
           "text": "向后移出/向前移入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'scaleDownCenter', 'scaleUpCenter&&delay400', 'scaleDownCenter', 'scaleUpCenter&&delay400')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "scaleDownCenter/scaleUpCenter&&delay400/scaleDownCenter/scaleUpCenter&&delay400"
+        }
       },
       "line-12": {
         "prop": {
           "text": "左侧吸附/向左移入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateRightSideFirst', 'moveFromRight&&delay200', 'rotateLeftSideFirst', 'moveFromLeft&&delay200')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateRightSideFirst/moveFromRight&&delay200/rotateLeftSideFirst/moveFromLeft&&delay200"
+        }
       },
       "line-13": {
         "prop": {
           "text": "下侧吸附/向下移入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateTopSideFirst', 'moveFromTop&&delay200', 'rotateBottomSideFirst', 'moveFromBottom&&delay200')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateTopSideFirst/moveFromTop&&delay200/rotateBottomSideFirst/moveFromBottom&&delay200"
+        }
       },
       "line-14": {
         "prop": {
           "text": "向右翻转/向左翻转",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'flipOutRight', 'flipInLeft&&delay500', 'flipOutLeft', 'flipInRight&&delay500')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "flipOutRight/flipInLeft&&delay500/flipOutLeft/flipInRight&&delay500"
+        }
       },
       "line-15": {
         "prop": {
           "text": "向下翻转/向向翻转",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'flipOutTop', 'flipInBottom&&delay500', 'flipOutBottom', 'flipInTop&&delay500')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "flipOutTop/flipInBottom&&delay500/flipOutBottom/flipInTop&&delay500"
+        }
       },
       "line-16": {
         "prop": {
           "text": "向后螺旋/向前螺旋",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateOutNewspaper', 'rotateInNewspaper&&delay500', 'rotateOutNewspaper', 'rotateInNewspaper&&delay500')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateOutNewspaper/rotateInNewspaper&&delay500/rotateOutNewspaper/rotateInNewspaper&&delay500"
+        }
       },
       "line-17": {
         "prop": {
           "text": "向下掉落/向前移入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateFall', 'scaleUp', 'rotateFall', 'scaleUp')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateFall/scaleUp/rotateFall/scaleUp"
+        }
       },
       "line-18": {
         "prop": {
           "text": "向左推出/向左移入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotatePushLeft', 'moveFromRight&&ontop', 'rotatePushRight', 'moveFromLeft&&ontop')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotatePushLeft/moveFromRight&&ontop/rotatePushRight/moveFromLeft&&ontop"
+        }
       },
       "line-19": {
         "prop": {
           "text": "向上推出/向上移入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotatePushTop', 'moveFromBottom&&ontop', 'rotatePushBottom', 'moveFromTop&&ontop')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotatePushTop/moveFromBottom&&ontop/rotatePushBottom/moveFromTop&&ontop"
+        }
       },
       "line-20": {
         "prop": {
           "text": "向左推出/向左推入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotatePushLeft', 'rotatePullRight&&ontop', 'rotatePushRight', 'rotatePullLeft&&ontop')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotatePushLeft/rotatePullRight&&ontop/rotatePushRight/rotatePullLeft&&ontop"
+        }
       },
       "line-21": {
         "prop": {
           "text": "向上推出/向上推入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotatePushTop', 'rotatePullBottom&&ontop', 'rotatePushBottom', 'rotatePullTop&&ontop')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotatePushTop/rotatePullBottom&&ontop/rotatePushBottom/rotatePullTop&&ontop"
+        }
       },
       "line-22": {
         "prop": {
           "text": "向左转动/向左转动",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateRoomLeftOut&&ontop', 'rotateRoomLeftIn', 'rotateRoomRightOut&&ontop', 'rotateRoomRightIn')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateRoomLeftOut&&ontop/rotateRoomLeftIn/rotateRoomRightOut&&ontop/rotateRoomRightIn"
+        }
       },
       "line-23": {
         "prop": {
           "text": "向上转动/向上转动",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateRoomTopOut&&ontop', 'rotateRoomTopIn', 'rotateRoomBottomOut&&ontop', 'rotateRoomBottomIn')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateRoomTopOut&&ontop/rotateRoomTopIn/rotateRoomBottomOut&&ontop/rotateRoomBottomIn"
+        }
       },
       "line-24": {
         "prop": {
           "text": "向右扭转/向右扭转",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateCubeLeftOut', 'rotateCubeLeftIn', 'rotateCubeRightOut', 'rotateCubeRightIn')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn"
+        }
       },
       "line-25": {
         "prop": {
           "text": "向上扭转/向上扭转",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateCubeTopOut', 'rotateCubeTopIn', 'rotateCubeBottomOut', 'rotateCubeBottomIn')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateCubeTopOut/rotateCubeTopIn/rotateCubeBottomOut/rotateCubeBottomIn"
+        }
       },
       "line-26": {
         "prop": {
           "text": "向左飞出/向左飞入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateCarouselLeftOut&&ontop', 'rotateCarouselLeftIn', 'rotateCarouselRightOut&&ontop', 'rotateCarouselRightIn')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateCarouselLeftOut&&ontop/rotateCarouselLeftIn/rotateCarouselRightOut&&ontop/rotateCarouselRightIn"
+        }
       },
       "line-27": {
         "prop": {
           "text": "向上飞出/向左飞入",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateCarouselTopOut&&ontop', 'rotateCarouselTopIn', 'rotateCarouselBottomOut&&ontop', 'rotateCarouselBottomIn')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateCarouselTopOut&&ontop/rotateCarouselTopIn/rotateCarouselBottomOut&&ontop/rotateCarouselBottomIn"
+        }
       },
       "line-28": {
         "prop": {
           "text": "向左翻转/向左翻转",
-          "class": "button-item",
-          "o-tap": "owo.go('exhibition', 'rotateSidesOut&&ontop', 'rotateSidesIn&&delay200', 'rotateSidesOut&&ontop', 'rotateSidesIn&&delay200')",
-          "name": "line",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "ani": "rotateSidesOut&&ontop/rotateSidesIn&&delay200/rotateSidesOut&&ontop/rotateSidesIn&&delay200"
+        }
       }
     }
   },
@@ -966,13 +634,7 @@ owo.script = {
               el: '.swiper-pagination'
             }
           });
-        },
-        "prop": {
-          "class": "swiper-item",
-          "name": "swiper",
-          "src": "./src/module/swiper.owo"
-        },
-        "propMap": {}
+        }
       },
       "flip": {
         "data": {
@@ -1010,11 +672,8 @@ owo.script = {
           this.data.isfilp = !this.data.isfilp;
         },
         "prop": {
-          "name": "flip",
-          "direction": "x",
-          "src": "./src/module/swiper/flip.owo"
-        },
-        "propMap": {}
+          "direction": "x"
+        }
       },
       "flip-1": {
         "data": {
@@ -1052,11 +711,8 @@ owo.script = {
           this.data.isfilp = !this.data.isfilp;
         },
         "prop": {
-          "name": "flip",
-          "direction": "y",
-          "src": "./src/module/swiper/flip.owo"
-        },
-        "propMap": {}
+          "direction": "y"
+        }
       }
     }
   },
@@ -1067,63 +723,33 @@ owo.script = {
     "template": {
       "line": {
         "prop": {
-          "class": "button-item",
-          "o-tap": "owo.script[owo.activePage].turn('https://owo.ink/public/9b82a8bb1b9f6f69f6d9a19f04c74b1a/')",
-          "name": "line",
-          "text": "模型",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "text": "模型"
+        }
       },
       "line-1": {
         "prop": {
-          "class": "button-item",
-          "o-tap": "owo.script[owo.activePage].turn('https://owo.ink/public/61327c295dc4ac1c181ba7a9b7cfb443/')",
-          "name": "line",
-          "text": "全景图片",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "text": "全景图片"
+        }
       },
       "line-2": {
         "prop": {
-          "class": "button-item",
-          "o-tap": "owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/index.html')",
-          "name": "line",
-          "text": "VR",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "text": "VR"
+        }
       },
       "line-3": {
         "prop": {
-          "class": "button-item",
-          "o-tap": "owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/vr/360.html')",
-          "name": "line",
-          "text": "全景图片2",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "text": "全景图片2"
+        }
       },
       "line-4": {
         "prop": {
-          "class": "button-item",
-          "o-tap": "owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/model/index.html')",
-          "name": "line",
-          "text": "3D模型",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "text": "3D模型"
+        }
       },
       "line-5": {
         "prop": {
-          "class": "button-item",
-          "o-tap": "owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/face/demos/threejs/headControls/index.html')",
-          "name": "line",
-          "text": "3D模型",
-          "src": "./src/module/button/line.owo"
-        },
-        "propMap": {}
+          "text": "3D模型"
+        }
       }
     }
   },

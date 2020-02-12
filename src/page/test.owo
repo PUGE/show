@@ -1,0 +1,14 @@
+<template>
+  <div class="switch">
+    <div class="box">
+      <p class="title">移入/移出</p>
+      <plug text="向右移出" class="button-item" page="exhibition" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft" name="line" src="./src/module/button/line.owo"></plug>
+  </div>
+</template>
+
+
+<style lang="less">
+.switch {
+  background-image: linear-gradient(to top, #fddb92 0%, #8ffaff 100%);
+}
+</style>
