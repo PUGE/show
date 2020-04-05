@@ -1,20 +1,13 @@
 <template lang="pug">
 .home.page
   .box
-    go.line-button(page="enter" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft") 入场效果
-    go.line-button(page="switch" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft") 页面切换效果
-    go.line-button(page="animation" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft") 动画效果
-    go.line-button(page="swiper" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft") 轮播图
-    go.line-button(page="dimensional" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft") 3D/VR
-    go.line-button(page="hover" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft") 鼠标悬停效果
+    .line-button(go="enter///moveToLeft/moveFromRight") 入场效果
+    .line-button(go="switch///moveToLeft/moveFromRight") 页面切换效果
+    .line-button(go="animation///moveToLeft/moveFromRight") 动画效果
+    .line-button(go="swiper///moveToLeft/moveFromRight") 轮播图
+    .line-button(go="dimensional///moveToLeft/moveFromRight") 3D/VR
+    .line-button(go="hover///moveToLeft/moveFromRight") 鼠标悬停效果
 </template>
-
-<script>
-  module.exports = {
-    data: {
-    }
-  }
-</script>
 
 <style>
 .line-button {
