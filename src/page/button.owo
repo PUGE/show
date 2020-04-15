@@ -14,8 +14,6 @@
       <!-- 更多内容不断补充中 -->
       <div class="supplement">更多内容正在持续补充中!</div>
     </div>
-    <!-- 趣动logo -->
-    <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
 

@@ -1,13 +1,13 @@
 <template lang="pug">
 .animation-box.page
-  img.show-logo(src="@|logo.png|" o-animation="bottomToTopHide")
-  img.show-logo(src="@|logo.png|" o-animation="flicker")
-  img.show-logo(src="@|logo.png|" o-animation="floatLeftRight")
-  img.show-logo(src="@|logo.png|" o-animation="floatUpDown")
-  img.show-logo(src="@|logo.png|" o-animation="leftToRight")
-  img.show-logo(src="@|logo.png|" o-animation="shrink")
-  img.show-logo(src="@|logo.png|" o-animation="turn")
-  img.show-logo(src="@|logo.png|" o-animation="rotate")
+  img.show-logo(src="@|router.svg|" o-animation="bottomToTopHide")
+  img.show-logo(src="@|router.svg|" o-animation="flicker")
+  img.show-logo(src="@|router.svg|" o-animation="floatLeftRight")
+  img.show-logo(src="@|router.svg|" o-animation="floatUpDown")
+  img.show-logo(src="@|router.svg|" o-animation="leftToRight")
+  img.show-logo(src="@|router.svg|" o-animation="shrink")
+  img.show-logo(src="@|router.svg|" o-animation="turn")
+  img.show-logo(src="@|router.svg|" o-animation="rotate")
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
-  <go class="line-button" page="exhibition" ani="{{prop.ani}}">
+  <div class="line-button" ani="{{prop.ani}}">
     <span>{{prop.text}}</span>
-  </go>
+  </div>
 </template>
 
 <style>

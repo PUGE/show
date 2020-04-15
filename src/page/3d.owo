@@ -14,8 +14,6 @@
       <!-- 面部识别 -->
       <plug class="button-item" o-tap="owo.script[owo.activePage].turn('https://puge-10017157.cos.ap-shanghai.myqcloud.com/show/face/demos/threejs/headControls/index.html')" name="line" text="3D模型" src="./src/module/button/line.owo"></plug>
     </div>
-    <!-- 趣动logo -->
-    <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
 

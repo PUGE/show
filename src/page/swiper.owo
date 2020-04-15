@@ -8,8 +8,6 @@
       <p class="title">上下翻转</p>
       <plug name="flip" direction="y" src="./src/module/swiper/flip.owo"></plug>
     </div>
-    <!-- 趣动logo -->
-    <img class="logo" src="@|logo.png|"/>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div class="three-dimensional page">
     <!-- 趣动logo -->
     <div class="logo-box">
-      <img class="show-logo" src="@|logo.png|"/>
+      <img class="show-logo" src="@|router.svg|"/>
     </div>
     <!-- 按钮列表 -->
     <div class="scroll-box">
